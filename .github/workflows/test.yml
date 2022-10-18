@@ -1,0 +1,20 @@
+name: test
+on: push
+jobs:
+  test-node:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v2
+    - run: |
+        brew install tree
+        echo 'java version:'
+        java -version
+        echo 'node version:'
+        node -v
+        echo 'npm version:'
+        npm -v
+    # - run: |
+    #     cd ./node1015
+    #     npm install
+    #     npm start

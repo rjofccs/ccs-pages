@@ -1,0 +1,402 @@
+## 01 obey rules:
+- **Children** are expected to obey different rules ***either at home or at school***.
+- Strict discipline is sometimes important, ***but I would argue that*** it would have an adverse impact on children's problem-solving abilities.
+- **Some people** strong ***advocate for imposing rules*** because rules can ***hold children accountable for*** their behaviour and help them ***develop good behaviour patterns*** from a young age.
+- Unlike adults, children are normally not aware of the consequences of bad behaviour, and setting rules can help them realise how to behave in a socially acceptable way.
+- For example, they can learn how to ***greet others, make polite requests and show table manners*** if they are required by adults to do so.
+- In addition, rules can also forbid inappropriate behaviours, ***such as bullying, using profanity, cheating in exams and interrupting teachers*** during a lesson.
+- **Opponents**, however, argue that rules can limit the development of problem-solving skills if those parents who establish strict rules ***give priority to*** children's obedience.
+- Children will ***rely heavily on*** rules and may not be able to solve problems independently.
+- For instance, some rules may dictate what children should do every day, but when children ***enter the workforce***, they may not know how to ***manage time*** without the instructions of their parents and ***cope with the demands of work*** themselves.
+- They are unlikely to ***achieve success in their careers***.
+- **In my view**, strict rules can ***stifle children's creativity***, and they are not able to solve problems in different ways.
+- They dare not ***put their ideas into practice*** since they are afraid of being punished if they disobey rules.
+- Some teachers, for example, ***require students to abide by*** strict essay writing rules, and the consequence is that children will not know ***the outcome of expressing their ideas*** in other ways.
+- The problems in the real world are complex, and they cannot ***tackle these problems*** without using imagination.
+
+## 02 television viewing:
+- **Watching television**(especially informational television) has been recognised as an effective method of learning because audio-visual information can ***attract students' attention and engage their interest***.
+- Although many TV programmes ***have educational values***, I do not agree with the idea of increasing screen time.
+- **Television viewing** can ***interfere with*** children's studies and other activities, which can benefit these children's ***intellectual development***.
+- They may not be able to achieve good grades in exams because screen time displaces the time they could spend doing homework.
+- It is also ***worrying*** to see that television viewing can ***crowd out*** those activities which can improve children's ***intellectual skills***, such as reading, playing chess and board games.
+- Another problem is that long screen time can limit children's ***social development***.
+- Those children who sit in front of their TV for many hours, instead of playing games with their peers and ***communicating with*** teachers, will become unsociable and unwilling to ***express their views and understand the thoughts of*** other people.
+- Without good communication skills, they will have difficulty in ***gaining knowledge***, ***drawing upon the ideas of*** classmates or teachers, and ***achieving academic success***.
+- **On the other hand**, I understand that television has exposed children to a world of knowledge.
+- There are many ***educational programmes*** aimed at children, allowing them to ***gain sight into*** different subjects.
+- For example, documentaries can help children learn about historical events, while foreign language channels can help them acquire a foreign language.
+- This kind of knowledge can complement what they learn at school.
+- **To summarise**, I would argue that parents and teachers should ***impose restrictions on*** children's television viewing, although television shows are a source of knowledge.
+- Watching TV can ***have an adverse impact on*** ***exam grades*** and ***social skills***.
+
+## 03! virtues and moral values:
+- **Schools** are normally seen as the place where the next generation can ***increase knowledge to improve employability***.
+- In my view, academic subjects are important to one's career achievement, but students who do not learn the difference between right and wrong cannot succeed in their working lives.
+- **Many teachers** suggest that students should ***concentrate on*** core subjects because their performance in these courses can determine whether they can enter university in the future.
+- What students can learn in academic courses can ***provide a firm grounding for*** university and help them find decent jobs.
+- For example, students who acquire mathematical skills at school can learn how to build models to analyse data at university and work as financial analysts and engineers after they graduate.
+- They ***are less likely to*** focus on key disciplines if they are required to spend time studying ***moral principles and behaviour norms***.
+- **On the other hand**, some educationalists are in favour of imparting some important ***virtues and moral values*** to students, ***motivating*** the next generation to make good use of knowledge to contribute positively to their ***future employers and the whole society***.
+- Students who ***are conscious of*** social responsibilities are more likely to design safe products which benefit consumers if they work as engineers ***in the manufacturing sector in the future***.
+- Students who do not have a moral compass cannot achieve success, ***even though*** they perform well at school.
+- **In my opinion**, the younger generation cannot be successful if they are not able to distinguish right from wrong.
+- Students who learn politeness and social rules may understand how to ***respect teachers and get along well with classmates, and because of this***, they will also be able to ***develop a strong working relationships with*** colleagues once they start working.
+- This is the key to career achievement.
+- If they do not realise this, their ***education and career*** can be affected adversely.
+
+## 04 volunteer work:
+- **Many schools** have promoted volunteer work and even accepted it as a requirement for graduation.
+- Unpaid work may have its downside, but it is of great value for those young participants and society.
+- **By providing** community services, students can improve their skills and increase their practical experience.
+- Students may be confronted with many problems and challenges, which are rare at school when involved in these voluntary services.
+- For example, when raising funds for charities, they should figure out how to communicate with benefactors, organise events or functions, and work closely with others.
+- These activities can boost their confidence in cooperating with people from all walks of life and improve their problem-solving abilities.
+- The younger generation can learn responsibility and enjoy serving the community.
+- They have a sense of community since they can see how their work can positively impact other community members.
+- Examples include helping disadvantaged children improve exam grades, supporting caregivers in nursing homes, and assisting disabled people in overcoming difficulties in their daily lives.
+- If young people are all happy to give a helping hand to others, it will create a close-knit and happy society.
+- **On the other hand**, we cannot rule out the possibility that unpaid work can waste volunteers' time and energy if not well-organised.
+- Volunteer work programmes are sometimes tedious and strenuous, and many students do not see unpaid work as a rewarding experience that is of educational value.
+- They may also regard voluntary work as a service that can take away their study time and interfere with their studies.
+- **Overall**, I believe that volunteer work is of considerable importance to the next generation in terms of sharpening skills, fostering a sense of responsibility, and social progress.
+- However, schools should make sure that it suits students' needs.
+
+## 05 university accommodation:
+- **Many students** have chosen university accommodation or shared a flat with their friends.
+- It is a rite of passage though these young people may be unable to maintain a day-to-day contact with their parents.
+- **Living away from** parents means that young people must learn how to live independently.
+- They must develop some life skills, such as housekeeping, managing finances and getting along with flatmates.
+- With these skills, they can handle many matters easily once they enter the workforce.
+- For example, they are more likely to keep everything organised if they have the habit of cleaning their bedrooms.
+- In addition, college students can enjoy more freedom in social life and make new friends.
+- They do not need to go home every day, so they have more time to do a wide range of activities, including going to the gym with other students, doing group assignments and even doing part-time work together.
+- Moreover, partying, club activities and backpacking allow these young people to enlarge their circle of friends, so they have personal resources to draw upon in future careers.
+- **The downside** of this choice is that the contact with parents will decline, and the emotional tie will suffer.
+- They hardly have a meal with their parents and cannot keep up with the news about their family.
+- As they can tackle problems independently, they do not feel the need to visit their family and take advice from their parents.
+- This may also affect their attitude toward family life.
+- **In conclusion**, it is a good decision for university students to leave home, although it may damage their family relationships.
+
+## 06 a university degree:
+- **Understandably**, some young people today drop out of college because there are successful entrepreneurs or business leaders who did not complete a university degree.
+- I believe what students learn at university is vitally essential to a fulfilling career.
+- **By learning theories** at university, people can gain a complete understanding of concepts and principles of different subjects to build expertise in their professions.
+- Many theories have developed based on empirical knowledge.
+- So these theories have practical implications, and people who are familiar with theories can deal with practical problems at work.
+- For example, a psychiatrist cannot identify effective therapies unless he or she attends some university courses to gain insight into all theories about the causes of different mental health problems.
+- Academic study can also improve the problem-solving abilities of learners and empower them to exercise creative potential.
+- University students need to collect information on different subject matters to finish essays and reports to gain experience analysing foreign matters and tackling them effectively.
+- When they embark on their careers, they will show confidence in researching when problems surface and come up with corresponding solutions.
+- **In contrast**, those who did not go to university may receive some practical training to deal with some general tasks, but they may be helpless in the face of unusual problems.
+- Meanwhile, we must recognise that theoretical knowledge is not the only determinant of success.
+- Many successful people have some personality traits in common.
+- An optimistic, hardworking and sociable person can overcome difficulties and cooperate with others to achieve success.
+- Another factor might be the social network, by which people can draw upon ideas of experts, investors and business managers, such as those managers who understand how to maintain a good relationship with clients, suppliers and government officials.
+- This kind of knowledge may not be available in textbooks.
+- **Higher education** has been undervalued, and people can handle many problems effectively and creatively with the knowledge they have acquired at university.
+- On the other hand, we need to admit that personality and social relationships are also essential to success.
+
+## 07 financial assistance:
+- **Receiving a university education** is essential to many young people because they can find employment easily in the future.
+- Those who support government spending on education think some students do not enrol because of learning costs.
+- I believe students should pay tuition while the disadvantaged can receive financial assistance from the government.
+- **If higher education** is not free of charge, students will study hard and take this educational opportunity seriously.
+- They understand the financial cost of completing a degree, so they consciously try to finish all assignments and pass all exams to qualify on time.
+- In contrast, in cases where they have free access to education, they will possibly take it for granted and fail their exams from time to time.
+- Another benefit of charging tuition fees is that it can lighten the burden on the government.
+- More money can be used in primary and secondary education, reducing illiteracy and preparing the next generation for university-level courses.
+- Additionally, subsidies can be provided for those students who enrol in post-graduate courses, and investing in these talented young people can promote technological innovation.
+- **On the other hand**, young people from less well-off backgrounds can be exempted from tuition.
+- They will be incentivised to attend college to acquire knowledge and skills to improve their career prospects.
+- This can close the gap between haves and have-nots and help build a fair society.
+- Conversely, tuition fees may force them to drop out of college and make it difficult for them to reach their potential.
+- **To summarise**, Students from deprived backgrounds should be exempt from tuition fees, while the abolition of tuition for all students is not realistic(practical).
+
+## 08! advertisements:
+- **Many children** are exposed to a large number of advertisements in the modern world.
+- These advertisements have encouraged them to buy many snacks, toys and video games, and I agree that advertisements aimed at children should be restricted or even banned.
+- **If advertising campaigns** directed at children are regulated, children will not pester their parents to buy many goods for them.
+- Children are not sensitive to prices and do not realise that the products promoted by advertisements, such as toys and fashionable clothes, can cost a fortune.
+- If they are not bombarded with advertisements, they will not nag(pester) their parents to purchase those expensive products.
+- Advertisements are also responsible for many behavioural problems and lifestyle issues among children.
+- For instance, some children like fast food since they are overwhelmed by fast food advertisements every day.
+- They are also addicted to violent electronic games advertised on television, and playing these games can make them aggressive and temperamental.
+- Imposing an outright ban on these advertisements can help reduce poor behaviour on campus, such as bullying and cursing.
+- **On the other hand**, we should recognise the advantage of advertisements.
+- For example, some advertisements disseminate information about nourishing food like milk and cereal, and there are also many commercials selling books, games and toys of educational value.
+- Parents can purchase the best products with the information from commercials when they do not know the options available in the market.
+- **Overall**, I agree that governments should regulate or even ban those advertisements which boost the sales of products harmful to the next generation.
+
+## 09 English:
+- **English** has developed into a global language and has been used as a global vehicle for cross-cultural communication worldwide.
+- The prevalence of this language worldwide can be viewed positively, although it might have a negative effect.
+- **The extensive use** of English worldwide helps promote international cooperation, enabling people to overcome language barriers in the global setting.
+- Entrepreneurs can conduct business together and discuss how to set up a company and import products, regardless of their native language.
+- Moreover, many international conferences and academic groups have identified English as the primary language.
+- Scholars can share knowledge and ideas or cooperate to complete projects in different study areas.
+- In addition, the dominance of English can help people expand their knowledge and broaden their horizons.
+- About 80% of the world's websites publish articles in English, so people who master this language can read news, magazines and books on the web and learn more about the world.
+- They can easily travel to different parts of the world and deepen their understanding of these places' customs.
+- **Despite the contribution** of the English language to globalisation, it is considered the main culprit of the loss of cultural diversity.
+- The idea lies in the fact that young people in many parts of the world make an effort to study English instead of their mother tongue.
+- Some less spoken languages may eventually die out, so those traditional therapies, recipes, religious practices and ceremonies preserved by people speaking these languages.
+- Our knowledge about the world will be limited if some cultures disappear.
+- **In conclusion**, English plays a vital role in communication and cooperation among people from different countries, although some people suspect that English will endanger some minority languages.
+
+## 10 healthy lifestyle:
+- **A healthy lifestyle** is important because it directly affects our dignity and well-being.
+- Although many people regard lifestyle choices as personal, I do not think they will adopt a healthy lifestyle unless the government intervenes.
+- **Some people** insist they should have the freedom to decide how to live their lives; otherwise, they will be unhappy.
+- They are incentivised to develop and maintain healthy habits believing that these habits can bring enjoyment to their lives.
+- For example, some may increase their intake of fruit and vegetables to keep fit.
+- If they are confident in their physical appearance, they will have a positive attitude towards life and enjoy a rich social life.
+- Conversely, they will live under enormous pressure if forced to follow the government's lifestyle guidelines.
+- **On the other hand**, it is sometimes argued that tightening regulation on some behaviours, especially those proven to be damaging to health, is more important.
+- Many people lack self-discipline.
+- For example, they smoke, although it is common knowledge that smoking endangers their health.
+- They would not quit smoking unless the government imposed a tobacco tax and forbade citizens to smoke publicly.
+- In my view, the government should be responsible for educating the public about what to do and offering guidance.
+- People should be well-informed about how damaging their ways of life can be.
+- For example, advertising will try to exercise regularly if the government launches campaigns to convey that a sedentary job can adversely affect health and reduce life expectancy.
+- **Awareness campaigns** should also provide information about the health problems caused by fast food, so consumers will pay attention to healthy eating and carefully read the nutritional information on food packaging.
+
+## 11 throw-away culture:
+- **People** are likely to use products only once instead of keeping these items for a long time.
+- It is important to understand why this throw-away culture has developed and how to reverse this trend.
+- **Consumers** today do not keep many goods for a long period of time because these products are not as expensive as before.
+- Technological innovations and mass production have reduced the cost of production and improved the productivity of the workforce.
+- Some electronic products such as mobile phones and computers are now sold at low prices, and this is why many people would purchase the newest product instead of fixing broken ones.
+- Young people, in particular, prefer the latest mobile phones with up-to-date features and throw old ones away.
+- **Another reason** is that people lack environmental awareness.
+- People have not yet realised that their ways of life will lead to energy consumption and cause waste as well as pollution.
+- They do not know that household appliances can end up in landfill sites, and these non-biodegradable products can have a destructive effect on the environment.
+- If they are aware that recycling can make lifestyles more sustainable, they will possibly try to reuse products.
+- As the overconsumption of consumer goods is pervasive, it is important to take some measures to mitigate this problem.
+- The first one is to raise environmental awareness, educating people to change the ways they use and dispose of different products.
+- Governments can also enforce some laws to deter consumers from throwing away goods.
+- For example, the tax penalty can be imposed on the use of some disposable products, including plastic bags, thereby encouraging people to use eco-friendly alternatives.
+- **To summarise**, people's changing attitudes toward consumption and price cuts are the main reasons behind the excessive consumption of consumer goods.
+- To address this problem successfully, the top priority is to raise people's awareness of environmental protection and motivate them to change their lifestyles.
+
+## 12 distance learning:
+- **The advent of the Internet** has changed the ways people live their lives and complete work.
+- A growing number of people are now considering distance education, which allows them to complete a degree at home.
+- **Although distance learning** differs from a traditional college education in some aspects, learners will possibly find that they can gain as much knowledge from an online course as they do at university.
+- In distance learning programmes, students can access the same content of the degree as those who attend lectures in person.
+- They can read relevant materials, such as textbooks and class notes, and attend video lessons, which are recorded lectures of reputable professors.
+- When they have problems comprehending some key concepts, they can click the pause button and replay the video until they fully digest the information.
+- The improvements in online education also make it possible for students to communicate with their lecturers whenever necessary.
+- Students can use interactive communication tools to ask questions in virtual classes or talk to lecturers via email.
+- In this way, these learners can get lecturers' guidance immediately, thereby completing all courses more effectively.
+- This is exactly the same as the interaction with professors in lecture rooms.
+- Despite living in their own countries, students can even communicate with scholars from top universities around the world.
+- **While distance education** has clear advantages, it may not offer participants the same networking experience they can get in a brick-and-mortar college.
+- Students complete their degrees independently and do not have opportunities to meet each other and socialise together.
+- This can have a negative impact on their career development in view of the importance of building up a network of contacts.
+- In contrast, those who study at university can do a wide range of activities on campus, such as playing sports and joining clubs, which can help them build a close relationships.
+- **In conclusion**, interactive technology has enabled learners to communicate with lectures easily and gain the qualification, so I believe that distance education is now as good as traditional ways of completing a degree at university.
+
+## 13 shift to cities:
+- **These days** many people from rural areas have chosen to migrate to cities, believing that they are more likely to find employment and enjoy a better quality of life in urban areas, but the movement of the population can cause(bring out) many problems.
+- **There are two main reasons** why these people have made this decision.
+- Firstly, cities are more densely populated, and there are more job opportunities available, so they may earn more money.
+- This means that they can improve living standards and afford more consumer goods than ever before.
+- By contrast, employment opportunities are scarce in rural areas due to the fact that=because many industries are underdeveloped and many inhabitants' buying power is limited.
+- Another advantage of urban life is that city dwellers have easy access to public services, including education and health care, and young couples who used to live in the countryside intend to send their children to urban schools to get prepared for better job opportunities in the future.
+- **The increased number** of urban dwellers can put huge pressure on housing and facilities in cities.
+- Some cities are unable to accommodate a large population because of a shortage of land.
+- Many migrants end up living in slums and enduring poor living conditions because they cannot afford home ownership.
+- All city dwellers are prone to poor health because urban facilities do not have the capacity to manage waste and sewage effectively and match the growing demand for clean water.
+- Another problem associated with a rural-to-urban shift is that rural-urban income disparity will grow instead of diminishing.
+- Young people who are ambitious, energetic, hardworking and creative prefer to go to the cities in search of educational and employment opportunities.
+- The shortage of labour has thus become a problem in rural communities, and it is not easy to revitalise the local economy.
+- **In conclusion**, poor employment prospects and sluggish local economies have caused the population to shift to cities.
+- This is a worrying trend.
+
+## 14 change x or are dismissed:
+- **In this rapidly changing world**, it is no longer realistic to expect to have a permanent job.
+- People should take action to cope with the challenges of job insecurity, whether they decide to change their jobs or are dismissed by their employers.
+- **There are so many unpredictable factors** in the world of work that employers have to downsize the workforce.
+- For example, in times of economic recession, companies have to lay off some employees to reduce the running cost, which means that many people will lose their jobs.
+- Technology has been developing so fast that many people have failed to upgrade their skills to meet the requirements of their employers.
+- Some of them may lose employment, for example, for the simple reason that they do not have the knowledge about the newest generation of software and cannot keep pace with the changes in the workplace.
+- **Another reason** why few people expect to stay in the same job for a lifetime is because they are interested in a varied career.
+- They work for different companies to discover their talents and fulfil their potential.
+- While some prefer to work for large companies, where they can improve skills and increase earnings, some may choose to work for start-ups, where they are trusted with more responsibilities.
+- **Because of the uncertainty** about job prospects, working adults must pay attention to two significant issues.
+- They should sharpen their skills and receive education to ensure they can adapt to an ever-changing world.
+- One example is the popularity of attending courses to acquire a second language because many companies operate in a globalized world.
+- In addition, they should save money to cope with all financial matters arising from unemployment.
+- They can even run their own business with sufficient savings if they fail to find employment.
+- **To summarise**, the turbulent business environment and the unstoppable technological progress have accounted for the unpredictability of the job market.
+- Solutions to these problems include job training and sound financial planning.
+
+## 15 fast food chains:
+- **Many people** today frequent fast-food restaurants because of the fast pace of life and irregular working hours.
+- Fast food has threatened traditional cuisine in many cultures, and people should not overlook the problems that may arise from this change.
+- **The strong appetite** for fast food has become a health issue in countries like America, where the number of overweight people has increased dramatically.
+- This kind of food is not only high in fat, sugar, salt and calories but also served in large portions.
+- This is why it is known as junk food and linked to the obesity epidemic.
+- Those who suffer from obesity are more likely to contract heart diseases than normal-weight people.
+- This means that governments have to pour more money into the medical system, which may adversely affect economic development.
+- Another problem is that it can threaten the diversity of the world's cuisine.
+- **Traditional means** of food preparation are known for the diversity of ingredients, cooking styles and flavours, and many traditional dishes show the evolution of cuisine in different regions.
+- Suppose fast food chains that provide American or European food, including hamburgers, fried chicken and pizza, dominate the market.
+- In that case, people will find that their diet will become increasingly monotonous and that some traditional recipes may vanish.
+- **The reliance** on pre-prepared food also harms family relationships, as people do not eat family meals as frequently as before.
+- As a general rule, family meals allow family members to communicate with each other and improve mutual understanding.
+- People who consistently eat outside may not be able to keep up to date with family issues and respond to the emotional needs of other family members.
+- They no longer have a sense of closeness at home and enjoy the company of their family.
+- **I thus agree** that the popularity of fast food is a menace.
+- It threatens people's health and their cuisine, culture and social relationship.
+
+## 16 household waste:
+- **Household waste** has become a threat to the environment, especially in large cities where many consumers now tend to buy more than they need.
+- In order to encourage them to recycle waste, governments should adopt several approaches, in addition to legislation.
+- **Laws** can be enforced to punish those who do not dispose of rubbish in an environmentally friendly way, thereby prompting all people to reduce the waste they produce.
+- Because of the legal consequences, they would be more environmentally conscious in waste management.
+- For example, they may have to pay extra fees when they produce excessive waste.
+- Families who do not separate rubbish and put recyclable items, including paper, glass, bottles and electrical equipment, in respective rubbish bins will be fined.
+- While rigid rules can change behaviour, it is also essential to educate the public about the impact of waste on the environment.
+- **People** would not make an effort to go green if they did not realise that waste could cause pollution, contaminate water and damage the environment.
+- Everybody should be aware that plastic bottles and cans, if not recycled, will end up in landfill sites and that the toxic substances contained in these items can cause serious environmental problems.
+- It is also necessary to increase recycling facilities in communities.
+- Supermarkets and shopping malls can put bottle banks in prominent positions to collect bottles from passers-by, while colour-coded recycling bins can help people separate waste more efficiently.
+- Without these facilities, they could not play a more significant part in the waste pre-treatment process, even though they understand it is a legal requirement to recycle waste effectively.
+- **To conclude**, setting more demanding standards is one effective way to promote recycling, but awareness campaigns and investment in facilities are equally important.
+
+## 17 facilitate information:
+- **Globalisation**, along with the extensive use of digital technology, has facilitated information sharing among academics and business people, regardless of nationality and race.
+- I agree that easy access to valuable information can foster innovation and address some global problems, despite the risk that some information can be misused.
+- **We can find solutions to problems** easily if we have unlimited access to different databases, such as those which contain information about how to cure diseases, prevent famines and mitigate the pollution.
+- This kind of knowledge is not available to people living in some poorest sections of the world, and this is why they are still afflicted by some preventable diseases and problems that can otherwise be avoided.
+- Some people are reluctant to share their know-how because they are afraid that their knowledge and intellectual propertiescan be exploited.
+- This is particularly understandable in the business world, where companies are not willing to provide information about their managerial skills, software and patented products on the Internet.
+- Their competitiveness would be undermined if their global competitors could acquire such information.
+- **I would, however, view** this issue in a positive light.
+- While it is up to business owners to decide what information is withheld, they should exchange their ideas with their peers in the same industry.
+- It can create an atmosphere world widein which designers, inventors and engineers can mine each other' s information with permission and come up with creative solutions without having to advance their research through trial and error.
+- **In conclusion**, it may not be practical to require all people to give up the ownership of their essential knowledge, but they should accept that sharing in a globalised world is better than concealing information.
+
+## 18 life expectancy:
+- **People's life expectancy** has improved in many societies, possibly because of improvements in technology and the increase in personal wealth.
+- Although senior citizens can contribute extraordinarily to societies, I would argue that this demographic change can bring about some problems.
+- **One problem** associated with an ageing population is that health care costs will increase, imposing a burden on taxpayers.
+- It is widely known that most medical needs and costs occur in the last years of life.
+- This means that governments have to pour more money into caring for the elderly and medical services.
+- This is normally achieved by requiring working people to pay higher income tax and cutting funds for other essential services like education.
+- The slow pace of work is another problem, as the number of senior workers increases.
+- The ability to absorb information and complete work normally declines with age.
+- Many elderly have a conservative attitude towards technology and struggle to learn how to use hi-tech devices and the lasted software at work.
+- If they choose to delay retirement, their presence in the workforce can influence companies' productivity and endanger the whole economy.
+- **On the other hand**, the experience and wisdom of senior citizens can be valuable assets to society.
+- People today can live healthier and longer lives as they pay closer attention to healthy eating and sports.
+- They can work as consultants even after leaving the workforce and impart their knowledge and skills to the younger generation.
+- For example, some senior managers can teach young people how to manage a company and how to provide better service for clients.
+- Our society can draw upon the expertise of these older people.
+- **In conclusion**, the considerable extension of life expectancy has put a strain on health care and made the workforce less productive.
+- It will influence the economic development of a country, although we can make good use of senior workers' wisdom.
+
+## 19 low-cost air travel:
+- **Low-cost air travel** has enabled us to travel across the border more frequently than before.
+- I think cheap flights can benefit the masses, though we should avoid unnecessary journeys.
+- **People** who travel to different countries can have a better understanding of these countries and explore some opportunities to advance their careers or increase wealth.
+- Some young people can visit other countries where they can find better jobs and earn higher salaries.
+- Some small business owners can discover business opportunities during their trips to foreign countries and earn profits by exporting or importing products.
+- If air tickets are expensive, these business people will fly less frequently to other countries and miss out on some opportunities to grow their business.
+- **At the same time**, some may argue that raising airfares can help reduce the environmental impact of the airline industry.
+- Higher prices will deter people from travelling great distances to other locations to go on holiday or travel for business.
+- Greenhouse gases produced by aeroplanes can decrease if the number of air flights drops.
+- Other problems related to the aviation sector, including noise pollution and the environmental destruction caused by the construction of airports and other facilities, will also be mitigated.
+- **Personally**, I do not think it is necessary to make air services expensive to potential passengers, because they deserve an affordable holiday to relax.
+- Many people, especially working people living in large cities, lead a hectic life and feel stressed.
+- If air tickets are highly affordable, they may choose to take a vacation in some exotic locations, tropical countries where they can sample local food and experience a different way of life, and get away from the everyday life of their own countries.
+- **Overall**, it would be wrong to impose restrictions on air travel, and above all, cheap airlines can benefit the public.
+- Air companies can turn to technological innovations as part of an effort to reduce the train on the environment.
+
+## 20 laws refer to rules:
+- **Laws refer to rules** imposed on human beings.
+- Although laws play an important role in regulating our behaviour, I believe that strict laws can also restrict our freedom.
+- **If no** law regulated people's behaviour, a country would be in chaos, and the economy would collapse(suffer).
+- For example, if people do not obey traffic regulations, traffic accidents will increase, and traffic congestion will become a problem.
+- The revenue of numerous businesses will be affected because their products cannot be delivered efficiently.
+- Similarly, in a country where there is no law to punish those merchants who sell fake products online, consumers will stop shopping on the Internet, and this country will suffer economically.
+- Following moral principles are also important.
+- Otherwise, people will not be able to develop a respectful and trusting relationship.
+- They are sometimes motivated by self-interest to do something that would be harmful to others, such as betraying the trust of their business partners, but this would cause damage to their relationship.
+- If people do not fulfil their promises, they will find it difficult to conduct business together, and arguments will reduce productivity.
+- It is fair to say that no society can function well when people lack mutual trust.
+- **On the other hand**, laws sometimes inevitably restrain human freedom and even hinder social progress.
+- For instance, if one country has many restrictions on the business world, business activity will not thrive.
+- High-income earners who are subject to high-income tax rates may lack the motivation to make greater efforts to increase their income.
+- The government can relax regulations to unlock the potential of these people, which can contribute to social progress.
+- **From what has been discussed**, it is reasonable to argue that a country cannot operate well without laws and rules.
+- Alternatively, our society can not advance easily if laws are too restrictive.
+
+## 21 tax revenue:
+- **Many people** regard tax as a burden because it can reduce their disposable income.
+- I think that we need to pay taxes because without tax revenue, society can not function appropriately.
+- **If** the government has tax revenue, more funds can be used to build public facilities such as roads, schools and hospitals.
+- Without a great public transport system, commuters find it difficult to travel to and from work, and traffic congestion could reduce work efficiency.
+- Public schools can provide children with educational opportunities, and without a well-educated workforce, a country cannot sustain economic growth.
+- Private investors are normally not interested in transport links and schools, which do not generate considerable profits.
+- Levying taxes can also regulate people's behaviour and encourage them, especially those who sometimes fail to show self-restraint, to break bad habits.
+- For example, the heavy tax on cigarettes and alcohol discourages the public from spending on these items.
+- The resulting lifestyle changes can improve their health and reduce hospital visits, thereby easing the pressure on the medical system.
+- **On the other hand**, if taxpayers are subject to high taxes, they may not have the incentive to work hard, and entrepreneurs are also not willing to set up a business.
+- Money is a great motivator for most people because, with a high income, they can improve living standards and gain a sense of accomplishment.
+- Without the hard work of these people and their willingness to show their talents, a country would not become prosperous, and the welfare system could not be sustained.
+- **Overall**, I am convinced that taxes are the lifeblood of the economy, although high taxes can have an adverse effect on economic growth.
+
+## 22! public art !artworks:
+- **The government** sometimes faces opposition when spending its budget on public art, especially in economically tough times.
+- I reckon that we should give priority to essential services and infrastructures and then fund the arts when there is a budget surplus.
+- **The supporters** of public funds for the arts argue that cities can become more visually attractive because of art.
+- It is true that artworks, including sculptures, paintings and statues, can decorate public facilities such as libraries, metro stations, or even toilets and increase the artistic appeal of these places.
+- If the art industry prospers, cities will have art exhibitions, art festivals and other cultural activities, which can make urban life dynamic and interesting.
+- Exposure to artwork can reduce our pressure and put us in a good mood.
+- **Despite this**, many people would argue that public facilities deserve more public money.
+- Ordinary people are more interested in public facilities (such as water and electricity supply networks, schools, libraries and roads), which have a direct impact on their living standards.
+- For example, good sanitation and clean water can improve young people's job prospects.
+- In contrast, sculptures, paintings and operas are luxury items to most people and are not likely to bring tangible benefits to them.
+- In my view, improvements in public facilities can promote economic development, but the arts may be less important in economic terms.
+- For example, the investment in the transport system can improve the productivity of working people by making daily commuting easier, while public spending on high-speed railway systems and airports can ensure that cargo can be delivered faster.
+- Cities can attract investment and become wealthy, so people's living standards can also be improved.
+- By contrast, the investment in the arts cannot create such returns in a short time.
+- **To sum up**, I believe that the government should focus on services and facilities vital to the well-being of the general public, even though artistic projects can make our cities spectacular.
+
+## 23 lengthy prison sentence:
+- **Imposing sentences** is widely accepted to punish those who commit a serious offence(crime) and sometimes as a correctional method.
+- This approach may be practical, but we should consider other ways to reform offenders.
+- **The prison sentence** may have a deterrent effect on either prospective or habitual offenders.
+- A lengthy prison sentence means that those who violate laws will lose freedom for a prolonged period, a consequence that no rational person is willing to take.
+- The criminal record can have a lasting impact on their lives, including their career.
+- They will not commit crimes when they realise the problems that ensue; instead, they will choose to find work or run a small business to earn a living.
+- This can help create a peaceful and safe community.
+- **While I agree** that a lengthy prison term may sometimes help us fight crime, we can consider community service as an alternative.
+- They can learn how to act as meaningful community members by cleaning streets, removing graffiti and tending gardens, and realise that they can contribute to society.
+- If they are sentenced to prison, they may make friends whit other offenders.
+- So they may re-offend after being released, which can threaten other members of society.
+- We can also provide them with educational opportunities and vocational training, improving their interpersonal and job skills.
+- It is worth noting that many juvenile offenders or first-time offenders break the law because of a lack of social experience or low socio-economic status.
+- Crime is no longer an option if they can find work and understand legal responsibilities.
+- The prison can isolate criminals from society, shattering their confidence in finding work and reintegrating into society.
+- **I agree** that the harsh penalty can deter crime, but it is not the best approach.
+- The focus should be on changing the behaviour of offenders and helping them function as productive members of society.
+
+## 24 exchange of commodities:
+- **As the world is increasingly globalised**, the exchange of commodities across the border is proceeding at an astounding rate.
+- From my point of view, this development can help improve the living standards of consumers.
+- **The products** from foreign countries are competitively priced and offer good value for money.
+- The main reason is that the countries which export these typical goods have the technology and know-how to reduce the cost of production to ensure that these products are highly affordable.
+- For example, China specialises in producing textile products, so China-made clothes, linen and footwear are cheaper than their local counterparts in many parts of the world.
+- Another benefit is that imported goods have challenged domestic manufacturers' dominance and intensified competition, pushing these producers to cut prices.
+- It is beneficial to domestic customers because they can spend less on products essential to their lives, such as food, and the cost of living will decline.
+- This is particularly important for people who live on a tight budget and need to feed a big family.
+- **The downside** of importing goods is that foreign brands may steal local companies' market share and lead to some domestic industries' underdevelopment.
+- These brands have been in the global marketplace for many decades, attracting local consumers with clear advantages in technology, packaging, functions and after-sales services.
+- For instance, Dell, Apple, HP and other world-famous producers of computers and electronic products have conquered many markets, and the arrival of these international brands has resulted in domestic manufacturers' bankruptcy.
+- This is harmful to the development of a self-contained economy.
+- **In conclusion**, importing products from other countries is positive overall.
+- Consumers can buy something at a lower cost, although some local firms may be shut down.

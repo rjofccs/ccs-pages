@@ -1,0 +1,57 @@
+---
+author:
+- Matthew Petty
+affiliation: None
+date: \today
+title: Title of Document
+subtitle: Subtitle of Document
+header-includes:
+    - '\newcommand{\projectNumberCode}{CODE }'
+    - '\newcommand{\projectName}{Project Name }'
+    - '\newcommand{\coreSystemName}{Core Name }'
+    - '\newcommand{\bt}[1]{\fcolorbox{gray}{lightgray}{#1}}'
+    - '\defaultfontfeatures{Extension = .otf}'
+    - '\usepackage{fontawesome}'
+    - '\usepackage{tocloft}'
+    - '\usepackage{graphicx}'
+    - '\usepackage{hyperref}'
+    - '\usepackage{float}'
+    - '\usepackage{glossaries}'
+    - '\setglossarystyle{altlistgroup}'
+    - '\usepackage{xparse}'
+    - '\usepackage{lscape}'
+    - '\makenoidxglossaries'
+    - '\usepackage{etoolbox}'
+    - '\usepackage{xstring}'
+    - '\setlength{\aboverulesep}{0pt}'
+    - '\setlength{\belowrulesep}{0pt}'
+    - '\renewcommand{\arraystretch}{1.3}'
+    - '\makeatletter'
+    - '\patchcmd{\LT@array}{\@mkpream{#2}}{\StrGobbleLeft{#2}{2}[\pream]\StrGobbleRight{\pream}{2}[\pream]\StrSubstitute{\pream}{l}{|l}[\pream]\@mkpream{@{}\pream|@{}}}{}{}'
+    - '\def\midrule{}'
+    - '\apptocmd{\LT@tabularcr}{\hline}{}{}'
+    - '\makeatother'
+documentclass: article
+fontsize: 10pt
+secnumdepth: 4
+classoptions:
+    - a4paper
+    - portrait
+geometry:
+- top=2cm
+- left=1cm
+- right=1cm
+- bottom=2cm
+linkcolor: Blue
+numbersections: true
+---
+
+\pagebreak
+
+\tableofcontents
+
+\setcounter{table}{0}
+
+\listoftables
+
+\pagebreak

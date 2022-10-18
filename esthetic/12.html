@@ -1,0 +1,796 @@
+<link rel="stylesheet" type="text/css" href="./esthetic.css">
+<script src="./esthetic.js"></script>
+<script>const chapter = '12';</script>
+<div class="nav">
+    <a href="./index.html">Index</a>
+    <a href="#/" onclick="hide(this);">Hide</a>
+    <a href="#/" onclick="play(this);">Play</a>
+    <a href="#/" onclick="next(this);">Next</a>
+</div>
+
+<div class="content">
+    <div class="word" data-word="food">food<div class="mark" onclick="mark('food')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfol_ukfolks015.mp3"></audio>食物；食品；（供植物生长的）养料</p>
+</div>
+<div class="content">
+    <div class="word" data-word="diet">diet<div class="mark" onclick="mark('diet')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdic_ukdictu017.mp3"></audio>（日常）饮食✓ 节食，限制饮食✓ 程序，套路；有限的几种活动</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdic_ukdictu017.mp3"></audio>（食物或饮品）健康的，低脂的，低糖的</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdic_ukdictu017.mp3"></audio>（尤指为减肥而）节食，控制饮食</p>
+</div>
+<div class="content">
+    <div class="word" data-word="appetite">appetite<div class="mark" onclick="mark('appetite')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukapp_ukappen009.mp3"></audio>食欲，胃口✓ 欲望；渴求</p>
+</div>
+<div class="content">
+    <div class="word" data-word="treat">treat<div class="mark" onclick="mark('treat')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktre_uktreac015.mp3"></audio>对待✓ 治疗，医治✓ 请（客）；款待✓ （用特殊物质）涂抹，处理</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktre_uktreac015.mp3"></audio>乐事；享受；特别款待✓ 我／你（等等）请（客），款待</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cater">cater<div class="mark" onclick="mark('cater')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcat_ukcatch012.mp3"></audio>提供饮食；承办（宴席）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="provision">provision<div class="mark" onclick="mark('provision')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprove019.mp3"></audio>提供；供给；准备✓ 粮食；给养，物资✓ 规定，条款✓ （公司账户上，为未来可能的亏损做准备的）准备金✓ 为…做好准备（尤指经济上的保障）</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprove019.mp3"></audio>为…提供给养（或物资）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="edible">edible<div class="mark" onclick="mark('edible')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukedg_ukedgil004.mp3"></audio>（无毒而）可以吃的；适宜食用的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="recipe">recipe<div class="mark" onclick="mark('recipe')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrec_ukrecep011.mp3"></audio>食谱；烹饪法</p>
+</div>
+<div class="content">
+    <div class="word" data-word="restaurant">restaurant<div class="mark" onclick="mark('restaurant')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukres_ukrespo009.mp3"></audio>饭店；餐馆；菜馆</p>
+</div>
+<div class="content">
+    <div class="word" data-word="refectory">refectory<div class="mark" onclick="mark('refectory')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukred_ukredou016.mp3"></audio>（修道院、学校等的）食堂，餐厅</p>
+</div>
+<div class="content">
+    <div class="word" data-word="bar">bar<div class="mark" onclick="mark('bar')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbanqu012.mp3"></audio>酒吧；酒吧的吧台✓ 铁栅栏✓ 条状物✓ （电炉上的）供热电阻丝✓ （音乐的）小节；乐谱的小节线✓ （乐谱的）小节线✓ 条纹，斑纹✓ 阻碍某事发生或发展的东西</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbanqu012.mp3"></audio>阻挡，阻挠；防止，禁止✓ 闩上；使紧闭</p>
+    <p onclick="play_one(this)">preposition<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbanqu012.mp3"></audio>除…外</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cafeteria">cafeteria<div class="mark" onclick="mark('cafeteria')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcad_ukcad__016.mp3"></audio>（常指工厂、大学或办公大楼内的）自助餐厅，自助食堂</p>
+</div>
+<div class="content">
+    <div class="word" data-word="buffet">buffet<div class="mark" onclick="mark('buffet')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbud_ukbuddh014.mp3"></audio>自助餐✓ （车站的）餐馆，快餐部</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbud_ukbuddh015.mp3"></audio>（风、雨等）连续猛击，打击</p>
+</div>
+<div class="content">
+    <div class="word" data-word="barbecue">barbecue<div class="mark" onclick="mark('barbecue')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbanqu021.mp3"></audio>烤肉架✓ 烤肉✓ 烤肉聚会✓ 用烤肉架烧烤</p>
+</div>
+<div class="content">
+    <div class="word" data-word="supper">supper<div class="mark" onclick="mark('supper')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksup_uksuper107.mp3"></audio>晚饭，晚餐✓ 夜宵</p>
+</div>
+<div class="content">
+    <div class="word" data-word="banquet">banquet<div class="mark" onclick="mark('banquet')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbands030.mp3"></audio>（正式的）宴会</p>
+</div>
+<div class="content">
+    <div class="word" data-word="refreshment">refreshment<div class="mark" onclick="mark('refreshment')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefre002.mp3"></audio>茶点；点心和饮料</p>
+</div>
+<div class="content">
+    <div class="word" data-word="snack">snack<div class="mark" onclick="mark('snack')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksmu_uksmut_004.mp3"></audio>小吃，点心；快餐</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksmu_uksmut_004.mp3"></audio>（在正餐之间）吃零食，吃零嘴</p>
+</div>
+<div class="content">
+    <div class="word" data-word="appetizer">appetizer<div class="mark" onclick="mark('appetizer')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukapp_ukappen010.mp3"></audio>（餐前的）开胃小吃✓ （一顿饭的）第一道菜，前菜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cuisine">cuisine<div class="mark" onclick="mark('cuisine')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcsa_ukcsa__028.mp3"></audio>烹饪，烹调</p>
+</div>
+<div class="content">
+    <div class="word" data-word="menu">menu<div class="mark" onclick="mark('menu')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmen_ukmenac025.mp3"></audio>菜单✓ （计算机屏幕上显示的）菜单，选项单</p>
+</div>
+<div class="content">
+    <div class="word" data-word="order">order<div class="mark" onclick="mark('order')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukora_ukorang022.mp3"></audio>点菜；订制；订货✓ 所订之货；所点饭菜✓ 在订购中，在订制中✓ 订做，订制✓ 顺序，次序✓ 指示；指令；命令✓ 命令就是命令，命令必须执行✓ （官方的）指令；（银行）汇票✓ 为了，以便✓ 整齐有序✓ 使有条理；把…整理得井井有条✓ 正常工作状况；良好使用状况✓ 秩序✓ 安静！安静！（用于议会或正式会议中）✓ （社会或政治）制度，秩序✓ （按照一定规范生活的）修道会；会社✓ 被授勋的人；勋爵士团✓ 种类，类型；规模✓ 大约，大概✓ （用于动植物分类的）目</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukora_ukorang022.mp3"></audio>（尤指在饭店或商店）点（饭菜），订购，订制，订货✓ 吩咐；命令；指示✓ 整理；安排；给…排序</p>
+</div>
+<div class="content">
+    <div class="word" data-word="takeaway">takeaway<div class="mark" onclick="mark('takeaway')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktaj_uktajik003.mp3"></audio>从…中了解到的主要信息✓ 外卖的饭食；外卖餐馆</p>
+</div>
+<div class="content">
+    <div class="word" data-word="chef">chef<div class="mark" onclick="mark('chef')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukcheer013.mp3"></audio>（酒店或餐馆的）厨师；（尤指）厨师长，大厨，主厨</p>
+</div>
+<div class="content">
+    <div class="word" data-word="gourmet">gourmet<div class="mark" onclick="mark('gourmet')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgou_ukgourd003.mp3"></audio>（食品）优质的✓ 提供美食的</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgou_ukgourd003.mp3"></audio>美食家，讲究饮食的人；美食品尝家</p>
+</div>
+<div class="content">
+    <div class="word" data-word="vegetarian">vegetarian<div class="mark" onclick="mark('vegetarian')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvec_ukvecto011.mp3"></audio>素食者，素食主义者</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvec_ukvecto011.mp3"></audio>素食的；素的；不包括肉的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cutlery">cutlery<div class="mark" onclick="mark('cutlery')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcut_ukcut__011.mp3"></audio>（刀、叉、匙等）餐具</p>
+</div>
+<div class="content">
+    <div class="word" data-word="silver">silver<div class="mark" onclick="mark('silver')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksil_uksilen022.mp3"></audio>银，银子✓ 银牌</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksil_uksilen022.mp3"></audio>银质的；银色的</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksil_uksilen022.mp3"></audio>给（窗户等）镀上银色物质</p>
+</div>
+<div class="content">
+    <div class="word" data-word="ceramic">ceramic<div class="mark" onclick="mark('ceramic')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcen_ukcensu027.mp3"></audio>made from clay that has been shaped and then baked until hard:</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_c_cdo_cdo03_cdo0319ukcera0272.mp3"></audio>clay that has been shaped and then baked until hard:</p>
+</div>
+<div class="content">
+    <div class="word" data-word="porcelain">porcelain<div class="mark" onclick="mark('porcelain')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi014.mp3"></audio>瓷✓ 瓷器</p>
+</div>
+<div class="content">
+    <div class="word" data-word="bowl">bowl<div class="mark" onclick="mark('bowl')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboe_ukboer_020.mp3"></audio>碗；钵✓ （物体的）碗状部分✓ 圆形运动场；圆形露天剧场✓ 草地滚木球戏✓ （草地滚木球戏中所用的）木球；（保龄球运动中所用的）圆球✓ （美国）美式橄榄球季后赛</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboe_ukboer_020.mp3"></audio>（在游戏中）滚动球✓ 把（球）投给击球员，投（球）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="dish">dish<div class="mark" onclick="mark('dish')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdis_ukdisgu007.mp3"></audio>盘子，碟子✓ （就餐用过的）餐具✓ （一道）菜✓ 性感的人</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdis_ukdisgu007.mp3"></audio>说人闲话，揭短</p>
+</div>
+<div class="content">
+    <div class="word" data-word="saucer">saucer<div class="mark" onclick="mark('saucer')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce002.mp3"></audio>茶碟，茶托</p>
+</div>
+<div class="content">
+    <div class="word" data-word="tray">tray<div class="mark" onclick="mark('tray')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktra_uktrap_029.mp3"></audio>盘；碟；托盘✓ 文件盘</p>
+</div>
+<div class="content">
+    <div class="word" data-word="fork">fork<div class="mark" onclick="mark('fork')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfor_ukforgi012.mp3"></audio>餐叉✓ 叉；耙✓ （公路、河流等的）分岔处，分流处，岔口；岔路</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfor_ukforgi012.mp3"></audio>（公路或河流）分岔✓ 走岔路中的一条✓ 叉运；叉起；用叉挖</p>
+</div>
+<div class="content">
+    <div class="word" data-word="knife">knife<div class="mark" onclick="mark('knife')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkne_ukkneel011.mp3"></audio>刀</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkne_ukkneel011.mp3"></audio>用刀砍（或刺、戳）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="spoon">spoon<div class="mark" onclick="mark('spoon')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspo_ukspong011.mp3"></audio>匙，勺；调羹✓ （用作构词成分）✓ 一匙的量</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspo_ukspong011.mp3"></audio>用匙盛；用勺舀</p>
+</div>
+<div class="content">
+    <div class="word" data-word="glass">glass<div class="mark" onclick="mark('glass')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgla_ukglaci030.mp3"></audio>玻璃✓ 玻璃制品；玻璃器皿✓ 在玻璃温室里✓ 玻璃杯✓ 一杯…✓ 眼镜✓ 气压计（同 barometer）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="mug">mug<div class="mark" onclick="mark('mug')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmuc_ukmucky017.mp3"></audio>（盛热饮用的）大杯子✓ 啤酒杯（有柄且通常刻有花纹的大玻璃杯）✓ 傻瓜；易受骗者✓ 脸</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmuc_ukmucky017.mp3"></audio>（在公共场合）行凶抢劫</p>
+</div>
+<div class="content">
+    <div class="word" data-word="kettle">kettle<div class="mark" onclick="mark('kettle')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukker_ukkero_005.mp3"></audio>水壶，烧水壶✓ 开始烧水✓ （警察控制大批街头人群的战术）把人群困在一定区域，不让离开</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukker_ukkero_005.mp3"></audio>（警察)把人群困在一定区域，不让离开</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pan">pan<div class="mark" onclick="mark('pan')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpam_ukpampe003.mp3"></audio>平底锅✓ （无盖的）烤模，烤盘✓ 马桶（的球形部分）✓ （同paan）</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpam_ukpampe003.mp3"></audio>（摄影机）追拍，摇摄✓ 严厉批评</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pot">pot<div class="mark" onclick="mark('pot')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpos_ukpostw002.mp3"></audio>罐，壶✓ （尤指储藏食物或液体的）罐，瓶，壶✓ 花盆✓ 一罐（或一壶、一瓶等）的量✓ （用作构词成分）壶，罐✓ 陶碟，陶碗；陶制器皿✓ 大量的…✓ 幼儿用便盆✓ 大麻✓ 啤酒肚✓ 毁坏；衰落；完蛋✓ （斯诺克等）击（球）落袋</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpos_ukpostw002.mp3"></audio>射杀，射猎（飞禽或小动物）；随手射（中）✓ （斯诺克等）击（球）落袋✓ 把（植物）栽入盆中</p>
+</div>
+<div class="content">
+    <div class="word" data-word="stove">stove<div class="mark" onclick="mark('stove')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore018.mp3"></audio>（用于取暖的）炉，火炉✓ （用于烹饪的）炉灶</p>
+</div>
+<div class="content">
+    <div class="word" data-word="furnace">furnace<div class="mark" onclick="mark('furnace')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfun_ukfunk_012.mp3"></audio>熔炉✓ 暖气炉</p>
+</div>
+<div class="content">
+    <div class="word" data-word="oven">oven<div class="mark" onclick="mark('oven')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukova_ukovary003.mp3"></audio>烤箱；烤炉</p>
+</div>
+<div class="content">
+    <div class="word" data-word="tin">tin<div class="mark" onclick="mark('tin')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktim_uktimin007.mp3"></audio>锡✓ 罐头盒，听✓ 罐头；盒装之物；桶装之物；听（或盒、桶）所装之量✓ （用于储存糕点或饼干的）有盖金属盒✓ （用于储藏涂料等液体的）有盖金属桶✓ （无盖的）烤模，烤盘✓ （啤酒）罐</p>
+</div>
+<div class="content">
+    <div class="word" data-word="lid">lid<div class="mark" onclick="mark('lid')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklic_uklicen010.mp3"></audio>盖，盖子✓ 眼睑，眼皮</p>
+</div>
+<div class="content">
+    <div class="word" data-word="drink">drink<div class="mark" onclick="mark('drink')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdre_ukdress019.mp3"></audio>饮料；一份（饮料）✓ 酒精饮料，酒✓ 酒会</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdre_ukdress019.mp3"></audio>喝✓ 喝酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="beverage">beverage<div class="mark" onclick="mark('beverage')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbet_ukbetid017.mp3"></audio>饮料</p>
+</div>
+<div class="content">
+    <div class="word" data-word="juice">juice<div class="mark" onclick="mark('juice')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukj_ukjud_ukjudic014.mp3"></audio>（水果、蔬菜的）汁，液✓ 肉汁✓ 权势；影响力✓ 活力，精力，劲儿</p>
+</div>
+<div class="content">
+    <div class="word" data-word="soda">soda<div class="mark" onclick="mark('soda')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksob_uksober027.mp3"></audio>甜味汽水✓ （常与酒混合的）苏打水</p>
+</div>
+<div class="content">
+    <div class="word" data-word="coffee">coffee<div class="mark" onclick="mark('coffee')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcoe_ukcoedu011.mp3"></audio>咖啡粉；咖啡</p>
+</div>
+<div class="content">
+    <div class="word" data-word="alcohol">alcohol<div class="mark" onclick="mark('alcohol')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukalb_ukalbin006.mp3"></audio>酒；酒精，乙醇</p>
+</div>
+<div class="content">
+    <div class="word" data-word="liquor">liquor<div class="mark" onclick="mark('liquor')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_c_cal_cald4_cald4uk0951.mp3"></audio>白酒，烈酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="whiskey">whiskey<div class="mark" onclick="mark('whiskey')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwhi_ukwhisk004.mp3"></audio>威士忌酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="whisky">whisky<div class="mark" onclick="mark('whisky')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwhi_ukwhisk004.mp3"></audio>威士忌酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="brandy">brandy<div class="mark" onclick="mark('brandy')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbra_ukbrain015.mp3"></audio>白兰地</p>
+</div>
+<div class="content">
+    <div class="word" data-word="drunk">drunk<div class="mark" onclick="mark('drunk')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdru_ukdrubb014.mp3"></audio>（drink的过去分词）</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdru_ukdrubb014.mp3"></audio>醉的，喝醉的，醉酒的✓ 酗酒滋事，酒后闹事✓ 因拥有权势而飘飘然</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdru_ukdrubb014.mp3"></audio>酒鬼，醉鬼，酗酒者</p>
+</div>
+<div class="content">
+    <div class="word" data-word="tobacco">tobacco<div class="mark" onclick="mark('tobacco')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktit_uktitil025.mp3"></audio>烟草，烟叶</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cigarette">cigarette<div class="mark" onclick="mark('cigarette')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukchu_ukchurc018.mp3"></audio>香烟，纸烟</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sober">sober<div class="mark" onclick="mark('sober')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksno_uksnows028.mp3"></audio>未醉的，清醒的✓ 严肃的；冷静的✓ （衣物）简朴的，色彩暗淡的</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksno_uksnows028.mp3"></audio>（使）变得冷静；（使）变得严肃</p>
+</div>
+<div class="content">
+    <div class="word" data-word="vegetable">vegetable<div class="mark" onclick="mark('vegetable')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvec_ukvecto010.mp3"></audio>蔬菜✓ 懒散的人；对任何事都毫无兴趣的人✓ 植物人</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvec_ukvecto010.mp3"></audio>植物的；提取自植物的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="tomato">tomato<div class="mark" onclick="mark('tomato')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukb03_ukb03206.mp3"></audio>西红柿，番茄</p>
+</div>
+<div class="content">
+    <div class="word" data-word="potato">potato<div class="mark" onclick="mark('potato')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpos_ukpostw006.mp3"></audio>马铃薯，土豆</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pea">pea<div class="mark" onclick="mark('pea')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukozo_ukozone002.mp3"></audio>豌豆</p>
+</div>
+<div class="content">
+    <div class="word" data-word="bean">bean<div class="mark" onclick="mark('bean')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbea_ukbeami002.mp3"></audio>豆；豆荚；菜豆；豆科植物</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cucumber">cucumber<div class="mark" onclick="mark('cucumber')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcsa_ukcsa__018.mp3"></audio>黄瓜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cabbage">cabbage<div class="mark" onclick="mark('cabbage')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbys_ukbysta012.mp3"></audio>卷心菜，洋白菜；甘蓝✓ （通常由于严重的事故或疾病导致丧失思考和语言能力的）植物人</p>
+</div>
+<div class="content">
+    <div class="word" data-word="onion">onion<div class="mark" onclick="mark('onion')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukomn_ukomniv012.mp3"></audio>洋葱（头）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="mushroom">mushroom<div class="mark" onclick="mark('mushroom')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmun_ukmunif023.mp3"></audio>蘑菇；伞菌，蕈</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmun_ukmunif023.mp3"></audio>迅速增长；迅速发展</p>
+</div>
+<div class="content">
+    <div class="word" data-word="eggplant">eggplant<div class="mark" onclick="mark('eggplant')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeff_ukeffor011.mp3"></audio>茄子</p>
+</div>
+<div class="content">
+    <div class="word" data-word="carrot">carrot<div class="mark" onclick="mark('carrot')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcar_ukcarap002.mp3"></audio>胡萝卜✓ （为鼓励而给的）好处，甜头，奖赏</p>
+</div>
+<div class="content">
+    <div class="word" data-word="turnip">turnip<div class="mark" onclick="mark('turnip')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktur_ukturbo030.mp3"></audio>芜菁（植株）✓ 瑞典芜菁（同 swede）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="radish">radish<div class="mark" onclick="mark('radish')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrad_ukradia023.mp3"></audio>（通常指红色或白色，圆形或手指形的）小萝卜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="fruit">fruit<div class="mark" onclick="mark('fruit')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfru_ukfruga004.mp3"></audio>水果✓ 果实✓ …的成果；…的结果✓ 男同性恋者（冒犯性用语）</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfru_ukfruga004.mp3"></audio>结果子</p>
+</div>
+<div class="content">
+    <div class="word" data-word="peel">peel<div class="mark" onclick="mark('peel')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpay_ukpayro027.mp3"></audio>除去，剥去（水果、蔬菜的）皮✓ （表层）脱落，剥落；剥去（表层），剥去…的壳✓ （皮肤因日晒而）脱皮，蜕皮</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpay_ukpayro027.mp3"></audio>（尤指水果和蔬菜被削掉的）外皮</p>
+</div>
+<div class="content">
+    <div class="word" data-word="strip">strip<div class="mark" onclick="mark('strip')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstr_ukstrik015.mp3"></audio>除去，剥除，撕掉（外皮或表层）✓ 脱衣服；脱光…的衣服✓ 表演脱衣舞✓ 拆卸，拆开（机器、车辆或引擎）✓ 拆散（汽车等）卖零件</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstr_ukstrik015.mp3"></audio>条，带，细长片✓ （足球队的）队服✓ 脱衣舞</p>
+</div>
+<div class="content">
+    <div class="word" data-word="core">core<div class="mark" onclick="mark('core')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcop_ukcop__028.mp3"></audio>核心，关键，最重要的部分✓ （水果的）核，心✓ （星球的）核心，中心✓ （核反应堆的）堆芯，活性区✓ 核心肌群✓ 岩芯</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcop_ukcop__028.mp3"></audio>核心的，精髓的，最重要的✓ 核心价值（信仰、问题等）✓ 核心业务✓ 基础课程✓ 下肢肌肉</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcop_ukcop__028.mp3"></audio>去掉…的果心</p>
+</div>
+<div class="content">
+    <div class="word" data-word="hull">hull<div class="mark" onclick="mark('hull')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhuf_ukhuffi012.mp3"></audio>船体，船身</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhuf_ukhuffi012.mp3"></audio>除去（水果、蔬菜等的）皮（或茎、叶）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cherry">cherry<div class="mark" onclick="mark('cherry')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukcheer025.mp3"></audio>樱桃；樱桃树</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukcheer025.mp3"></audio>樱桃红的，鲜红色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="berry">berry<div class="mark" onclick="mark('berry')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukben_ukbenev024.mp3"></audio>浆果</p>
+</div>
+<div class="content">
+    <div class="word" data-word="grape">grape<div class="mark" onclick="mark('grape')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgranu004.mp3"></audio>葡萄✓ 葡萄酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="papaya">papaya<div class="mark" onclick="mark('papaya')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpan_ukpanor025.mp3"></audio>番木瓜；番木瓜树</p>
+</div>
+<div class="content">
+    <div class="word" data-word="peach">peach<div class="mark" onclick="mark('peach')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpay_ukpayro020.mp3"></audio>桃（子）✓ 杰出的人；极好的东西；特别惹人喜欢的人（或物）✓ 桃红色</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpay_ukpayro020.mp3"></audio>桃红色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pear">pear<div class="mark" onclick="mark('pear')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpai_ukpaink014.mp3"></audio>梨</p>
+</div>
+<div class="content">
+    <div class="word" data-word="plum">plum<div class="mark" onclick="mark('plum')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>李子；梅子</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>好的；值得拥有的✓ 紫红色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="orange">orange<div class="mark" onclick="mark('orange')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukora_ukorang001.mp3"></audio>橙；橘；柑✓ 橙色，橘黄色</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukora_ukorang001.mp3"></audio>橙色的，橘黄色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="melon">melon<div class="mark" onclick="mark('melon')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmel_ukmelod004.mp3"></audio>瓜；甜瓜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="lemon">lemon<div class="mark" onclick="mark('lemon')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklei_ukleisu005.mp3"></audio>柠檬✓ 柠檬汁；柠檬饮料✓ 淡黄色，柠檬色✓ 有毛病的东西；不成功的东西✓ 傻瓜</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklei_ukleisu005.mp3"></audio>柠檬色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="kiwi">kiwi<div class="mark" onclick="mark('kiwi')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkit_ukkit__013.mp3"></audio>猕猴桃，奇异果✓ 鹬鸵，几维（新西兰国鸟，喙长，不能飞）✓ 新西兰人</p>
+</div>
+<div class="content">
+    <div class="word" data-word="crop">crop<div class="mark" onclick="mark('crop')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcro_ukcrocu014.mp3"></audio>庄稼，作物；收成，收获量✓ （同时涌现的）一批，一帮（人或事物）✓ 平头发型✓ （鸟的）嗉囊✓ 短马鞭</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcro_ukcrocu014.mp3"></audio>修剪；剪短✓ （羊、马等）啃食（草或其他植物）的顶部✓ 剪裁（照片）✓ （植物）结果，开花，收成，收获✓ 种植（庄稼）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="corn">corn<div class="mark" onclick="mark('corn')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcor_ukcoran024.mp3"></audio>（小麦、玉米、燕麦、大麦等）谷物，谷粒✓ 玉米（植株）✓ 玉米（粒）✓ （尤指脚上的）钉胼，鸡眼✓ 陈腐的东西；老一套；煽情的东西</p>
+</div>
+<div class="content">
+    <div class="word" data-word="grain">grain<div class="mark" onclick="mark('grain')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgraci019.mp3"></audio>（尤指像稻谷、小麦等像草一样的植物的）谷粒，颖果，谷（物）✓ 细粒，颗粒✓ 一点儿；微量，少量✓ （照片、底片的）显影颗粒✓ （木头和织物等的）纹理✓ 格令（质量单位，等于0.0648克）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="wheat">wheat<div class="mark" onclick="mark('wheat')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwet_ukwet__026.mp3"></audio>小麦</p>
+</div>
+<div class="content">
+    <div class="word" data-word="reap">reap<div class="mark" onclick="mark('reap')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrea_ukreadi028.mp3"></audio>收割，收获；获得</p>
+</div>
+<div class="content">
+    <div class="word" data-word="flour">flour<div class="mark" onclick="mark('flour')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukflo_ukflori016.mp3"></audio>（谷物磨成的）粉；（尤指）小麦粉</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukflo_ukflori016.mp3"></audio>在…上撒面粉</p>
+</div>
+<div class="content">
+    <div class="word" data-word="porridge">porridge<div class="mark" onclick="mark('porridge')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi028.mp3"></audio>燕麦粥，麦片粥✓ 关押，监禁</p>
+</div>
+<div class="content">
+    <div class="word" data-word="paste">paste<div class="mark" onclick="mark('paste')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpas_ukpassi013.mp3"></audio>糊；面团；（尤指）糨糊✓ 酱✓ （制人造宝石用的）铅质玻璃</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpas_ukpassi013.mp3"></audio>（尤指用糨糊）粘，贴✓ （在电脑文档中）粘贴（某一文本）✓ （计算机文件中文字或图片的）剪贴</p>
+</div>
+<div class="content">
+    <div class="word" data-word="livestock">livestock<div class="mark" onclick="mark('livestock')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklit_uklitig023.mp3"></audio>牲畜；家畜；家禽</p>
+</div>
+<div class="content">
+    <div class="word" data-word="chicken">chicken<div class="mark" onclick="mark('chicken')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukchess018.mp3"></audio>鸡；鸡肉✓ 胆小鬼，懦夫</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukchess018.mp3"></audio>胆小的，胆怯的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="turkey">turkey<div class="mark" onclick="mark('turkey')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktur_ukturbo018.mp3"></audio>火鸡✓ 火鸡肉✓ 失败（之作）✓ 傻瓜，笨蛋</p>
+</div>
+<div class="content">
+    <div class="word" data-word="beef">beef<div class="mark" onclick="mark('beef')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbed_ukbeddi022.mp3"></audio>牛肉✓ 抱怨；怨言✓ 力量，力气</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbed_ukbeddi022.mp3"></audio>抱怨</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pork">pork<div class="mark" onclick="mark('pork')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi017.mp3"></audio>猪肉</p>
+</div>
+<div class="content">
+    <div class="word" data-word="mutton">mutton<div class="mark" onclick="mark('mutton')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmus_ukmusic030.mp3"></audio>羊肉✓ 羊肉，山羊肉</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sausage">sausage<div class="mark" onclick="mark('sausage')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce008.mp3"></audio>香肠，腊肠</p>
+</div>
+<div class="content">
+    <div class="word" data-word="fish">fish<div class="mark" onclick="mark('fish')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfir_ukfirew013.mp3"></audio>鱼；鱼肉✓ 怪人</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfir_ukfirew013.mp3"></audio>摸找，翻找，搜寻✓ 拐弯抹角地引出；间接探听✓ 捕（鱼）；钓（鱼）✓ （水域）鱼被捕尽的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pond">pond<div class="mark" onclick="mark('pond')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolys025.mp3"></audio>池塘✓ （幽默的说法）大西洋（指其将英国和欧洲与美国分开）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="rod">rod<div class="mark" onclick="mark('rod')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrob_ukrobot016.mp3"></audio>竿，杆，棒✓ 视杆细胞</p>
+</div>
+<div class="content">
+    <div class="word" data-word="dairy">dairy<div class="mark" onclick="mark('dairy')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdag_ukdagoe011.mp3"></audio>奶牛的；奶制品的，乳品的</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdag_ukdagoe011.mp3"></audio>牛奶场，乳品场，制酪场；牛奶公司，奶制品公司✓ 奶制品的，乳品</p>
+</div>
+<div class="content">
+    <div class="word" data-word="milk">milk<div class="mark" onclick="mark('milk')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmil_ukmilea020.mp3"></audio>奶；牛奶；羊奶✓ （女性及雌性哺乳动物的）奶，乳汁✓ （植物的）乳液，白色汁液</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmil_ukmilea020.mp3"></audio>挤…的奶；挤（奶）✓ 榨取，勒索</p>
+</div>
+<div class="content">
+    <div class="word" data-word="yogurt">yogurt<div class="mark" onclick="mark('yogurt')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uky_ukyie_ukyield014.mp3"></audio>酸乳，酸奶</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cream">cream<div class="mark" onclick="mark('cream')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcraps029.mp3"></audio>奶油，乳脂✓ 奶油色，淡黄色，米黄色✓ 护肤霜✓ 奶油夹心糖✓ 清洁乳液✓ 奶油蘑菇（西红柿等）汤</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcraps029.mp3"></audio>奶油色的，淡黄色的，米黄色的</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcraps029.mp3"></audio>把…搅成糊状</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cheese">cheese<div class="mark" onclick="mark('cheese')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukcheer004.mp3"></audio>奶酪，干酪</p>
+</div>
+<div class="content">
+    <div class="word" data-word="butter">butter<div class="mark" onclick="mark('butter')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbus_ukbushr029.mp3"></audio>黄油</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbus_ukbushr029.mp3"></audio>涂黄油于</p>
+</div>
+<div class="content">
+    <div class="word" data-word="salad">salad<div class="mark" onclick="mark('salad')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksal_uksalaa006.mp3"></audio>（通常用生菜等做成的）蔬菜色拉✓ （用小块生蔬菜或熟蔬菜拌上蛋黄酱做成的）蛋黄酱拌色拉✓ （金枪鱼／奶酪／鸡蛋等）色拉✓ （将金枪鱼／奶酪／鸡蛋等拌上蛋黄酱做三明治时用）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sandwich">sandwich<div class="mark" onclick="mark('sandwich')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksan_uksands004.mp3"></audio>三明治，夹心面包片✓ 夹心饼，三明治饼</p>
+</div>
+<div class="content">
+    <div class="word" data-word="hamburger">hamburger<div class="mark" onclick="mark('hamburger')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhal_ukhallw017.mp3"></audio>汉堡包，汉堡牛肉饼✓ （用于做汉堡包的）碎牛肉，牛肉糜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="loaf">loaf<div class="mark" onclick="mark('loaf')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_004.mp3"></audio>一条（面包）✓ （肉糜或小块蔬菜压紧后烹制成的长条形）糕</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_004.mp3"></audio>懒散；（尤指）偷懒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pie">pie<div class="mark" onclick="mark('pie')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphoto029.mp3"></audio>馅饼</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pizza">pizza<div class="mark" onclick="mark('pizza')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpit_ukpitfa027.mp3"></audio>比萨饼</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pasta">pasta<div class="mark" onclick="mark('pasta')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpas_ukpassi012.mp3"></audio>（通常拌以调味汁的）意大利面食</p>
+</div>
+<div class="content">
+    <div class="word" data-word="spaghetti">spaghetti<div class="mark" onclick="mark('spaghetti')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci007.mp3"></audio>意大利式细面条</p>
+</div>
+<div class="content">
+    <div class="word" data-word="soup">soup<div class="mark" onclick="mark('soup')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksound007.mp3"></audio>汤；羹</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pudding">pudding<div class="mark" onclick="mark('pudding')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpsy_ukpsych027.mp3"></audio>布丁（通常由油酥面团、面粉、面包或大米加上水果制成的热甜食）✓ 布丁（由牛奶、糖、鸡蛋和调味料制成的松软的冷甜食）✓ （一餐中的最后一道菜）甜点✓ （用肉加面粉做的）布丁，香肠</p>
+</div>
+<div class="content">
+    <div class="word" data-word="biscuit">biscuit<div class="mark" onclick="mark('biscuit')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbip_ukbipla018.mp3"></audio>饼干；薄薄的小甜饼✓ 松饼</p>
+</div>
+<div class="content">
+    <div class="word" data-word="jam">jam<div class="mark" onclick="mark('jam')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukj_ukjac_ukjacks011.mp3"></audio>果酱✓ 交通堵塞（同 traffic jam）✓ 堵在机器中的东西；让机器部件无法运动的东西✓ 困境，窘境✓ 拥挤；堵塞</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukj_ukjac_ukjacks011.mp3"></audio>（使）轧住；（使）卡住✓ 干扰（无线电信号）✓ （与他人）即兴演奏爵士乐（或摇滚乐）✓ 把…塞入✓ 把…完全填满</p>
+</div>
+<div class="content">
+    <div class="word" data-word="nut">nut<div class="mark" onclick="mark('nut')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknum_uknumbe023.mp3"></audio>坚果✓ 螺母，螺帽✓ 疯子；傻瓜；怪人✓ 对…入迷的人✓ 脑袋✓ 运作经费，开销</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknum_uknumbe023.mp3"></audio>用头撞</p>
+</div>
+<div class="content">
+    <div class="word" data-word="chocolate">chocolate<div class="mark" onclick="mark('chocolate')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcho_ukchock003.mp3"></audio>巧克力；巧克力糖✓ 巧克力热饮✓ 巧克力色，深褐色✓ 巧克力色的，深褐色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="ice cream">ice cream<div class="mark" onclick="mark('ice cream')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld00700.mp3"></audio>冰激凌</p>
+</div>
+<div class="content">
+    <div class="word" data-word="vanilla">vanilla<div class="mark" onclick="mark('vanilla')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvam_ukvamp_009.mp3"></audio>（用于给食物调味的）香子兰精，香草精</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvam_ukvamp_009.mp3"></audio>（产品或服务）普通的；基本的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="mustard">mustard<div class="mark" onclick="mark('mustard')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmus_ukmusic013.mp3"></audio>芥末；芥子酱✓ 深黄色的，芥末色的</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmus_ukmusic013.mp3"></audio>深黄色，芥末色</p>
+</div>
+<div class="content">
+    <div class="word" data-word="wasabi">wasabi<div class="mark" onclick="mark('wasabi')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwar_ukwarp_017.mp3"></audio>（日本的）芥子酱</p>
+</div>
+<div class="content">
+    <div class="word" data-word="pepper">pepper<div class="mark" onclick="mark('pepper')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpen_ukpente012.mp3"></audio>胡椒粉✓ 菜椒，甜椒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="ginger">ginger<div class="mark" onclick="mark('ginger')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgig_ukgigan021.mp3"></audio>姜，生姜✓ 姜黄色，赤黄色✓ 长着姜黄色头发的人✓ （同 ginger ale）</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgig_ukgigan021.mp3"></audio>姜黄色的，赤黄色的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="garlic">garlic<div class="mark" onclick="mark('garlic')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgan_ukganja028.mp3"></audio>大蒜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="scallion">scallion<div class="mark" onclick="mark('scallion')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksax_uksax__022.mp3"></audio>葱（同 spring onion）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="vinegar">vinegar<div class="mark" onclick="mark('vinegar')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvin_ukvineg001.mp3"></audio>醋</p>
+</div>
+<div class="content">
+    <div class="word" data-word="salt">salt<div class="mark" onclick="mark('salt')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksal_uksalaa029.mp3"></audio>盐，食盐✓ （化学）盐</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksal_uksalaa029.mp3"></audio>含盐的；用盐腌的</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksal_uksalaa029.mp3"></audio>给…加盐，用盐给…调味</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sugar">sugar<div class="mark" onclick="mark('sugar')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksuc_uksucro030.mp3"></audio>糖，食糖；（尤指）蔗糖✓ 糖（总称，指溶于水的碳水化合物）✓ 宝贝儿，亲爱的</p>
+    <p onclick="play_one(this)">exclamation<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksuc_uksucro030.mp3"></audio>（代替 shit，用于表示懊恼）糟糕，哎呀</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksuc_uksucro030.mp3"></audio>给…加糖</p>
+</div>
+<div class="content">
+    <div class="word" data-word="candy">candy<div class="mark" onclick="mark('candy')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcan_ukcandy001.mp3"></audio>糖果；巧克力；一块糖（或巧克力）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="honey">honey<div class="mark" onclick="mark('honey')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhom_ukhomon015.mp3"></audio>蜂蜜✓ 亲爱的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="flavour">flavour<div class="mark" onclick="mark('flavour')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflato019.mp3"></audio>（食物或饮料的）风味；（某种）味道✓ 特点；特色✓ 想法；快速的体验</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflato019.mp3"></audio>给（食物或饮料）调味</p>
+</div>
+<div class="content">
+    <div class="word" data-word="flavor">flavor<div class="mark" onclick="mark('flavor')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflato019.mp3"></audio>（flavour的美式拼写）</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sour">sour<div class="mark" onclick="mark('sour')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksound010.mp3"></audio>酸的，有酸味的✓ 不友好的；坏脾气的，没好气的</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksound010.mp3"></audio>（使）变酸；（使）酸腐✓ （使）令人不快，（使）不友好</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksound010.mp3"></audio>酸味鸡尾酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sweet">sweet<div class="mark" onclick="mark('sweet')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksug_uksugar014.mp3"></audio>（尤指食物或饮料）甜的✓ 愉快的，惬意的，令人满意的✓ （声音）甜美的，悦耳的，动听的✓ （尤指小东西或小孩子）迷人的，漂亮的，吸引人的✓ 温和的，和蔼的，讨人喜欢的</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksug_uksugar014.mp3"></audio>糖果✓ 甜食✓ 甜点</p>
+    <p onclick="play_one(this)">exclamation<audio preload="none"><source src="./mp3/us_pron_s_sui_suite_suite.mp3"></audio>（用来表示对…很高兴或认为很好）好</p>
+</div>
+<div class="content">
+    <div class="word" data-word="bitter">bitter<div class="mark" onclick="mark('bitter')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbit_ukbitch006.mp3"></audio>极为不满的；怨恨的；无法释怀的✓ 使人痛苦的；令人愤怒的✓ 充满仇恨的；愤怒的；激烈的✓ 苦的，有苦味的✓ （天气）严寒的，刺骨的</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbit_ukbitch006.mp3"></audio>苦啤酒✓ 苦味酒</p>
+</div>
+<div class="content">
+    <div class="word" data-word="spicy">spicy<div class="mark" onclick="mark('spicy')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspe_ukspell030.mp3"></audio>加香料的；用香料调味的；味重的✓ 刺激的；（尤指）耸人听闻的，下流的，粗俗的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="delicious">delicious<div class="mark" onclick="mark('delicious')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdej_ukdejur026.mp3"></audio>美味的；（味道或气味）诱人的✓ 好玩的，有趣的，有意思的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="yummy">yummy<div class="mark" onclick="mark('yummy')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uky_ukyou_ukyouth015.mp3"></audio>美味可口的，很好吃的✓ 性感的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="tasty">tasty<div class="mark" onclick="mark('tasty')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktas_uktaste005.mp3"></audio>美味的，可口的✓ 有魅力的，迷人的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="hunger">hunger<div class="mark" onclick="mark('hunger')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhun_ukhunch012.mp3"></audio>饥饿感✓ 饥饿✓ 渴望，盼望</p>
+</div>
+<div class="content">
+    <div class="word" data-word="thirsty">thirsty<div class="mark" onclick="mark('thirsty')">Mark</div></div>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukthi_ukthick029.mp3"></audio>口渴的✓ 渴求（权力、知识等）的</p>
+</div>
+<div class="content">
+    <div class="word" data-word="spice">spice<div class="mark" onclick="mark('spice')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspe_ukspell027.mp3"></audio>（调味）香料✓ 调剂品；额外的刺激（或趣味）✓ （毒品）人造大麻</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspe_ukspell027.mp3"></audio>在…中加香料</p>
+</div>
+<div class="content">
+    <div class="word" data-word="sauce">sauce<div class="mark" onclick="mark('sauce')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksat_uksatan030.mp3"></audio>沙司，调味汁，酱✓ 酒✓ 无礼的话，粗俗的话</p>
+</div>
+<div class="content">
+    <div class="word" data-word="ketchup">ketchup<div class="mark" onclick="mark('ketchup')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukker_ukkero_004.mp3"></audio>西红柿酱</p>
+</div>
+<div class="content">
+    <div class="word" data-word="perfume">perfume<div class="mark" onclick="mark('perfume')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperfu001.mp3"></audio>香水✓ 香味，芳香</p>
+</div>
+<div class="content">
+    <div class="word" data-word="ingredient">ingredient<div class="mark" onclick="mark('ingredient')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_uking_ukingra004.mp3"></audio>（食品的）成分，原料✓ （成功的）要素，因素</p>
+</div>
+<div class="content">
+    <div class="word" data-word="supplement">supplement<div class="mark" onclick="mark('supplement')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksup_uksuper111.mp3"></audio>补充物，增补物✓ （杂志或报纸的）增刊，副刊✓ （书的）附录，补编，补遗</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksup_uksuper110.mp3"></audio>增加，补充，增补</p>
+</div>
+<div class="content">
+    <div class="word" data-word="digest">digest<div class="mark" onclick="mark('digest')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdif_ukdiffi013.mp3"></audio>（使）消化✓ 理解，吸收（信息）</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdif_ukdiffi014.mp3"></audio>文摘，摘要；文汇，简报</p>
+</div>
+<div class="content">
+    <div class="word" data-word="cook">cook<div class="mark" onclick="mark('cook')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconve028.mp3"></audio>做饭，烹调；烧，煮</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconve028.mp3"></audio>厨师</p>
+</div>
+<div class="content">
+    <div class="word" data-word="bake">bake<div class="mark" onclick="mark('bake')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbag_ukbag__023.mp3"></audio>烘，烤✓ 烧硬（砖块等）✓ 感到很热</p>
+</div>
+<div class="content">
+    <div class="word" data-word="fry">fry<div class="mark" onclick="mark('fry')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfru_ukfruga024.mp3"></audio>油炸；油煎；油炒</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfru_ukfruga024.mp3"></audio>小鱼，鱼苗</p>
+</div>
+<div class="content">
+    <div class="word" data-word="roast">roast<div class="mark" onclick="mark('roast')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrn__ukrn___021.mp3"></audio>烘；烤；焙✓ 烘焙（坚果或咖啡豆）✓ 严厉批评；非难✓ 吐槽（名人）</p>
+    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrn__ukrn___021.mp3"></audio>烘；烤；焙</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrn__ukrn___021.mp3"></audio>大块烤肉✓ （对名人的）吐槽</p>
+</div>
+<div class="content">
+    <div class="word" data-word="toast">toast<div class="mark" onclick="mark('toast')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktit_uktitil022.mp3"></audio>烤面包片，吐司✓ 祝酒；干杯</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktit_uktitil022.mp3"></audio>烤，烘✓ 使暖和，给…烤火✓ 为…干杯</p>
+</div>
+<div class="content">
+    <div class="word" data-word="suck">suck<div class="mark" onclick="mark('suck')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksub_uksubur027.mp3"></audio>吸；吮吸；咂，啜✓ 吸，抽吸；使卷入✓ 显得糟糕；令人厌恶</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksub_uksubur027.mp3"></audio>吸；吮吸；啜</p>
+</div>
+<div class="content">
+    <div class="word" data-word="swallow">swallow<div class="mark" onclick="mark('swallow')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksus_uksuspi018.mp3"></audio>吞咽，吞下，咽下✓ （因为紧张、害怕或要开始说话而）做吞咽动作，咽口水✓ 吞掉；吞没✓ 大量使用，大量夺走（贵重之物）✓ 轻信；全盘接受✓ 不表露，不表现，抑制住</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksus_uksuspi018.mp3"></audio>吞，咽，吞咽✓ 燕子</p>
+</div>
+<div class="content">
+    <div class="word" data-word="lick">lick<div class="mark" onclick="mark('lick')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklic_uklicen006.mp3"></audio>舔，舐✓ （火焰）蔓延，掠过，吞卷；（波浪）拍击，冲刷✓ （在竞赛、争斗等中）轻易打败，轻取</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklic_uklicen006.mp3"></audio>抽打，鞭打✓ 快速，飞速✓ 少量；薄层✓ （爵士乐或摇滚乐中的）小过门✓ 舔，舐</p>
+</div>
+<div class="content">
+    <div class="word" data-word="chew">chew<div class="mark" onclick="mark('chew')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukchess007.mp3"></audio>咀嚼；嚼碎✓ （尤指为品尝味道而）嚼，咬</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukchess007.mp3"></audio>嚼，咀嚼✓ 咀嚼物✓ （越嚼越软的）硬糖；口香糖</p>
+</div>
+<div class="content">
+    <div class="word" data-word="gum">gum<div class="mark" onclick="mark('gum')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgui_ukguime017.mp3"></audio>齿龈，牙龈，牙床✓ 树胶，树脂✓ 胶，粘合剂✓ 口香糖（同 chewing gum）；泡泡糖（同 bubble gum）✓ 透明果味糖；胶姆糖；橡皮软糖</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgui_ukguime017.mp3"></audio>用胶粘</p>
+</div>
+<div class="content">
+    <div class="word" data-word="soak">soak<div class="mark" onclick="mark('soak')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksno_uksnows016.mp3"></audio>浸湿，把…湿透；（液体）渗入，渗透✓ 浸泡，泡</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksno_uksnows016.mp3"></audio>浸泡，浸透✓ 酒鬼，酗酒者</p>
+</div>
+<div class="content">
+    <div class="word" data-word="dip">dip<div class="mark" onclick="mark('dip')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdim_ukdimme030.mp3"></audio>涮，浸，蘸✓ 给（羊）洗药浴（以杀死身上对其有害的虫类）✓ 下降，下落✓ 使（车辆前灯）向下照，把（前灯）调为近光</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_c_cuk_cuk00_cuk00331.mp3"></audio>（蘸着吃的）调味酱✓ （短时间的）游泳✓ 洗涤液，清洗液✓ 凹陷处或斜坡；下降✓ 涉猎，了解</p>
+</div>
+<div class="content">
+    <div class="word" data-word="squeeze">squeeze<div class="mark" onclick="mark('squeeze')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksqu_uksquab029.mp3"></audio>（尤指从各方面）挤压，捏，挤，榨✓ 给…带来财务困难，使陷入财务困境✓ （困难地）挤进，挤过</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksqu_uksquab029.mp3"></audio>挤压，捏；榨✓ 减少；削减；限制✓ 通货紧缩，银根紧缩✓ 拥挤；挤入</p>
+</div>
+<div class="content">
+    <div class="word" data-word="stir">stir<div class="mark" onclick="mark('stir')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksti_ukstimu020.mp3"></audio>（用汤匙等）搅动，搅拌✓ （使）微动✓ 醒来；开始采取行动✓ 激发；打动；煽动✓ （情感）逐渐产生，萌动✓ 挑拨离间；（尤指）搬弄是非</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksti_ukstimu020.mp3"></audio>搅动，搅拌✓ 极大的兴趣；兴奋；骚动✓ 示威行动</p>
+</div>
+<div class="content">
+    <div class="word" data-word="grind">grind<div class="mark" onclick="mark('grind')">Mark</div></div>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgre_ukgrena028.mp3"></audio>碾碎，磨碎，把…磨成粉✓ 磨，把…磨锋利，把…磨光✓ 把牙齿咬得嘎嘎响；出声地磨牙</p>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgre_ukgrena028.mp3"></audio>令人厌倦的苦事，苦差事✓ 只会读书的无趣之人，书呆子</p>
+</div>
+<div class="content">
+    <div class="word" data-word="slice">slice<div class="mark" onclick="mark('slice')">Mark</div></div>
+    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksle_uksleep016.mp3"></audio>（切下的食物）薄片✓ （钱等的）份额，部分✓ 餐刀；（餐桌用的）小铲✓ （网球运动中）削（球）✓ （高尔夫球和棒球运动中）斜切（球），削（球）</p>
+    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksle_uksleep016.mp3"></audio>把…切成薄片✓ 切，割；切开；割破✓ （高尔夫球和棒球运动中）斜切（球），削球✓ （网球运动中）削（球）</p>
+</div>

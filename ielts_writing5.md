@@ -1,0 +1,68 @@
+- 因为: The idea lies in the __fact__ that, due to the __fact__ that✓ are the main __reasons__ behind, is __why__ it is known as
+- lead __to__ x, tend __to__ ✓ are prone __to__, are subject __to__
+- x __arising__ from, __accounted__ for, __resulted__ in✓ __caused__, 逗thereby __prompting__ x
+- 转折: __逗Despite__ x逗, __逗regardless__ of x, __逗instead__ of x✓ __逗even though__ s
+- 关联: 逗as, __associated__ with✓ aimed __at__, directed __at__
+- related __to__, refer __to__, linked __to__ ✓ are also essential __to__, harmful __to__ ✓ pay closer attention __to__
+- conentrate __on__, focus __on__, rely heavily __on__
+- plays a vital(an important) __role__ in, Suppose....In that __case逗__, in __view__ of the importance of, in __search__ of
+- more frequently __than__ before
+- __including__, get __away__ from
+- 观点: but __I__ would argue that, From __my__ point of view, insist that
+- Those __who__ support...think, __Some people__ advocate for imposing x on, __Opponents逗__ however逗argue that, faces opposition
+- give __priority__ to, the top __priority__
+- 生活: __live__ their lives, __live__ on a tight budget and need to feed a big family
+- lead a hectic __life__ and feel stressed, experience a different way of __life__, improve __living__ standards (of consumers), enjoy a better quality of __life__
+- __adapt to__ an ever-changing world, the exchange of __commodities__ proceed, afford more consumer __goods__
+- __spending__ its budget on, deserve, educational opportunities and vocational training
+- put us in a good __mood__, __function as__ productive members
+- 流行: prevalent, prevalence, popularity, prosperous
+- attractive, beneficial, dynamic and interesting
+- increase the __artistic__ appeal of, __astounding__ rate
+- 知识: core __subjects__, academic __courses__, key __disciplines__
+- gain sight into->be well-informed about->struggle to learn how to->learn more about->comprehending key concepts->digest(absorb) the information->deepen(have a) their understanding of->make good use of->expand(increase acquire (gain as much)) their knowledge to improve employability and broaden their horizons->acquire(impart) knowledge and skills->education and __career__
+- finish all assignments and pass all exams to qualify->gain the qualification->complete a university degree
+- draw upon ideas(expertise) of, advance their __research__ through trial and error, gain experience analysing
+- 道德: (Following)moral principles and behaviour norms, virtues and moral values
+- have a __sense__ of community(closeness), fostering a __sense__ of responsibility, gain a __sense__ of accomplishment
+- commit a serious (offence)__crime__, fight(deter) __crime__, break __bad habits__
+- __law__ be imposed on, violate(break) __laws__, enforce some __laws__ to deter consumers from throwing
+- relax __regulations__, __regulating__ our(people's) behaviour, __regulate__ or even ban, __restrict__ our freedom
+- 社会: help build(create) a close-knit and happy(a peaceful and safe (fair)) __society__, contribute(hinder) to __social__ progress✓ __society__ advance(function) easily, __country__ operate well
+- doing group assignments, respect teachers, have a meal with✓ create an atmosphere, the general public
+- __electronic__ products, __technological__ innovations 
+- 经济: __promote__ economic development, __sustain__ economic growth, __match__ the growing demand for, __close__ the gap between
+- 基础: public(community voluntary medical essential) __services__, essential __services__ and infrastructures(facilities)
+- 文化: culture has developed and how to reverse this trend
+- 机会: explore(discover (miss out on)) some __opportunities__ to grow, have __opportunities__ to meet each other and socialise together
+- 交流: work closely __with__, cooperate __with__ others✓ communicate with x whenever necessary✓ get along well with, maintain a day-to-day contact with✓ help them develop(maintain build damage) a strong(respectful trusting close) working(family) relationships with, interpersonal and job skills
+- __express__ their views and understand the thoughts of, __take__ advice from, __share__ their know-how, knowledge and ideas, __exchange__ their ideas with, __improve__ mutual understanding
+- __keep up with__ the news about, __keep up (to date) with__
+- enjoy the __company__ of, respond to the __emotional needs__ of
+- betraying the __trust__ of, lack mutual __trust__, fulfil their __promises__
+- enlarge their __circle__ of friends, __personal resources__ to draw upon, building up a __network__ of contacts
+- 解决: __find__(come up with) corresponding(creative) solutions to problems, __address__(cause (bring out) (bring about) (deal with) tackle overlook) problems, __handle__ many practical matters(problems), __cope with__ the challenges(financial matters (the demands)) of work
+- be confronted with->be helpless in the face of->organise events or functions->take some measures to mitigate->overcome difficulties(language barriers)
+- cure __diseases__, prevent __famines__ and mitigate the __pollution__
+- 金钱: increase __earnings(wealth)__, the increase in personal __wealth__, lack the motivation to make greater efforts to increase their __income__, earn more __money(profits (higher salaries))__, generate considerable __profits__
+- sound __financial__ planning, pour more __money__ into, priced and offer good value for __money__, create such __returns__ in a short time
+- 事业: key to career achievement(development)->__embark on__ their careers, __advance__ their careers, __improve__ their career(employment job) prospects(insecurity)->achieve (academic) __success__ in careers->a fulfilling career
+- 工作: __job__ opportunities(training) available->find(lose) __employment__, find better __jobs(work)__->__enter__ the workforce
+- improve(sharpen) x __skills__ and increase x practical experience, failed to upgrade their __skills__ to meet the requirements of
+- 工作: travel to and from __work__, complete __work__
+- discover(show) their __talents__ and fulfil(reach unlock) their __potential__ of
+- 创业: run a small __business__ to earn a living, set up a __business__, conduct __business__ together
+- __investing__ in, __improvements__ in technology, __improved__ the productivity of the workforce, technology and know-how✓ __specialises__ in producing, __foster__ innovation
+- __reduce__ the running cost of production, slow pace of work, in the manufacturing sector✓ __steal__ x market share, __conquered__ markets, __intensified__ competition
+- 提供: __By__ providing, be provided __for__, provide x __with__ y, provide information __about__ ✓ bring tangible __benefits__ to, __benefit__ the masses(public)✓ __offer__ participants x
+- get __prepared__ for, __preparing__ the next generation for
+- are __motivated__ by, __motivate__ them to✓ be __incentivised__ to
+- __attract__ students' attention and engage x interest, __recognise__ the advantage of✓ discourages x from, __fail__ x(to find), __downside__
+- 阻止2i 2put 4c 2t: __interfere__ with, __influence__ x' productivity and endanger x(the whole economy)✓ put a __strain__ on, put huge(ease reduce) __pressure__ on✓ crowd out, cause damage to, challenged, collapse(suffer)✓ threaten, take away
+- revenue be __affected__, __affect__(improve) health and reduce life expectancy
+- have an adverse(negative destructive direct deterrent lasting) __impact(effect)__ on, be __afflicted__(avoided exploited undermined misused mined)
+- __impose__ restrictions on, __impose__(lighten a) the burden on, __imposed__ a tobacco tax and forbade citizens✓ __reduce__ the train on
+- 环境: recycle(produce excessive) __waste__, cause __waste__ as well as pollution
+- lack(raise) __environmental awareness__, reduce the __environmental__ impact of, __awareness__ campaigns and investment
+- __gases__ produced by, dispose of __rubbish__, contaminate __water__ and damage the environment
+- setting more demanding standards->build public(recycling) facilities->go green

@@ -1,0 +1,31 @@
+name: cron
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+#  bj+16=now
+jobs:
+  cron-job1:
+    name: 'Firstly'
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    steps:
+    - name: Step1
+      uses: actions/checkout@master
+    - name: Step2
+      uses: wei/wget@v1
+      with:
+        args: -O csdn.html https://www.zaobao.com/realtime/china
+    - name: Step3
+      run: |
+        pwd
+        mkdir -p ./cron
+        mv csdn.html ./cron/
+        cd ./cron/
+    - name: Step4
+      run: |
+          git config --global user.name 'ci'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add -A
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "ci"
+          git push

@@ -1,0 +1,122 @@
+name: python
+on: push
+jobs:
+  python-job1:
+    name: Run mdn2pdf
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: List install
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+        sudo apt-get install -y texlive-xetex
+        sudo apt-get install texlive-fonts-extra
+    - name: Wget eisvogel
+      uses: wei/wget@v1
+      with:
+        args: -O eisvogel.tex https://raw.githubusercontent.com/Wandmalfarbe/pandoc-latex-template/master/eisvogel.tex
+    - name: Run pandoc
+      run: |
+        pandoc -v
+        pandoc ielts_write.md \
+        --from markdown \
+        --template eisvogel.tex \
+        --listings \
+        -o ielts_write2.pdf
+    - name: Git push
+      run: |
+          git config --global user.name 'ci'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add ielts_write2.pdf
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "ci"
+          git push
+# https://github.com/Wandmalfarbe/pandoc-latex-template
+
+  python-job2:
+    name: Run python1
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: List install
+      run: |
+        pip install requests
+        pip install arrow
+        pip install fpdf
+
+    - name: Run py
+      run: |
+        pwd
+        ls -al
+        python ./pypdf.py
+        pwd
+        ls -al
+
+    - name: Git push
+      run: |
+          git config --global user.name 'ci'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add ielts_now.pdf
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "ci"
+          git push
+          
+  python-job3:
+    name: Run md2pdf
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+# cache: 'pip' # caching pip dependencies
+
+    - name: List install
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+        sudo apt-get install -y texlive-xetex
+        sudo apt-get install texlive-fonts-extra
+#         pwd
+#         ls -al
+#         pip install requests
+#         pip install arrow
+# pandoc ielts_write.txt -o ielts_write.pdf
+
+    - name: Run py
+      run: |
+        pandoc ielts_now.md -V geometry:a4paper -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" -V mainfont="LiberationSerif" --pdf-engine=xelatex -o ielts_now.pdf
+#         python ./pypdf.py
+#         pwd
+#         ls -al
+# https://pandoc.org/MANUAL.html#creating-a-pdf
+# pandoc ielts_now.md -V geometry:a4paper -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" -V mainfont="LiberationSerif" --pdf-engine=xelatex -o ielts_now.pdf
+# pandoc *.md -V geometry:a4paper -V geometry:"top=2cm, bottom=1.5cm, left=2cm, right=2cm" -V mainfont="DejaVu Serif" --pdf-engine=xelatex -o *.pdf
+# pandoc ielts_write.md -V geometry:a4paper -V geometry:"top=2cm, bottom=1.5cm, left=1cm, right=1cm" -V mainfont="LiberationSerif" --pdf-engine=xelatex -o ielts_write.pdf
+# mkdir -p ./python-demo/
+# cd ./node-python/
+# pwd
+
+    - name: Git push
+      run: |
+          git config --global user.name 'ci'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add ielts_now.pdf
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "ci"
+          git push

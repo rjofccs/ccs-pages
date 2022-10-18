@@ -1,0 +1,56 @@
+name: java
+on: push
+jobs:
+  java-job1:
+    name: Run java1
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Install Java and Maven
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
+
+    - name: Maven Generate
+      run: |
+        wget https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.7.4/spring-boot-cli-2.7.4-bin.tar.gz
+        tar -zxvf spring-boot-cli-2.7.4-bin.tar.gz
+        ls -al
+        ls -al ./spring-2.7.4
+        ls -al ./spring-2.7.4/bin
+        SPRING_HOME="$(pwd)/spring-2.7.4/"
+        echo $SPRING_HOME
+        PATH=$PATH:$SPRING_HOME/bin
+        echo $PATH
+        java -version
+        spring --version
+        spring init --dependencies=web,data-jpa --java-version=1.8 my-project
+        ls -al
+        ls -al ./my-project/
+#        sudo ln -s ./shell-completion/bash/spring /etc/bash_completion.d/spring
+#        sudo ln -s ./shell-completion/zsh/_spring /usr/local/share/zsh/site-functions/_spring
+
+# - name: Maven Generate
+#   run: |
+#     # ls -al
+#     # java -version
+#     # mvn -v
+#     mvn archetype:generate -DgroupId=com.demo -DartifactId=demo-project -DarchetypeGroupId=pl.org.miki -DarchetypeArtifactId=java8-quickstart-archetype -DarchetypeVersion=1.0.0 -DinteractiveMode=false
+
+    - name: Maven Build
+      run: |
+        cd ./my-project/
+        ls -al
+        mvn -B package -Dmaven.test.skip=true --file pom.xml
+        ls -al
+
+    - name: List Files
+      run: |
+        pwd
+        tree
+#        ls -al
+#        ls -al ./my-project/
+#        ls -al ./my-project/target

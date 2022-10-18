@@ -1,0 +1,72 @@
+- __因为fact reason why__: The idea lies in the fact that, due to the fact that, are the main reasons behind, is why it is known as
+- __因为4to__: lead to x, tend to, are prone to, are subject to
+- __因为arise account result cause prompt__: x arising from, accounted for, resulted in, caused, 逗thereby prompting x
+- __转折despite regard instead__: 逗:Despite x逗, 逗regardless of x, 逗instead of x, 逗even though s
+- __关联as__: 逗as, associated with
+- __关联2at__: aimed at, directed at
+- __关联6to__: related to, refer to, linked to, are also essential to, harmful to, pay closer attention to
+- __关联3on__: conentrate on, focus on, rely heavily on
+- __关联role case view__: plays a vital(an important) role in, Suppose....In that case逗, in view of the importance of, in search of
+- __关联than__: more frequently than before
+- __关联include away__: including, get away from
+- __观点I__: but I would argue that, From my point of view, insist that
+- __观点who some 2opponent__: Those who support...think, Some people advocate for imposing x on, Opponents逗however逗argue that, faces opposition
+- __观点priority__: give priority to, the top priority
+- __生活2live__: live their lives, live on a tight budget and need to feed a big family
+- __生活顺序4life__: lead a hectic life and feel stressed, experience a different way of life, improve living standards (of consumers), enjoy a better quality of life
+- __生活adapt goods__: adapt to an ever-changing world, the exchange of commodities proceed, afford more consumer goods
+- __生活spend__: spending its budget on, deserve, educational opportunities and vocational training
+- __生活mood as__: put us in a good mood, function as productive members
+- __流行4p__: prevalent, prevalence, popularity, prosperous
+- __流行abc__: attractive, beneficial, dynamic and interesting
+- __流行artistic astound__: increase the artistic appeal of, astounding rate
+- __知识subject course discipline__: core subjects, academic courses, key disciplines
+- __知识顺序employability__: gain sight into, be well-informed about, struggle to learn how to, learn more about, comprehending key concepts, digest(absorb) the information, deepen(have a) their understanding of, make good use of, expand(increase acquire (gain as much)) their knowledge to improve employability and broaden their horizons, acquire knowledge and skills
+- __知识顺序assignment__: finish all assignments and pass all exams to qualify, gain the qualification, complete a university degree
+- __知识research__: impart their knowledge and skills to, draw upon ideas(expertise) of, advance their research through trial and error, gain experience analysing
+- __道德mpbh vmv__: (Following)moral principles and behaviour norms, virtues and moral values
+- __道德3sense__: have a sense of community(closeness), fostering a sense of responsibility, gain a sense of accomplishment
+- __道德2break habits__: commit a serious (offence)crime, fight(deter) crime, break bad habits
+- __道德3law__: law be imposed on, violate(break) laws, enforce some laws to deter consumers from throwing
+- __道德3regulate restrict__: relax regulations, regulating our(people's) behaviour, regulate or even ban, restrict our freedom
+- __社会close-knit fair social progress__: create a close-knit and happy(a peaceful and safe) society, help build a fair society, contribute(hinder) to social progress, create an atmosphere
+- __社会do学 respect师 meal家 operate社__: doing group assignments, respect teachers, have a meal with, country operate well, society advance(function) easily
+- __社会electronic technological public__: electronic products, technological innovations, the general public 
+- __经济promote sustain close match__: promote economic development, sustain economic growth, close the gap between, match the growing demand for
+- __基础2services__: public(community voluntary medical essential) services, essential services and infrastructures(facilities)
+- __文化__: culture has developed and how to reverse this trend
+- __机会__: explore(discover (miss out on)) some opportunities to grow, have opportunities to meet each other and socialise together
+- __交流5with(2work 1friend 2 family) interpersonal__: work closely with, cooperate with others, communicate with x whenever necessary, get along well with, maintain a day-to-day contact with, help them develop(maintain build damage) a strong(respectful trusting close) working(family) relationships with, interpersonal and job skills
+- __交流express take share exchange__: express their views and understand the thoughts of, take advice from, share their know-how, knowledge and ideas, exchange their ideas with, improve mutual understanding
+- __交流keep up__: keep up with the news about, keep up (to date) with
+- __交流company emotional__: enjoy the company of, respond to the emotional needs of
+- __交流2trust promise__: betraying the trust of, lack mutual trust, fulfil their promises
+- __交流circle pr network__: enlarge their circle of friends, personal resources to draw upon, building up a network of contacts
+- __解决find address handle cope__: find(come up with) corresponding(creative) solutions to problems, address(cause (bring out) (bring about) (deal with) tackle overlook) problems, handle many practical matters(problems), cope with the challenges(financial matters (the demands)) of work
+- __解决顺序confront face organise mitigate overcome__: be confronted with, be helpless in the face of, organise events or functions, take some measures to mitigate, overcome difficulties(language barriers)
+- __解决具体dfp__: cure diseases, prevent famines and mitigate the pollution
+- __金钱2increase earn generate__: increase earnings(wealth), the increase in personal wealth, lack the motivation to make greater efforts to increase their income, earn more money(profits (higher salaries)), generate considerable profits
+- __金钱plan goods__: sound financial planning, priced and offer good value for money, create such returns in a short time, pour more money into
+- __成功success__: achieve success in careers, achieving academic success
+- __成功4career__: education and career, career development, key to career achievement, a fulfilling career
+- __工作workforce 2career__: enter the workforce, embark on their careers, advance their careers, improve their career(employment job) prospects(insecurity)
+- __工作3job__: find(lose) employment, find better jobs(work), job opportunities(training) available
+- __工作2skills__: improve(sharpen) x skills and increase x practical experience, failed to upgrade their skills to meet the requirements of
+- __工作2work__: travel to and from work, complete work
+- __工作talent potential__: discover(show) their talents and fulfil(reach unlock) their potential of
+- __创业3business__: run a small business to earn a living, set up a business, conduct business together
+- __创业投入__: investing in, improvements in technology, technology and know-how, specialises in producing, foster innovation, improved the productivity of the workforce, intensified competition
+- __创业减少__: reduce the running cost of production, slow pace of work, in the manufacturing sector, steal x market share, conquered markets 
+- __提供4provide 2benefit offer__: By providing, be provided for, provide x with y, provide information about, bring tangible benefits to, benefit the masses(public), offer participants x
+- __提供2prepare__: get prepared for, preparing the next generation for
+- __提供2motivate incentivise__: are motivated by, motivate them to, be incentivised to
+- __提供2attract recognise__: attract students' attention and engage x interest, recognise the advantage of
+discourages x from, fail x(to find), downside
+- __阻止2i 2put 4c 2t__: interfere with, influence x' productivity and endanger x(the whole economy), put a strain on, put huge(ease reduce) pressure on, crowd out, cause damage to, challenged, collapse(suffer), threaten, take away
+- __阻止3affect influence__: revenue be affected, be afflicted(avoided exploited undermined misused mined), affect(improve) health and reduce life expectancy, 
+- __阻止impact__: have an adverse(negative destructive direct deterrent lasting) impact(effect) on
+- __阻止train 3impose__: reduce the train on, impose restrictions on, (impose a)lighten the burden on, imposed a tobacco tax and forbade citizens
+- __环境2waste__: recycle(produce excessive) waste, cause waste as well as pollution
+- __环境2environmental awareness__: lack(raise) environmental awareness, reduce the environmental impact of, awareness campaigns and investment
+- __环境gas rubbish water damage__: gases produced by, dispose of rubbish, contaminate water and damage the environment
+- __环境standard 2facilities go__: setting more demanding standards, recycling facilities, build public facilities, go green

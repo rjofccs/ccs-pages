@@ -1,0 +1,200 @@
+name: tmp
+on:
+  push:
+    branches: [ master ]
+jobs:
+  tmp-job1:
+    name: 'tmp-job1'
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    steps:
+    - name: Step1
+      env:
+        MY_VAR: Hello World!
+      run: |
+        echo $MY_VAR
+        java -version
+        node -v
+        python -V
+        pip --version
+    - name: Step2
+      uses: actions/checkout@master
+    - name: Step3
+      uses: wei/wget@v1
+      with:
+        args: -O sample.html https://httpbin.org/html
+    - name: Step4
+      run: |
+        pwd
+        cat sample.html
+        mkdir -p ./wget
+        mv sample.html ./wget/
+        cd ./wget/
+        pwd
+        ls -al
+    - name: Step5
+      run: |
+          git config --global user.name 'ci'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add -A
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "ci"
+          git push
+
+
+  tmp-job2:
+    name: 'tmp-job2'
+    runs-on: ubuntu-latest
+    if: github.repository == 'octo-org/octo-repo-prod'
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm install
+    - run: npm run docs:build
+
+
+  test-node:
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - run: |
+        brew install tree
+        echo 'java version:'
+        java -version
+        echo 'node version:'
+        node -v
+        echo 'npm version:'
+        npm -v
+        echo 'python version:'
+        python -V
+    - run: |
+        # cd ./node1015
+        # # npm init -y
+        # npm install
+        # npm start
+
+
+name: test
+on: push
+jobs:
+  test-cam:
+    name: Run test-cam
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: ubuntu-latest
+#     runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.10' 
+    - name: Info
+      run: |
+        # brew install tree
+        echo 'java version:'
+        java -version
+        echo 'python version:'
+        python -V
+    - name: Install
+      run: |
+        pip install requests
+        pip install arrow
+        pip install lxml
+    - name: Run
+      run: |
+        python ./action_py_rs/pyesthetic.py
+
+    - name: Git push
+      run: |
+          git config --global user.name 'esthetic'
+          git config --global user.email 'esthetic@google.com'
+          git add ./esthetic/mp4/*.mp3
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "esthetic"
+          git push
+ 
+name: test
+on: push
+jobs: 
+# 内容从其他提取   
+  test-pdf:
+    name: Run test-pdf
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+    - name: Install
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra
+        sudo apt-get install -y texlive-xetex
+        sudo apt-get install texlive-fonts-extra
+    - name: Run
+      run: |
+        pandoc ./action_py_rs/ielts_now2.md -V geometry:a4paper -V geometry:"top=1cm, bottom=1.5cm, left=1cm, right=1.5cm" -V mainfont="LiberationSerif" --pdf-engine=xelatex -o ielts_now2.pdf
+        tree
+    - name: Git push
+      run: |
+          git config --global user.name 'ci'
+          git config --global user.email 'ci@users.noreply.github.com'
+          git add ielts_now2.pdf
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git commit -am "ci"
+          git push
+
+
+python
+  test-cam:
+    name: Run test-cam
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: FedericoCarboni/setup-ffmpeg@v1
+    - run: |
+        pip install requests
+        pip install arrow
+        pip install lxml
+    - run: |
+        python ./action_py_rs/pyesthetic.py
+    - run: |
+        git config --global user.name 'esthetic'
+        git config --global user.email 'esthetic@google.com'
+        git add ./esthetic/mp4/*.mp3
+        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+        git commit -am "esthetic"
+        git push
+
+
+nodejs
+  test-node:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v2
+    - run: |
+        brew install tree
+        echo 'java version:'
+        java -version
+        echo 'node version:'
+        node -v
+        echo 'npm version:'
+        npm -v
+    - run: |
+        cd ./node1015
+        npm install
+        npm start

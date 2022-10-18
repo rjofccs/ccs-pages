@@ -1,0 +1,21 @@
+name: test
+on: push
+jobs:
+  test-stm32:
+    name: Run test-stm32
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: macOS-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v3
+      - name: Setup
+        uses: carlosperate/arm-none-eabi-gcc-action@v1
+      - name: Build
+        run: |
+          brew install tree          
+          arm-none-eabi-gcc --version
+          gcc --version
+          cd ./make1009
+          make
+          tree
+#          cd ./led20220829

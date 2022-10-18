@@ -1,0 +1,91 @@
+name: rust
+on: push
+jobs:
+  rust-job1:
+    name: Run test-job1
+    if: github.repository == 'octo-org/octo-repo-prod'
+    runs-on: macOS-latest
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v3
+      - name: Setup | Rust
+        uses: ATiltedTree/setup-rust@v1
+        with:
+          rust-version: stable
+      - name: Build | Compile
+        run: |
+          rustc -V
+          rustc base.rs && ./base
+          ls -al
+
+
+
+
+  rust-job2:
+    name: Run test-job2
+    if: github.repository == 'octo-org/octo-repo-prod'
+    strategy:
+      matrix:
+        os:
+          - ubuntu-latest
+          - windows-latest
+          - macOS-latest
+        rust:
+          - stable
+          - beta
+          - nightly
+    runs-on: ${{ matrix.os }}
+#     needs: [compile]'
+    steps:
+      - name: Setup | Checkout
+        uses: actions/checkout@v3
+      - name: Setup | Rust
+        uses: ATiltedTree/setup-rust@v1
+        with:
+          rust-version: ${{ matrix.rust }}
+      - name: Build | Compile
+        run: |
+          rustc -V
+          rustc base.rs && ./base
+          ls -al
+
+# https://github.com/sdras/awesome-actions
+# https://github.com/marketplace/actions/setup-rust
+# https://www.runoob.com/rust/rust-tutorial.html
+
+
+
+
+
+
+
+#       - name: Setup | Rust
+#         uses: dawidd6/action-send-mail@v3
+#         with:
+#           server_address: smtp.office365.com
+#           server_port: 587
+#           username: ${{ secrets.MAILUSERNAME }}
+#           password: ${{ secrets.MAILPASSWORD }}
+#           from: GitHub Actions
+#           to: ${{ secrets.MAILUSERNAME }}
+#           body: Build job of ${{github.repository}} completed successfully!
+#           subject: 每日统计
+# https://github.com/dawidd6/action-send-mail
+# jobs:
+#   vm:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Run on VM
+#       run: |
+#         echo This job does not specify a container.
+#         echo It runs directly on the virtual machine.
+#         pwd
+#   container:
+#     runs-on: ubuntu-latest
+#     container: node:10.16-jessie
+#     steps:
+#     - name: Run in container
+#       run: |
+#         echo This job does specify a container.
+#         echo It runs in the container instead of the VM.
+#         pwd
