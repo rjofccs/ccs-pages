@@ -1,12 +1,14 @@
 due lie fact, reasons, why; caused, prompt->lead tend->arising, accounted, resulted  
-Despite, regardless, instead; even though  
-as at to:as, associated; aim direct at; relate refer link to, attention to, essential harmful to  
-on in:prone suject; concentrate focus rely on  role, Scase, viewi, search; than; including, get away  
+Despite, regardless, instead of; even though  
+2as 2at 312to:as, associated; aim direct at; relate refer link to, attention to, essential harmful to  
+3on 4in:prone suject; concentrate focus rely on; role, Scase, viewi, search; than; including, get away  
 I, my, insist that; who, Some people, Opponents, faces opposition; 2priority  
   
-求解(find, addresss, handle, cope with):confronted->face->organise->take->overcome; cure, prevent and mitigate  
-in on 4c 2t:interfere, influence; strain on, pressure on; crowd out, cause damage to, challenged, collapse(suffer); threaten, take away  
+2in 2on 4c 2t:interfere, influence; strain on, pressure on; crowd out, cause damage to, challenged, collapse(suffer); threaten, take away  
 具体ie:revenue, health; have effect, be afflicted; impose rbt; reduce  
+ppb miar ddf:g prepare ing bb fw provide offer benefit tt;  a motivate x incentivised attract, recognise; discourages, fail, downside  
+(find, addresss, handle, cope with):confronted->face->organise->take->overcome; cure, prevent and mitigate  
+
 生活goods:ll lb; lead, experience, improve, enjoy; adapt to, commodities, goods  
 花(earnings, wealth, income, money, profits, returns):spending, planning, pour, (deserve, priced) educational vocational   
   
@@ -20,7 +22,6 @@ in on 4c 2t:interfere, influence; strain on, pressure on; crowd out, cause damag
 课程subjects, courses, disciplines->assignments->qualification->degree->career  
 关系eh opportunities->(relationships, interpersonalskills circle, resources, network):express, take, share, exchanging->improve 2trust, fulfil  
 工家work cooperate communicate; get, maintain, keep up with, company, emotional  
-ppb miar ddf:g prepare ing bb fw provide offer benefit tt;  a motivate x incentivised attract, recognise; discourages, fail, downside  
   
 job->2find->enter->iu skills; 2work; talents potential  
 rs c business; investing, improvements, improved;  specialises, foster  
