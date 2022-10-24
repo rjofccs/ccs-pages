@@ -131,11 +131,12 @@ def read_file():
             word = pp[1]
             js = json.loads(pp[2])
 
-            mean = '''  <a href="#" class="content list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            mean = '''    <a href="#" class="content list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
     <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
     <div class="d-flex gap-2 w-100 justify-content-between">
       <div>
-        <h6 class="word mb-0">{}</h6>'''.format(word)
+        <h6 class="word mb-0">{}</h6>
+'''.format(word)
             size = len(js)
             for k in range(size):
                 j = js[k]
@@ -148,14 +149,15 @@ def read_file():
                     # fetch first uk
                     aud = j['prons'][0]
                     ind = aud.find('pron/')
-                    p = '        <p onclick="play_one(this)">{}<audio preload="none"><source src="{}"></audio>{}</p>'.format(j['noun'], './mp3/'+aud[ind-3:].replace('/','_'), t)
+                    p = '        <p class="mb-0 opacity-75" onclick="play_one(this)">{}<audio preload="none"><source src="{}"></audio>{}</p>'.format(j['noun'], './mp3/'+aud[ind-3:].replace('/','_'), t)
                 mean = mean + p
                 if k<(size-1):
                     mean = mean + '\n'                    
-            mean = mean + '''      </div>
+            mean = mean + '''
+      </div>
       <small class="mark opacity-50 text-nowrap" data-word="{}" onclick="mark('{}')">mark</small>
     </div>
-  </a>'''.format(word, word)
+    </a>'''.format(word, word)
             txt_append(chapter, word, mean)
             if m == (tl-1):
                 txt_append(chapter, word, '''  
