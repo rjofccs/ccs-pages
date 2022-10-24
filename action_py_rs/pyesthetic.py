@@ -109,6 +109,7 @@ def txt_append(fina, word, con):
         <a href="#/" onclick="play(this);">Play</a>
         <a href="#/" onclick="next(this);">Next</a>
     </div>
+    <div class="list-group w-auto">
 '''
         with open(input_filename, 'a') as f:
             f.write(pre+'\n')
@@ -130,9 +131,11 @@ def read_file():
             word = pp[1]
             js = json.loads(pp[2])
 
-            mean = '''    <div class="content">
-        <div class="word" data-word="{}">{}<div class="mark" onclick="mark('{}')">Mark</div></div>
-'''.format(word, word, word)
+            mean = '''  <a href="#" class="content list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="word mb-0">{}</h6>'''.format(word)
             size = len(js)
             for k in range(size):
                 j = js[k]
@@ -146,12 +149,18 @@ def read_file():
                     aud = j['prons'][0]
                     ind = aud.find('pron/')
                     p = '        <p onclick="play_one(this)">{}<audio preload="none"><source src="{}"></audio>{}</p>'.format(j['noun'], './mp3/'+aud[ind-3:].replace('/','_'), t)
-                mean = mean + p + ('\n' if k<(size-1) else '')
-            mean = mean + '''
-    </div>'''
+                mean = mean + p
+                if k<(size-1):
+                    mean = mean + '\n'                    
+            mean = mean + '''      </div>
+      <small class="mark opacity-50 text-nowrap" data-word="{}" onclick="mark('{}')">mark</small>
+    </div>
+  </a>'''.format(word, word)
             txt_append(chapter, word, mean)
             if m == (tl-1):
-                txt_append(chapter, word, '''    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+                txt_append(chapter, word, '''  
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 </body>
 </html>''')
 
