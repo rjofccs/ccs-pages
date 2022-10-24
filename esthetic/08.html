@@ -1,306 +1,508 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="./tailwind.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./esthetic.css">
-<script src="./esthetic.js"></script>
-<script>const chapter = '08';</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="./esthetic.js"></script>
+    <script>const chapter = '08';</script>
 </head>
 <body>
-    
-<div class="nav">
-    <a href="./index.html">Index</a>
-    <a href="#/" onclick="hide(this);">Hide</a>
-    <a href="#/" onclick="play(this);">Play</a>
-    <a href="#/" onclick="next(this);">Next</a>
-</div>
+    <div class="nav">
+        <a href="./index.html">Index</a>
+        <a href="#/" onclick="hide(this);">Hide</a>
+        <a href="#/" onclick="play(this);">Play</a>
+        <a href="#/" onclick="next(this);">Next</a>
+    </div>
 
-<div class="content">
-    <div class="word" data-word="language">language<div class="mark" onclick="mark('language')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklan_uklangu001.mp3"></audio>语言</p>
-</div>
-<div class="content">
-    <div class="word" data-word="symbol">symbol<div class="mark" onclick="mark('symbol')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcyb_ukcyber021.mp3"></audio>标志，象征✓ （某种特性或思想的）代表，象征✓ 符号，代号，记号✓ 象征</p>
-</div>
-<div class="content">
-    <div class="word" data-word="sign">sign<div class="mark" onclick="mark('sign')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksie_uksiege014.mp3"></audio>签（名），署（名）；签署，签字✓ 与（球员）签约✓ 打手势；示意✓ 使用手语</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksie_uksiege014.mp3"></audio>告示；标志；警告✓ 示意动作；手势✓ 迹象；征兆✓ 记号，符号，标志</p>
-</div>
-<div class="content">
-    <div class="word" data-word="gesture">gesture<div class="mark" onclick="mark('gesture')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukger_ukgerma020.mp3"></audio>手势；姿势；示意动作✓ 姿态；表示</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukger_ukgerma020.mp3"></audio>做手势；用手势表示；用动作示意</p>
-</div>
-<div class="content">
-    <div class="word" data-word="handwriting">handwriting<div class="mark" onclick="mark('handwriting')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhan_ukhando009.mp3"></audio>书写✓ 字迹，笔迹</p>
-</div>
-<div class="content">
-    <div class="word" data-word="pictograph">pictograph<div class="mark" onclick="mark('pictograph')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/us_pron_c_cdo_cdo03_cdo0319uspict1324.mp3"></audio>石壁画✓ 象形文字</p>
-</div>
-<div class="content">
-    <div class="word" data-word="wedge">wedge<div class="mark" onclick="mark('wedge')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwea_ukweari027.mp3"></audio>（金属、木头或橡胶等制成的）楔子，三角木✓ 楔形物，三角形物（尤指食物）✓ 整个鞋底都有鞋跟的女鞋，坡跟鞋</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwea_ukweari027.mp3"></audio>用楔子楔住，楔牢✓ 挤入，插入，塞入；卡住</p>
-</div>
-<div class="content">
-    <div class="word" data-word="knot">knot<div class="mark" onclick="mark('knot')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkno_ukknock005.mp3"></audio>（绳等的）结✓ 绞成一团的头发（或绳）✓ 一小群人✓ 树瘤；节；（木板上的）节疤✓ 节（飞机或轮船的航速以及流速单位；1节约等于1海里／小时）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkno_ukknock005.mp3"></audio>打个结✓ 形成硬结</p>
-</div>
-<div class="content">
-    <div class="word" data-word="linguistics">linguistics<div class="mark" onclick="mark('linguistics')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklin_uklinct028.mp3"></audio>语言学</p>
-</div>
-<div class="content">
-    <div class="word" data-word="semantic">semantic<div class="mark" onclick="mark('semantic')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksel_ukselfs010.mp3"></audio>语义的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="syntax">syntax<div class="mark" onclick="mark('syntax')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksyn_uksynta002.mp3"></audio>句法；句子结构</p>
-</div>
-<div class="content">
-    <div class="word" data-word="grammar">grammar<div class="mark" onclick="mark('grammar')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgraci022.mp3"></audio>语法；语法学✓ 语法书</p>
-</div>
-<div class="content">
-    <div class="word" data-word="phonetics">phonetics<div class="mark" onclick="mark('phonetics')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphone003.mp3"></audio>语音学</p>
-</div>
-<div class="content">
-    <div class="word" data-word="pronounce">pronounce<div class="mark" onclick="mark('pronounce')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukpromi025.mp3"></audio>发（音），读（音）✓ 宣称；宣布；断言</p>
-</div>
-<div class="content">
-    <div class="word" data-word="intonation">intonation<div class="mark" onclick="mark('intonation')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukintes019.mp3"></audio>（尤指对话语意义有影响的）语调，声调✓ （演奏或歌唱时音符的）音准</p>
-</div>
-<div class="content">
-    <div class="word" data-word="inflection">inflection<div class="mark" onclick="mark('inflection')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfir013.mp3"></audio>屈折成分；屈折变化✓ 语调的抑扬变化</p>
-</div>
-<div class="content">
-    <div class="word" data-word="dialect">dialect<div class="mark" onclick="mark('dialect')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdex_ukdextr020.mp3"></audio>方言，土语，地方话</p>
-</div>
-<div class="content">
-    <div class="word" data-word="accent">accent<div class="mark" onclick="mark('accent')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukac__ukac___014.mp3"></audio>口音，腔调；土音✓ （标在字母上的）发音符号✓ 重音✓ 着重点在于…；注重…；强调…</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukac__ukac___015.mp3"></audio>强调；着重；突出</p>
-</div>
-<div class="content">
-    <div class="word" data-word="utterance">utterance<div class="mark" onclick="mark('utterance')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukush_ukusher029.mp3"></audio>说话，讲话✓ 用语言表达</p>
-</div>
-<div class="content">
-    <div class="word" data-word="oral">oral<div class="mark" onclick="mark('oral')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaud_ukaudac028.mp3"></audio>口头的；口述的✓ 口的；口服的；口腔的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaud_ukaudac028.mp3"></audio>口试（通常是一种语言的检测，对问题做口头而不是书面回答）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="verbal">verbal<div class="mark" onclick="mark('verbal')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukven_ukventr011.mp3"></audio>口头的；非书面的✓ 用言辞的；文字的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="syllable">syllable<div class="mark" onclick="mark('syllable')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/us_pron_s_syl_sylla_syllable.mp3"></audio>音节</p>
-</div>
-<div class="content">
-    <div class="word" data-word="phoneme">phoneme<div class="mark" onclick="mark('phoneme')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukb01_ukb01001.mp3"></audio>音位，音素</p>
-</div>
-<div class="content">
-    <div class="word" data-word="vowel">vowel<div class="mark" onclick="mark('vowel')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvor_ukvorte011.mp3"></audio>元音✓ 元音字母</p>
-</div>
-<div class="content">
-    <div class="word" data-word="consonant">consonant<div class="mark" onclick="mark('consonant')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconse024.mp3"></audio>辅音；辅音字母</p>
-</div>
-<div class="content">
-    <div class="word" data-word="alphabet">alphabet<div class="mark" onclick="mark('alphabet')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukall_ukally_023.mp3"></audio>字母表</p>
-</div>
-<div class="content">
-    <div class="word" data-word="logogram">logogram<div class="mark" onclick="mark('logogram')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_e_epd_epd17_epd17510.mp3"></audio>语标，缩记符（如& 、@等） ；非字母语言的字符</p>
-</div>
-<div class="content">
-    <div class="word" data-word="vocabulary">vocabulary<div class="mark" onclick="mark('vocabulary')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_016.mp3"></audio>词汇量；（某人掌握的）全部词汇✓ （某一语言或学科的）词汇，术语</p>
-</div>
-<div class="content">
-    <div class="word" data-word="dictionary">dictionary<div class="mark" onclick="mark('dictionary')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdia_ukdiaph030.mp3"></audio>字典，词典✓ 专业词典，专门词典</p>
-</div>
-<div class="content">
-    <div class="word" data-word="idiom">idiom<div class="mark" onclick="mark('idiom')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukidi_ukidioc002.mp3"></audio>习语，成语，惯用语✓ （某一时期、个人或群体在写作、言语、音乐方面的）典型表达风格</p>
-</div>
-<div class="content">
-    <div class="word" data-word="phrase">phrase<div class="mark" onclick="mark('phrase')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphoto010.mp3"></audio>短语✓ 说法；用语；警句✓ 乐句；乐节</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphoto010.mp3"></audio>用…方式表达，以…措词表达</p>
-</div>
-<div class="content">
-    <div class="word" data-word="clause">clause<div class="mark" onclick="mark('clause')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcla_ukclass006.mp3"></audio>（法律文件的）条款，款项✓ 从句</p>
-</div>
-<div class="content">
-    <div class="word" data-word="expression">expression<div class="mark" onclick="mark('expression')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexp_ukexpre003.mp3"></audio>表示；表达；表露✓ 表情；神色✓ 词；词语；措词✓ （数学中的）式，表达式</p>
-</div>
-<div class="content">
-    <div class="word" data-word="tense">tense<div class="mark" onclick="mark('tense')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukten_uktense001.mp3"></audio>（动词的）时态</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukten_uktense001.mp3"></audio>紧张的，焦虑的✓ （局势）令人紧张的✓ （身体或肌肉）僵直的，绷紧的✓ （语音）紧的；紧张音的</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukten_uktense001.mp3"></audio>（使）（身体或肌肉）绷紧，（使）变得僵直✓ 紧张的，焦虑的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="root">root<div class="mark" onclick="mark('root')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke012.mp3"></audio>根，根茎，根块✓ （坏事的）根源，根由，原因✓ 根，根源，起源✓ （毛发、牙或指甲的）根部✓ 词根✓ （数学方程式的）根✓ 根；方根</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke012.mp3"></audio>翻找，翻寻✓ 生根；长出根来</p>
-</div>
-<div class="content">
-    <div class="word" data-word="prefix">prefix<div class="mark" onclick="mark('prefix')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprefe004.mp3"></audio>前缀✓ （电话）区号</p>
-</div>
-<div class="content">
-    <div class="word" data-word="suffix">suffix<div class="mark" onclick="mark('suffix')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksuc_uksucro020.mp3"></audio>后缀，词尾</p>
-</div>
-<div class="content">
-    <div class="word" data-word="abbreviation">abbreviation<div class="mark" onclick="mark('abbreviation')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_uka___uka____027.mp3"></audio>缩略，缩写；简称</p>
-</div>
-<div class="content">
-    <div class="word" data-word="synonym">synonym<div class="mark" onclick="mark('synonym')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksym_uksympa026.mp3"></audio>同义词，近义词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="antonym">antonym<div class="mark" onclick="mark('antonym')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukant_ukantis007.mp3"></audio>反义词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="noun">noun<div class="mark" onclick="mark('noun')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknot_uknotif012.mp3"></audio>名词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="singular">singular<div class="mark" onclick="mark('singular')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksin_uksineq023.mp3"></audio>单数（的）✓ 特别的；引人注意的✓ 特别的，奇特的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksin_uksineq023.mp3"></audio>单数的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="plural">plural<div class="mark" onclick="mark('plural')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplu_ukplump009.mp3"></audio>复数形式</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplu_ukplump009.mp3"></audio>多样的，多元的✓ 多数的，多种的✓ 复数的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="pronoun">pronoun<div class="mark" onclick="mark('pronoun')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukpromi024.mp3"></audio>代词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="verb">verb<div class="mark" onclick="mark('verb')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukven_ukventr010.mp3"></audio>动词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="adjective">adjective<div class="mark" onclick="mark('adjective')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadh_ukadher017.mp3"></audio>形容词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="adverb">adverb<div class="mark" onclick="mark('adverb')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadu_ukadult021.mp3"></audio>副词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="preposition">preposition<div class="mark" onclick="mark('preposition')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukpremi028.mp3"></audio>介词，前置词</p>
-</div>
-<div class="content">
-    <div class="word" data-word="conjunction">conjunction<div class="mark" onclick="mark('conjunction')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconje006.mp3"></audio>连词，连接词✓ 结合；联合；同时发生✓ （占星术中两个天体的）相合</p>
-</div>
-<div class="content">
-    <div class="word" data-word="consistent">consistent<div class="mark" onclick="mark('consistent')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/us_pron_c_con_consi_consistent.mp3"></audio>一贯的；坚持的；始终如一的✓ 一致的，吻合的；符合的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="complicated">complicated<div class="mark" onclick="mark('complicated')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe029.mp3"></audio>复杂的；麻烦的；费解的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="complex">complex<div class="mark" onclick="mark('complex')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>由许多相关的不同部分组成的；构造复杂的✓ 难懂的，费解的；错综复杂的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>综合大楼；建筑群✓ （尤指由过去的不快经历或自我评价不高造成的）情结，心理负担，病态心理</p>
-</div>
-<div class="content">
-    <div class="word" data-word="compile">compile<div class="mark" onclick="mark('compile')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe004.mp3"></audio>汇编；编纂；编辑；编制✓ 编译（计算机程序）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="version">version<div class="mark" onclick="mark('version')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukver_ukverit018.mp3"></audio>版本；说法</p>
-</div>
-<div class="content">
-    <div class="word" data-word="translate">translate<div class="mark" onclick="mark('translate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktra_uktrans027.mp3"></audio>译，翻译✓ 转化（尤指将计划变为现实）✓ 认为…意味着…</p>
-</div>
-<div class="content">
-    <div class="word" data-word="paraphrase">paraphrase<div class="mark" onclick="mark('paraphrase')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpar_ukparag023.mp3"></audio>（以幽默或更简短、清晰的方式）意译，解释，改述</p>
-</div>
-<div class="content">
-    <div class="word" data-word="interpret">interpret<div class="mark" onclick="mark('interpret')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter220.mp3"></audio>理解，解释，阐释✓ （表演者根据本人对作品的理解）表演，演绎✓ 翻译，口译</p>
-</div>
-<div class="content">
-    <div class="word" data-word="narrate">narrate<div class="mark" onclick="mark('narrate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknar_uknark_003.mp3"></audio>讲（故事）；叙述</p>
-</div>
-<div class="content">
-    <div class="word" data-word="illuminate">illuminate<div class="mark" onclick="mark('illuminate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukign_ukignor025.mp3"></audio>为…照明，照亮✓ 阐明，解释</p>
-</div>
-<div class="content">
-    <div class="word" data-word="decipher">decipher<div class="mark" onclick="mark('decipher')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdec_ukdecep013.mp3"></audio>辨认；破解，破译</p>
-</div>
-<div class="content">
-    <div class="word" data-word="eloquence">eloquence<div class="mark" onclick="mark('eloquence')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeli_ukelimi025.mp3"></audio>the quality of delivering a clear, strong message:</p>
-</div>
-<div class="content">
-    <div class="word" data-word="communicate">communicate<div class="mark" onclick="mark('communicate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcommu002.mp3"></audio>交流，沟通（信息）✓ 传达，表达，传递，沟通（思想或感情）✓ 传染，传播（疾病）✓ （房间）互通，相连</p>
-</div>
-<div class="content">
-    <div class="word" data-word="discussion">discussion<div class="mark" onclick="mark('discussion')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdis_ukdiscr005.mp3"></audio>讨论，议论，谈论</p>
-</div>
-<div class="content">
-    <div class="word" data-word="brainstorm">brainstorm<div class="mark" onclick="mark('brainstorm')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboy_ukboyfr029.mp3"></audio>自由讨论，集思广益，脑力激荡</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboy_ukboyfr029.mp3"></audio>（突发的）奇想；灵感；妙计✓ 突然神志不清，一时糊涂</p>
-</div>
-<div class="content">
-    <div class="word" data-word="debate">debate<div class="mark" onclick="mark('debate')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdea_ukdeath012.mp3"></audio>谈论，讨论；争论，辩论</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdea_ukdeath012.mp3"></audio>讨论；争论✓ 斟酌；考虑</p>
-</div>
-<div class="content">
-    <div class="word" data-word="commentary">commentary<div class="mark" onclick="mark('commentary')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcomma020.mp3"></audio>（广播或电视所播事件的）评论，解说，实况报道✓ 评论；评注；评述✓ 实况追踪报道，现场评述</p>
-</div>
-<div class="content">
-    <div class="word" data-word="negotiate">negotiate<div class="mark" onclick="mark('negotiate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_ukneg_uknegot002.mp3"></audio>（就…）谈判，（就…）磋商✓ 设法穿过，越过（难走的路段）✓ 解决（难题）✓ 议付，洽兑</p>
-</div>
-<div class="content">
-    <div class="word" data-word="contention">contention<div class="mark" onclick="mark('contention')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconta029.mp3"></audio>争论；纷争；口角✓ 论点；主张；看法✓ （尤指在体育运动中）有（没有）机会赢得…</p>
-</div>
+    <div class="content">
+        <div class="word" data-word="language">language<div class="mark" onclick="mark('language')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklan_uklangu001.mp3"></audio>语言</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="symbol">symbol<div class="mark" onclick="mark('symbol')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcyb_ukcyber021.mp3"></audio>标志，象征✓ （某种特性或思想的）代表，象征✓ 符号，代号，记号✓ 象征</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="sign">sign<div class="mark" onclick="mark('sign')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksie_uksiege014.mp3"></audio>签（名），署（名）；签署，签字✓ 与（球员）签约✓ 打手势；示意✓ 使用手语</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksie_uksiege014.mp3"></audio>告示；标志；警告✓ 示意动作；手势✓ 迹象；征兆✓ 记号，符号，标志</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="gesture">gesture<div class="mark" onclick="mark('gesture')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukger_ukgerma020.mp3"></audio>手势；姿势；示意动作✓ 姿态；表示</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukger_ukgerma020.mp3"></audio>做手势；用手势表示；用动作示意</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="handwriting">handwriting<div class="mark" onclick="mark('handwriting')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhan_ukhando009.mp3"></audio>书写✓ 字迹，笔迹</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="pictograph">pictograph<div class="mark" onclick="mark('pictograph')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/us_pron_c_cdo_cdo03_cdo0319uspict1324.mp3"></audio>石壁画✓ 象形文字</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="wedge">wedge<div class="mark" onclick="mark('wedge')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwea_ukweari027.mp3"></audio>（金属、木头或橡胶等制成的）楔子，三角木✓ 楔形物，三角形物（尤指食物）✓ 整个鞋底都有鞋跟的女鞋，坡跟鞋</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwea_ukweari027.mp3"></audio>用楔子楔住，楔牢✓ 挤入，插入，塞入；卡住</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="knot">knot<div class="mark" onclick="mark('knot')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkno_ukknock005.mp3"></audio>（绳等的）结✓ 绞成一团的头发（或绳）✓ 一小群人✓ 树瘤；节；（木板上的）节疤✓ 节（飞机或轮船的航速以及流速单位；1节约等于1海里／小时）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkno_ukknock005.mp3"></audio>打个结✓ 形成硬结</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="linguistics">linguistics<div class="mark" onclick="mark('linguistics')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklin_uklinct028.mp3"></audio>语言学</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="semantic">semantic<div class="mark" onclick="mark('semantic')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksel_ukselfs010.mp3"></audio>语义的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="syntax">syntax<div class="mark" onclick="mark('syntax')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksyn_uksynta002.mp3"></audio>句法；句子结构</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="grammar">grammar<div class="mark" onclick="mark('grammar')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgraci022.mp3"></audio>语法；语法学✓ 语法书</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="phonetics">phonetics<div class="mark" onclick="mark('phonetics')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphone003.mp3"></audio>语音学</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="pronounce">pronounce<div class="mark" onclick="mark('pronounce')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukpromi025.mp3"></audio>发（音），读（音）✓ 宣称；宣布；断言</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="intonation">intonation<div class="mark" onclick="mark('intonation')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukintes019.mp3"></audio>（尤指对话语意义有影响的）语调，声调✓ （演奏或歌唱时音符的）音准</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="inflection">inflection<div class="mark" onclick="mark('inflection')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfir013.mp3"></audio>屈折成分；屈折变化✓ 语调的抑扬变化</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="dialect">dialect<div class="mark" onclick="mark('dialect')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdex_ukdextr020.mp3"></audio>方言，土语，地方话</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="accent">accent<div class="mark" onclick="mark('accent')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukac__ukac___014.mp3"></audio>口音，腔调；土音✓ （标在字母上的）发音符号✓ 重音✓ 着重点在于…；注重…；强调…</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukac__ukac___015.mp3"></audio>强调；着重；突出</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="utterance">utterance<div class="mark" onclick="mark('utterance')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukush_ukusher029.mp3"></audio>说话，讲话✓ 用语言表达</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="oral">oral<div class="mark" onclick="mark('oral')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaud_ukaudac028.mp3"></audio>口头的；口述的✓ 口的；口服的；口腔的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaud_ukaudac028.mp3"></audio>口试（通常是一种语言的检测，对问题做口头而不是书面回答）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="verbal">verbal<div class="mark" onclick="mark('verbal')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukven_ukventr011.mp3"></audio>口头的；非书面的✓ 用言辞的；文字的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="syllable">syllable<div class="mark" onclick="mark('syllable')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/us_pron_s_syl_sylla_syllable.mp3"></audio>音节</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="phoneme">phoneme<div class="mark" onclick="mark('phoneme')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukb01_ukb01001.mp3"></audio>音位，音素</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="vowel">vowel<div class="mark" onclick="mark('vowel')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvor_ukvorte011.mp3"></audio>元音✓ 元音字母</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="consonant">consonant<div class="mark" onclick="mark('consonant')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconse024.mp3"></audio>辅音；辅音字母</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="alphabet">alphabet<div class="mark" onclick="mark('alphabet')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukall_ukally_023.mp3"></audio>字母表</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="logogram">logogram<div class="mark" onclick="mark('logogram')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_e_epd_epd17_epd17510.mp3"></audio>语标，缩记符（如& 、@等） ；非字母语言的字符</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="vocabulary">vocabulary<div class="mark" onclick="mark('vocabulary')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_016.mp3"></audio>词汇量；（某人掌握的）全部词汇✓ （某一语言或学科的）词汇，术语</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="dictionary">dictionary<div class="mark" onclick="mark('dictionary')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdia_ukdiaph030.mp3"></audio>字典，词典✓ 专业词典，专门词典</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="idiom">idiom<div class="mark" onclick="mark('idiom')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukidi_ukidioc002.mp3"></audio>习语，成语，惯用语✓ （某一时期、个人或群体在写作、言语、音乐方面的）典型表达风格</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="phrase">phrase<div class="mark" onclick="mark('phrase')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphoto010.mp3"></audio>短语✓ 说法；用语；警句✓ 乐句；乐节</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpho_ukphoto010.mp3"></audio>用…方式表达，以…措词表达</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="clause">clause<div class="mark" onclick="mark('clause')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcla_ukclass006.mp3"></audio>（法律文件的）条款，款项✓ 从句</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="expression">expression<div class="mark" onclick="mark('expression')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexp_ukexpre003.mp3"></audio>表示；表达；表露✓ 表情；神色✓ 词；词语；措词✓ （数学中的）式，表达式</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="tense">tense<div class="mark" onclick="mark('tense')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukten_uktense001.mp3"></audio>（动词的）时态</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukten_uktense001.mp3"></audio>紧张的，焦虑的✓ （局势）令人紧张的✓ （身体或肌肉）僵直的，绷紧的✓ （语音）紧的；紧张音的</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukten_uktense001.mp3"></audio>（使）（身体或肌肉）绷紧，（使）变得僵直✓ 紧张的，焦虑的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="root">root<div class="mark" onclick="mark('root')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke012.mp3"></audio>根，根茎，根块✓ （坏事的）根源，根由，原因✓ 根，根源，起源✓ （毛发、牙或指甲的）根部✓ 词根✓ （数学方程式的）根✓ 根；方根</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke012.mp3"></audio>翻找，翻寻✓ 生根；长出根来</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="prefix">prefix<div class="mark" onclick="mark('prefix')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprefe004.mp3"></audio>前缀✓ （电话）区号</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="suffix">suffix<div class="mark" onclick="mark('suffix')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksuc_uksucro020.mp3"></audio>后缀，词尾</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="abbreviation">abbreviation<div class="mark" onclick="mark('abbreviation')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_uka___uka____027.mp3"></audio>缩略，缩写；简称</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="synonym">synonym<div class="mark" onclick="mark('synonym')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksym_uksympa026.mp3"></audio>同义词，近义词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="antonym">antonym<div class="mark" onclick="mark('antonym')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukant_ukantis007.mp3"></audio>反义词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="noun">noun<div class="mark" onclick="mark('noun')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknot_uknotif012.mp3"></audio>名词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="singular">singular<div class="mark" onclick="mark('singular')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksin_uksineq023.mp3"></audio>单数（的）✓ 特别的；引人注意的✓ 特别的，奇特的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksin_uksineq023.mp3"></audio>单数的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="plural">plural<div class="mark" onclick="mark('plural')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplu_ukplump009.mp3"></audio>复数形式</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplu_ukplump009.mp3"></audio>多样的，多元的✓ 多数的，多种的✓ 复数的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="pronoun">pronoun<div class="mark" onclick="mark('pronoun')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukpromi024.mp3"></audio>代词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="verb">verb<div class="mark" onclick="mark('verb')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukven_ukventr010.mp3"></audio>动词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="adjective">adjective<div class="mark" onclick="mark('adjective')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadh_ukadher017.mp3"></audio>形容词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="adverb">adverb<div class="mark" onclick="mark('adverb')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadu_ukadult021.mp3"></audio>副词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="preposition">preposition<div class="mark" onclick="mark('preposition')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukpremi028.mp3"></audio>介词，前置词</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="conjunction">conjunction<div class="mark" onclick="mark('conjunction')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconje006.mp3"></audio>连词，连接词✓ 结合；联合；同时发生✓ （占星术中两个天体的）相合</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="consistent">consistent<div class="mark" onclick="mark('consistent')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/us_pron_c_con_consi_consistent.mp3"></audio>一贯的；坚持的；始终如一的✓ 一致的，吻合的；符合的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="complicated">complicated<div class="mark" onclick="mark('complicated')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe029.mp3"></audio>复杂的；麻烦的；费解的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="complex">complex<div class="mark" onclick="mark('complex')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>由许多相关的不同部分组成的；构造复杂的✓ 难懂的，费解的；错综复杂的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>综合大楼；建筑群✓ （尤指由过去的不快经历或自我评价不高造成的）情结，心理负担，病态心理</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="compile">compile<div class="mark" onclick="mark('compile')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe004.mp3"></audio>汇编；编纂；编辑；编制✓ 编译（计算机程序）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="version">version<div class="mark" onclick="mark('version')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukver_ukverit018.mp3"></audio>版本；说法</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="translate">translate<div class="mark" onclick="mark('translate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktra_uktrans027.mp3"></audio>译，翻译✓ 转化（尤指将计划变为现实）✓ 认为…意味着…</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="paraphrase">paraphrase<div class="mark" onclick="mark('paraphrase')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpar_ukparag023.mp3"></audio>（以幽默或更简短、清晰的方式）意译，解释，改述</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="interpret">interpret<div class="mark" onclick="mark('interpret')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter220.mp3"></audio>理解，解释，阐释✓ （表演者根据本人对作品的理解）表演，演绎✓ 翻译，口译</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="narrate">narrate<div class="mark" onclick="mark('narrate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknar_uknark_003.mp3"></audio>讲（故事）；叙述</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="illuminate">illuminate<div class="mark" onclick="mark('illuminate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukign_ukignor025.mp3"></audio>为…照明，照亮✓ 阐明，解释</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="decipher">decipher<div class="mark" onclick="mark('decipher')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdec_ukdecep013.mp3"></audio>辨认；破解，破译</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="eloquence">eloquence<div class="mark" onclick="mark('eloquence')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeli_ukelimi025.mp3"></audio>the quality of delivering a clear, strong message:</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="communicate">communicate<div class="mark" onclick="mark('communicate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcommu002.mp3"></audio>交流，沟通（信息）✓ 传达，表达，传递，沟通（思想或感情）✓ 传染，传播（疾病）✓ （房间）互通，相连</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="discussion">discussion<div class="mark" onclick="mark('discussion')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdis_ukdiscr005.mp3"></audio>讨论，议论，谈论</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="brainstorm">brainstorm<div class="mark" onclick="mark('brainstorm')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboy_ukboyfr029.mp3"></audio>自由讨论，集思广益，脑力激荡</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboy_ukboyfr029.mp3"></audio>（突发的）奇想；灵感；妙计✓ 突然神志不清，一时糊涂</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="debate">debate<div class="mark" onclick="mark('debate')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdea_ukdeath012.mp3"></audio>谈论，讨论；争论，辩论</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdea_ukdeath012.mp3"></audio>讨论；争论✓ 斟酌；考虑</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="commentary">commentary<div class="mark" onclick="mark('commentary')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcomma020.mp3"></audio>（广播或电视所播事件的）评论，解说，实况报道✓ 评论；评注；评述✓ 实况追踪报道，现场评述</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="negotiate">negotiate<div class="mark" onclick="mark('negotiate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_ukneg_uknegot002.mp3"></audio>（就…）谈判，（就…）磋商✓ 设法穿过，越过（难走的路段）✓ 解决（难题）✓ 议付，洽兑</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="contention">contention<div class="mark" onclick="mark('contention')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconta029.mp3"></audio>争论；纷争；口角✓ 论点；主张；看法✓ （尤指在体育运动中）有（没有）机会赢得…</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>

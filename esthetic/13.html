@@ -1,620 +1,1023 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="./tailwind.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./esthetic.css">
-<script src="./esthetic.js"></script>
-<script>const chapter = '13';</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="./esthetic.js"></script>
+    <script>const chapter = '13';</script>
 </head>
 <body>
-    
-<div class="nav">
-    <a href="./index.html">Index</a>
-    <a href="#/" onclick="hide(this);">Hide</a>
-    <a href="#/" onclick="play(this);">Play</a>
-    <a href="#/" onclick="next(this);">Next</a>
-</div>
+    <div class="nav">
+        <a href="./index.html">Index</a>
+        <a href="#/" onclick="hide(this);">Hide</a>
+        <a href="#/" onclick="play(this);">Play</a>
+        <a href="#/" onclick="next(this);">Next</a>
+    </div>
 
-<div class="content">
-    <div class="word" data-word="architecture">architecture<div class="mark" onclick="mark('architecture')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukarc_ukarcha028.mp3"></audio>建筑学；建筑术✓ 建筑风格</p>
-</div>
-<div class="content">
-    <div class="word" data-word="erection">erection<div class="mark" onclick="mark('erection')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukequ_ukequip021.mp3"></audio>建立；建造✓ 建筑物✓ （阴茎）勃起</p>
-</div>
-<div class="content">
-    <div class="word" data-word="structure">structure<div class="mark" onclick="mark('structure')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstr_ukstrol018.mp3"></audio>结构；构造；机构；体系✓ 结构体；（尤指）大型建筑物✓ （器官的）结构</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstr_ukstrol018.mp3"></audio>构成；组织</p>
-</div>
-<div class="content">
-    <div class="word" data-word="construct">construct<div class="mark" onclick="mark('construct')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconst001.mp3"></audio>建造；构筑；构成，组成</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconsp030.mp3"></audio>构想；观念；编造，杜撰</p>
-</div>
-<div class="content">
-    <div class="word" data-word="obstruct">obstruct<div class="mark" onclick="mark('obstruct')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukobs_ukobsti004.mp3"></audio>阻塞，堵塞，阻挡（道路、通道、入口等）✓ 阻碍；阻止，阻挠；妨碍</p>
-</div>
-<div class="content">
-    <div class="word" data-word="establish">establish<div class="mark" onclick="mark('establish')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukesq_ukesq__009.mp3"></audio>建立；设立；创立✓ 与…建立关系；与…开始往来✓ 使得到承认；使被接受✓ 确立（某种地位）✓ 查实；确定；证实，证明</p>
-</div>
-<div class="content">
-    <div class="word" data-word="build">build<div class="mark" onclick="mark('build')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbud_ukbuddh025.mp3"></audio>建造，修建✓ 建立；发展；开辟</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbud_ukbuddh025.mp3"></audio>身材，体形</p>
-</div>
-<div class="content">
-    <div class="word" data-word="found">found<div class="mark" onclick="mark('found')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfor_ukfortn023.mp3"></audio>（find的过去式及过去分词）✓ 创建；创立；创办✓ 为（建筑物或公路）打地基✓ 把…基于，把…建立在</p>
-</div>
-<div class="content">
-    <div class="word" data-word="concrete">concrete<div class="mark" onclick="mark('concrete')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconci022.mp3"></audio>混凝土</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconci022.mp3"></audio>用混凝土覆盖</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconci022.mp3"></audio>确定的，确实的；具体的，有形的，实在的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="steel">steel<div class="mark" onclick="mark('steel')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun016.mp3"></audio>钢</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun016.mp3"></audio>下决心做；横下心</p>
-</div>
-<div class="content">
-    <div class="word" data-word="stability">stability<div class="mark" onclick="mark('stability')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksqu_uksquee027.mp3"></audio>稳定；稳固</p>
-</div>
-<div class="content">
-    <div class="word" data-word="site">site<div class="mark" onclick="mark('site')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh008.mp3"></audio>（建筑物的）地点，位置；建筑工地；（某事发生的）地点，现场✓ 在（工厂、办公楼等的）内部✓ 网站✓ 宿营地</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh008.mp3"></audio>使坐落于</p>
-</div>
-<div class="content">
-    <div class="word" data-word="venue">venue<div class="mark" onclick="mark('venue')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukven_ukventr007.mp3"></audio>（公共事件的）发生场所，举行地点；会场✓ 审判地</p>
-</div>
-<div class="content">
-    <div class="word" data-word="landmark">landmark<div class="mark" onclick="mark('landmark')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklam_uklampl021.mp3"></audio>地标；标志性建筑✓ （发展过程中的）里程碑</p>
-</div>
-<div class="content">
-    <div class="word" data-word="situated">situated<div class="mark" onclick="mark('situated')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksit_uksitua001.mp3"></audio>位于…的✓ 处于…的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="located">located<div class="mark" onclick="mark('located')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_029.mp3"></audio>位于…／在…附近／坐落在…（等等）✓ 确定…的位置，发现…的位置✓ 搬至…办公</p>
-</div>
-<div class="content">
-    <div class="word" data-word="reside">reside<div class="mark" onclick="mark('reside')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun026.mp3"></audio>居住；定居</p>
-</div>
-<div class="content">
-    <div class="word" data-word="inhabit">inhabit<div class="mark" onclick="mark('inhabit')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_uking_ukingra007.mp3"></audio>居住于</p>
-</div>
-<div class="content">
-    <div class="word" data-word="migrate">migrate<div class="mark" onclick="mark('migrate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmid_ukmidsi022.mp3"></audio>（动物）迁徙，移栖✓ （指人）大批外出；（暂时）移居，迁移✓ 移动，转移✓ 迁移（使用新的操作系统，或将资料从一种操作系统移至另一种操作系统）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="settle">settle<div class="mark" onclick="mark('settle')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukser_ukservi020.mp3"></audio>确定；决定；解决，结束（争端等）✓ 安排✓ （使）（舒舒服服地）坐下；安顿下来✓ （尤指永久性地）定居，安家✓ （尤指从别国）移居殖民地；殖民✓ 降落；沉降✓ 支付（尤指欠款或被索款项）；偿付；结算✓ （使）安静下来；（使）平静下来✓ 稳定下来</p>
-</div>
-<div class="content">
-    <div class="word" data-word="dwelling">dwelling<div class="mark" onclick="mark('dwelling')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdus_ukdusts017.mp3"></audio>房屋，住所，住处</p>
-</div>
-<div class="content">
-    <div class="word" data-word="skyscraper">skyscraper<div class="mark" onclick="mark('skyscraper')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksku_ukskunk013.mp3"></audio>摩天大楼</p>
-</div>
-<div class="content">
-    <div class="word" data-word="villa">villa<div class="mark" onclick="mark('villa')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvig_ukvigil017.mp3"></audio>别墅；花园住宅</p>
-</div>
-<div class="content">
-    <div class="word" data-word="mansion">mansion<div class="mark" onclick="mark('mansion')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukman_ukmanli020.mp3"></audio>大厦；大楼；豪宅</p>
-</div>
-<div class="content">
-    <div class="word" data-word="apartment">apartment<div class="mark" onclick="mark('apartment')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukapa_ukapart002.mp3"></audio>公寓套房✓ （公共大楼、城堡等中大而豪华的）套间</p>
-</div>
-<div class="content">
-    <div class="word" data-word="flat">flat<div class="mark" onclick="mark('flat')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>水平的；平坦的✓ 扁平的✓ （面包）未发酵的✓ 低顶帽✓ 不积极的；不感兴趣的；缺乏热情的✓ 没有电的✓ （饮料）走了气的✓ 彻底的；肯定的；断然的✓ （轮胎或球）瘪了的，撒了气的✓ （尤指钱数）固定的，不变的✓ （利润、销售等）无增长的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>公寓，单元房✓ （常指水边的）平地；低洼地✓ 手掌✓ 在平地上✓ 瘪胎✓ （女式）平跟鞋，平底鞋✓ 降半音；降音符号</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>（音乐）低于标准音高的，偏低的</p>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>（常指贴着另一表面）水平地，平直地✓ 扁平地✓ 彻底；断然✓ 刚好3分钟／半小时（等等）✓ 全速；全力以赴</p>
-</div>
-<div class="content">
-    <div class="word" data-word="hostel">hostel<div class="mark" onclick="mark('hostel')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhor_ukhorsi019.mp3"></audio>（免费或廉价的）旅社，客栈✓ （无家可归者的）收容所</p>
-</div>
-<div class="content">
-    <div class="word" data-word="lodge">lodge<div class="mark" onclick="mark('lodge')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloc_ukloch_021.mp3"></audio>提出索赔／投诉／抗议（等等）✓ （使）固定；（使）卡住✓ 存放，保管✓ 借宿，借住</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloc_ukloch_021.mp3"></audio>（尤指度假者或体育活动者用的）乡间小屋，小舍✓ 海狸的巢穴✓ 尖顶棚屋，简陋小屋（同 wigwam）✓ （共济会等组织的）地方分会，地方分支机构✓ 门房，传达室</p>
-</div>
-<div class="content">
-    <div class="word" data-word="hut">hut<div class="mark" onclick="mark('hut')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhur_ukhurly023.mp3"></audio>（通常只有一个房间的）小屋</p>
-</div>
-<div class="content">
-    <div class="word" data-word="cabin">cabin<div class="mark" onclick="mark('cabin')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbys_ukbysta016.mp3"></audio>小木屋；小棚屋✓ 船舱✓ （飞机）座舱✓ 大办公室内隔离的办公空间</p>
-</div>
-<div class="content">
-    <div class="word" data-word="cellar">cellar<div class="mark" onclick="mark('cellar')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcel_ukceleb013.mp3"></audio>（通常用于储物的）地窖，地下室</p>
-</div>
-<div class="content">
-    <div class="word" data-word="shed">shed<div class="mark" onclick="mark('shed')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat005.mp3"></audio>（通常为木质、存放物品用的）棚子，小屋✓ （用于特定活动的）大简易棚</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat005.mp3"></audio>（常为报刊用语）去除，摆脱✓ 使脱落；使掉落；蜕；脱✓ 流泪／流血／发光（等等）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="cottage">cottage<div class="mark" onclick="mark('cottage')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcos_ukcossa018.mp3"></audio>（通常指乡村中的）小屋，村舍</p>
-</div>
-<div class="content">
-    <div class="word" data-word="nursery">nursery<div class="mark" onclick="mark('nursery')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknum_uknumbe020.mp3"></audio>幼儿园，托儿所✓ （家中的）育儿室✓ （尤指商业目的的）苗圃，育苗场</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknum_uknumbe020.mp3"></audio>幼儿教育的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="cradle">cradle<div class="mark" onclick="mark('cradle')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl001.mp3"></audio>摇床；摇篮✓ （移动电话，相机，掌上电脑等的）传输座（用来充电或连接电脑）✓ （悬挂在建筑物、船等侧面供工作用的）脚手架，吊架，吊篮</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl001.mp3"></audio>（尤指用手臂）轻托，轻抱</p>
-</div>
-<div class="content">
-    <div class="word" data-word="shelter">shelter<div class="mark" onclick="mark('shelter')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat028.mp3"></audio>掩蔽（处）；遮蔽（处）✓ 躲避</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat028.mp3"></audio>躲避；保护；遮蔽✓ 为…提供避难的地方✓ 合法避税</p>
-</div>
-<div class="content">
-    <div class="word" data-word="block">block<div class="mark" onclick="mark('block')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbli_ukbliss017.mp3"></audio>街区；街段✓ 街区里的大楼✓ 在前面转过去的那条街上✓ 一大块（直边的硬物）✓ （罪犯被斩首时的）垫头木✓ 大厦，大楼✓ 一组；一批；一叠✓ 堵塞物</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbli_ukbliss017.mp3"></audio>堵塞；阻挡；阻碍✓ 挡住视线✓ 妨碍</p>
-</div>
-<div class="content">
-    <div class="word" data-word="grid">grid<div class="mark" onclick="mark('grid')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgre_ukgrena007.mp3"></audio>网格，方格；格栅，格子✓ 电力网，输电网✓ （地图的）坐标方格✓ 赛车起跑线</p>
-</div>
-<div class="content">
-    <div class="word" data-word="aisle">aisle<div class="mark" onclick="mark('aisle')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukair_ukairwo004.mp3"></audio>（客机、电影院或教堂座席间的）走廊，过道✓ （商店货架间的）通道</p>
-</div>
-<div class="content">
-    <div class="word" data-word="porch">porch<div class="mark" onclick="mark('porch')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi015.mp3"></audio>门廊✓ 走廊（同 veranda）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="corridor">corridor<div class="mark" onclick="mark('corridor')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcor_ukcorps022.mp3"></audio>（尤指两边是房间的）走廊，通道，过道✓ 走廊（指一国领土通过他国境内的狭长地带）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="stair">stair<div class="mark" onclick="mark('stair')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstabl029.mp3"></audio>楼梯✓ （楼梯的）梯级✓ 楼梯</p>
-</div>
-<div class="content">
-    <div class="word" data-word="staircase">staircase<div class="mark" onclick="mark('staircase')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstabl030.mp3"></audio>（建筑物内通常带有扶手的）楼梯</p>
-</div>
-<div class="content">
-    <div class="word" data-word="storey">storey<div class="mark" onclick="mark('storey')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore008.mp3"></audio>楼层，层</p>
-</div>
-<div class="content">
-    <div class="word" data-word="story">story<div class="mark" onclick="mark('story')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore008.mp3"></audio>（真实或虚构的）故事；叙述，描述；小说✓ 新闻报道✓ 谎话✓ 楼层，层</p>
-</div>
-<div class="content">
-    <div class="word" data-word="layer">layer<div class="mark" onclick="mark('layer')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklaw_uklawle015.mp3"></audio>层；涂层✓ （机构）层次</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklaw_uklawle015.mp3"></audio>把…按层排列，把…分层放置✓ 把（头发）剪成不同层次</p>
-</div>
-<div class="content">
-    <div class="word" data-word="elevator">elevator<div class="mark" onclick="mark('elevator')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukele_ukelect021.mp3"></audio>电梯✓ （装有传送带，用以卸货、装货或搬运粮食入库的）升降机，起卸机</p>
-</div>
-<div class="content">
-    <div class="word" data-word="escalator">escalator<div class="mark" onclick="mark('escalator')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukero_ukeroge028.mp3"></audio>自动扶梯</p>
-</div>
-<div class="content">
-    <div class="word" data-word="handrail">handrail<div class="mark" onclick="mark('handrail')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhan_ukhando002.mp3"></audio>（楼梯等的）扶手</p>
-</div>
-<div class="content">
-    <div class="word" data-word="pillar">pillar<div class="mark" onclick="mark('pillar')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpig_ukpigmy023.mp3"></audio>（建筑物的）柱子，支柱；墩✓ 重要成员；栋梁，中坚</p>
-</div>
-<div class="content">
-    <div class="word" data-word="column">column<div class="mark" onclick="mark('column')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcol_ukcolor019.mp3"></audio>（报纸、杂志上的）栏✓ （报纸、杂志上的）栏目，专栏✓ （词或数字的）纵列✓ 石柱；纪念柱✓ …柱✓ 一队，一列（移动的人或车辆）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="beam">beam<div class="mark" onclick="mark('beam')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbattl030.mp3"></audio>光线；光束；光柱✓ （定向发出的）射束，粒子流✓ （尤指支撑建筑物或其他结构的）梁，桁架，栋梁✓ （女子体操运动中的）平衡木</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbattl030.mp3"></audio>高兴的微笑，眉开眼笑✓ 辐射；发光；闪光；发射电波；播送</p>
-</div>
-<div class="content">
-    <div class="word" data-word="vault">vault<div class="mark" onclick="mark('vault')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvar_ukvario019.mp3"></audio>（尤指教堂或公共建筑的）拱顶，穹顶✓ （尤指银行的）金库，保险库✓ （教堂的）地下墓室；（墓地的）墓穴</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvar_ukvario019.mp3"></audio>（用手支撑或撑杆）跳跃，跃过✓ 突然提升；使跃居</p>
-</div>
-<div class="content">
-    <div class="word" data-word="arch">arch<div class="mark" onclick="mark('arch')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat030.mp3"></audio>拱；拱形结构；拱门（或窗、顶、洞等）✓ （常用作装饰的）拱形，拱形物✓ 足弓，足背✓ 弓（身体中曲线形或弧形的结构）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat030.mp3"></audio>（使）拱起；（使）成拱形</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat030.mp3"></audio>淘气的；调皮的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="ceiling">ceiling<div class="mark" onclick="mark('ceiling')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcav_ukcaval029.mp3"></audio>天花板，顶棚✓ （通常指钱款的）上限</p>
-</div>
-<div class="content">
-    <div class="word" data-word="eaves">eaves<div class="mark" onclick="mark('eaves')">Mark</div></div>
-    <p onclick="play_one(this)">plural noun<audio preload="none"><source src="./mp3/us_pron_e_eav_eaves_eaves.mp3"></audio>the edge of a roof that sticks out over the walls</p>
-</div>
-<div class="content">
-    <div class="word" data-word="chimney">chimney<div class="mark" onclick="mark('chimney')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukchi_ukchilb028.mp3"></audio>烟囱；烟道✓ （可容一人攀登的）岩石狭缝，一线天</p>
-</div>
-<div class="content">
-    <div class="word" data-word="reception">reception<div class="mark" onclick="mark('reception')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukreb_ukrebui026.mp3"></audio>欢迎会；招待会✓ 感受；反应；回应✓ 接待；迎接；欢迎✓ （旅馆或办公楼的）接待处，服务台，前台✓ （收音机或电视信号）接收效果，接收质量✓ 学前班</p>
-</div>
-<div class="content">
-    <div class="word" data-word="lobby">lobby<div class="mark" onclick="mark('lobby')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_018.mp3"></audio>游说，试图说服（政客、政府或官方团体）</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_018.mp3"></audio>游说团体，游说集团✓ 大堂，大厅，门厅✓ （英国议会的）接见厅，会见厅，表决厅</p>
-</div>
-<div class="content">
-    <div class="word" data-word="bench">bench<div class="mark" onclick="mark('bench')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbel_ukbelly013.mp3"></audio>长凳✓ 工作台✓ （健身房里的）练习台✓ 运动员休息区；替补队员席✓ 法官；法官席✓ 担任法官✓ 当法官✓ （法官）宣布开庭✓ （英国议会的）议员席</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbel_ukbelly013.mp3"></audio>把（场上队员）换下；罚（场上队员）下场；不让（队员）上场✓ 仰卧推举，卧推</p>
-</div>
-<div class="content">
-    <div class="word" data-word="parlour">parlour<div class="mark" onclick="mark('parlour')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpar_ukparis016.mp3"></audio>（提供某种服务或销售某种商品的）店堂，店铺✓ （尤指旧时的）起居室，客厅，会客室</p>
-</div>
-<div class="content">
-    <div class="word" data-word="fireplace">fireplace<div class="mark" onclick="mark('fireplace')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfin_ukfink_021.mp3"></audio>壁炉；火炉</p>
-</div>
-<div class="content">
-    <div class="word" data-word="radiator">radiator<div class="mark" onclick="mark('radiator')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrad_ukradia007.mp3"></audio>（通常指依靠水循环的）暖气装置；散热器；冷却器</p>
-</div>
-<div class="content">
-    <div class="word" data-word="living room">living room<div class="mark" onclick="mark('living room')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld00823.mp3"></audio>起居室，客厅</p>
-</div>
-<div class="content">
-    <div class="word" data-word="cabinet">cabinet<div class="mark" onclick="mark('cabinet')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbys_ukbysta017.mp3"></audio>内阁✓ 贮藏柜；陈列柜；橱柜</p>
-</div>
-<div class="content">
-    <div class="word" data-word="balcony">balcony<div class="mark" onclick="mark('balcony')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbal_ukbalal004.mp3"></audio>露台，阳台✓ （剧场的）楼座，楼厅，厢房</p>
-</div>
-<div class="content">
-    <div class="word" data-word="terrace">terrace<div class="mark" onclick="mark('terrace')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukter_uktermi005.mp3"></audio>台地✓ 露天平台，阳台✓ 梯田；阶地✓ （足球）阶梯看台✓ 排屋，排房</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukter_uktermi005.mp3"></audio>使…成梯田</p>
-</div>
-<div class="content">
-    <div class="word" data-word="kitchen">kitchen<div class="mark" onclick="mark('kitchen')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkit_ukkit__002.mp3"></audio>厨房</p>
-</div>
-<div class="content">
-    <div class="word" data-word="lavatory">lavatory<div class="mark" onclick="mark('lavatory')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklat_uklatvi021.mp3"></audio>厕所，卫生间</p>
-</div>
-<div class="content">
-    <div class="word" data-word="toilet">toilet<div class="mark" onclick="mark('toilet')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktob_uktobyj023.mp3"></audio>坐便器，马桶✓ 卫生间✓ 上厕所✓ 卫生间，厕所✓ 梳洗打扮</p>
-</div>
-<div class="content">
-    <div class="word" data-word="bath">bath<div class="mark" onclick="mark('bath')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbatch003.mp3"></audio>澡盆，浴缸✓ 沐浴，洗澡✓ 往浴缸里放水✓ 浴室✓ （保健性）洗浴✓ 池；盆✓ 公共游泳池（同 swimming bath）✓ 公共澡堂</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbatch003.mp3"></audio>（给某人）洗澡</p>
-</div>
-<div class="content">
-    <div class="word" data-word="basin">basin<div class="mark" onclick="mark('basin')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbas_ukbashf009.mp3"></audio>盆；水盆✓ 一盆（的量）✓ 洗手池；洗脸盆✓ 流域✓ 船坞；内湾</p>
-</div>
-<div class="content">
-    <div class="word" data-word="reserve">reserve<div class="mark" onclick="mark('reserve')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun018.mp3"></audio>把…专门留给；把…留作；保留✓ 预订；预约</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun018.mp3"></audio>拘谨；矜持；内向✓ 贮藏（物）；储备（物）；备用（物）✓ （尤指保护野生动物生存的）自然保护区，禁猎区，保护区✓ 替补队员✓ 后备队员✓ 后备军；后备部队✓ 保留态度；保留意见✓ （尤指拍卖中买方定的）底价，保留价格，最低价</p>
-</div>
-<div class="content">
-    <div class="word" data-word="store">store<div class="mark" onclick="mark('store')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore001.mp3"></audio>（大型）百货商店✓ 商店，店铺✓ 储存量，储备量✓ 仓库，储藏所</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore001.mp3"></audio>储存；储备；储藏</p>
-</div>
-<div class="content">
-    <div class="word" data-word="mall">mall<div class="mark" onclick="mark('mall')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmal_ukmalig006.mp3"></audio>（车辆不得入内的）商业街，购物中心</p>
-</div>
-<div class="content">
-    <div class="word" data-word="complex">complex<div class="mark" onclick="mark('complex')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>由许多相关的不同部分组成的；构造复杂的✓ 难懂的，费解的；错综复杂的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>综合大楼；建筑群✓ （尤指由过去的不快经历或自我评价不高造成的）情结，心理负担，病态心理</p>
-</div>
-<div class="content">
-    <div class="word" data-word="supermarket">supermarket<div class="mark" onclick="mark('supermarket')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksup_uksuper009.mp3"></audio>超级市场，超市</p>
-</div>
-<div class="content">
-    <div class="word" data-word="booth">booth<div class="mark" onclick="mark('booth')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboo_ukboomi011.mp3"></audio>小亭，小房间✓ （集市、展览会等处半封闭的）小棚子，小帐篷，小间✓ （餐馆里墙边的）隔间</p>
-</div>
-<div class="content">
-    <div class="word" data-word="casino">casino<div class="mark" onclick="mark('casino')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcar_ukcartr018.mp3"></audio>赌场</p>
-</div>
-<div class="content">
-    <div class="word" data-word="studio">studio<div class="mark" onclick="mark('studio')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstu_ukstubb013.mp3"></audio>（电视或广播节目的）录制室，演播室；（音乐）录音棚✓ （电影）摄影棚；电影公司，电影制片厂✓ （舞蹈）练功房✓ （艺术家的）工作室；（尤指）画室，摄影室✓ 艺术工作室；摄影工作室✓ 单间公寓（通常一个房间兼作卧室和起居室，带有卫生间，有的有单独的厨房）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="downtown">downtown<div class="mark" onclick="mark('downtown')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_c_cal_cald4_cald4uk0452.mp3"></audio>在市中心（的）；朝市中心（的）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="urban">urban<div class="mark" onclick="mark('urban')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukups_ukupstr016.mp3"></audio>城市的，城镇的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="peripheral">peripheral<div class="mark" onclick="mark('peripheral')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperfu015.mp3"></audio>次要的，附带的✓ 外围的，边缘的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperfu015.mp3"></audio>（计算机的）外围设备（如打印机）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="vicinity">vicinity<div class="mark" onclick="mark('vicinity')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvia_ukvia__028.mp3"></audio>周围地区；邻近地区；附近</p>
-</div>
-<div class="content">
-    <div class="word" data-word="room">room<div class="mark" onclick="mark('room')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke003.mp3"></audio>房间，室✓ 卧室✓ （用于合成词中）房间，室，厅✓ （尤指大学中租住的）一套房间，住所，寓所✓ 空间，空地方✓ 机会；余地</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke003.mp3"></audio>租住；（与某人）合租</p>
-</div>
-<div class="content">
-    <div class="word" data-word="void">void<div class="mark" onclick="mark('void')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_030.mp3"></audio>空洞；空间；空白✓ 空虚感；失落感</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_030.mp3"></audio>不合法的；无效的✓ 没有；缺少</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_030.mp3"></audio>使无效；使作废；取消</p>
-</div>
-<div class="content">
-    <div class="word" data-word="spacious">spacious<div class="mark" onclick="mark('spacious')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksouth030.mp3"></audio>宽敞的，空间大的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="airtight">airtight<div class="mark" onclick="mark('airtight')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukair_ukairfi027.mp3"></audio>密封的，气密的，不透气的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="expanse">expanse<div class="mark" onclick="mark('expanse')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexi_ukexist023.mp3"></audio>（陆地、水面或天空的）广阔区域</p>
-</div>
-<div class="content">
-    <div class="word" data-word="plaza">plaza<div class="mark" onclick="mark('plaza')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpla_ukplayg011.mp3"></audio>（尤指西班牙语国家城镇中的）露天广场✓ （城市建筑群中的）购物区，购物中心</p>
-</div>
-<div class="content">
-    <div class="word" data-word="castle">castle<div class="mark" onclick="mark('castle')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcas_ukcaste003.mp3"></audio>城堡；堡垒✓ （国际象棋）车（rook的非正式说法）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcas_ukcaste003.mp3"></audio>（国际象棋中）王车易位</p>
-</div>
-<div class="content">
-    <div class="word" data-word="carpenter">carpenter<div class="mark" onclick="mark('carpenter')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcar_ukcarho027.mp3"></audio>木匠；木工</p>
-</div>
-<div class="content">
-    <div class="word" data-word="mason">mason<div class="mark" onclick="mark('mason')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmar_ukmarve019.mp3"></audio>石匠，石工（同 stonemason）✓ 砌砖工；瓦工（同 bricklayer）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="tile">tile<div class="mark" onclick="mark('tile')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktig_uktight005.mp3"></audio>瓦片；瓷砖</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktig_uktight005.mp3"></audio>给…铺瓦；给…贴瓷砖</p>
-</div>
-<div class="content">
-    <div class="word" data-word="brickwork">brickwork<div class="mark" onclick="mark('brickwork')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbre_ukbrew_014.mp3"></audio>（建筑物等的）砖造部分，砖结构</p>
-</div>
-<div class="content">
-    <div class="word" data-word="suspension">suspension<div class="mark" onclick="mark('suspension')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksur_uksurro028.mp3"></audio>暂停，中止✓ （作为处罚的）暂令停职；暂令停学；暂令停止活动✓ （车辆的）悬架，减震装置✓ 悬浮液</p>
-</div>
-<div class="content">
-    <div class="word" data-word="hook">hook<div class="mark" onclick="mark('hook')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhon_ukhonor015.mp3"></audio>钩子，挂钩✓ （拳击的）勾拳；（板球或高尔夫球的）曲球</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhon_ukhonor015.mp3"></audio>（用钩子）固定，挂，钩住✓ 卖淫</p>
-</div>
-<div class="content">
-    <div class="word" data-word="lever">lever<div class="mark" onclick="mark('lever')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklea_uklearn016.mp3"></audio>杠杆，操纵杆，控制手柄✓ （用以说服别人的）手段，把柄</p>
-</div>
-<div class="content">
-    <div class="word" data-word="pole">pole<div class="mark" onclick="mark('pole')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar007.mp3"></audio>杆，柱✓ （地球的）极（点）✓ （意见、立场或特点）截然相反的一端，极端</p>
-</div>
-<div class="content">
-    <div class="word" data-word="scaffold">scaffold<div class="mark" onclick="mark('scaffold')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksax_uksax__014.mp3"></audio>（建筑工人用的）脚手架✓ （悬挂在建筑物、船等侧面供工作用的）脚手架，吊架，吊篮✓ 断头台；绞刑台</p>
-</div>
-<div class="content">
-    <div class="word" data-word="infrastructure">infrastructure<div class="mark" onclick="mark('infrastructure')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfor009.mp3"></audio>基础设施</p>
-</div>
-<div class="content">
-    <div class="word" data-word="apparatus">apparatus<div class="mark" onclick="mark('apparatus')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukapo_ukapolo018.mp3"></audio>设备；仪器；装置；用具✓ （尤指政治）机构，组织，机制</p>
-</div>
-<div class="content">
-    <div class="word" data-word="crane">crane<div class="mark" onclick="mark('crane')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl018.mp3"></audio>起重机，吊车✓ 鹤</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl018.mp3"></audio>伸长（脖子），探着身子（看）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="malfunction">malfunction<div class="mark" onclick="mark('malfunction')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmal_ukmalad023.mp3"></audio>运转不正常，发生故障</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmal_ukmalad023.mp3"></audio>失灵，故障</p>
-</div>
-<div class="content">
-    <div class="word" data-word="maintain">maintain<div class="mark" onclick="mark('maintain')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmai_ukmains002.mp3"></audio>维持；保持✓ 维修；养护；保养✓ 坚称；断言✓ 供养；抚养；赡养</p>
-</div>
-<div class="content">
-    <div class="word" data-word="fix">fix<div class="mark" onclick="mark('fix')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfis_ukfistf014.mp3"></audio>修理✓ 安排，确定（时间、地点、价格等）✓ 使固定；安装✓ 盯着看，凝视✓ 继续想（某事）；记得（某事）✓ 操纵；在（比赛或选举）中作弊✓ 梳洗，整理（头发、容妆、衣服等）✓ 做（饭）；准备（食物或饮料）✓ 惩罚，收拾（尤指待人不公者）✓ （对摄影感光材料）定（色），定（影）✓ 阉割（动物）✓ 注射毒品</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfis_ukfistf014.mp3"></audio>操纵；在（比赛或选举）中作弊✓ 窘境；困境✓ （毒品或致瘾物的）一次用量✓ （车辆的）方位；方位确定</p>
-</div>
-<div class="content">
-    <div class="word" data-word="mend">mend<div class="mark" onclick="mark('mend')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmen_ukmenac004.mp3"></audio>修理；修补；缝补</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmen_ukmenac004.mp3"></audio>修补过的地方</p>
-</div>
-<div class="content">
-    <div class="word" data-word="modify">modify<div class="mark" onclick="mark('modify')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmod_ukmodif001.mp3"></audio>（稍作）修改，更改，改造，改变✓ 修饰，限定</p>
-</div>
-<div class="content">
-    <div class="word" data-word="trim">trim<div class="mark" onclick="mark('trim')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktri_uktribu030.mp3"></audio>修剪，修整✓ 消减，减少</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktri_uktribu030.mp3"></audio>苗条的✓ 整齐的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktri_uktribu030.mp3"></audio>修剪，修整✓ 修剪，修整✓ 身体状况好；状态好</p>
-</div>
-<div class="content">
-    <div class="word" data-word="weld">weld<div class="mark" onclick="mark('weld')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwee_ukweedk030.mp3"></audio>焊接，锻接（金属）✓ 使紧密结合；使形成整体</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwee_ukweedk030.mp3"></audio>焊接处；锻接点</p>
-</div>
-<div class="content">
-    <div class="word" data-word="saw">saw<div class="mark" onclick="mark('saw')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce025.mp3"></audio>（see的过去式）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce025.mp3"></audio>锯✓ 拉锯般地来回移动</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce025.mp3"></audio>锯</p>
-</div>
-<div class="content">
-    <div class="word" data-word="screw">screw<div class="mark" onclick="mark('screw')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukscr_ukscrap025.mp3"></audio>螺丝（钉）✓ 扭转，旋转✓ 监狱看守（尤为犯人用语）✓ 性行为；性伙伴✓ （同 thumbscrew）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukscr_ukscrap025.mp3"></audio>用螺丝固定（或拧紧）✓ （用类似螺丝的东西）固定，拧紧✓ 旋上，拧合✓ （尤指出于不赞同或疼痛）扭曲（面部）✓ 将（尤指纸或布）揉成团✓ 拧牢，旋紧✓ 骗，欺骗✓ （与…）发生性关系</p>
-</div>
-<div class="content">
-    <div class="word" data-word="drill">drill<div class="mark" onclick="mark('drill')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdre_ukdress017.mp3"></audio>钻；钻床；钻机✓ （尤指军事）训练，练习</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdre_ukdress017.mp3"></audio>（用特殊工具）钻孔；打眼✓ （尤指进行军事）训练，练习✓ （为记忆而）反复训练，重复灌输</p>
-</div>
-<div class="content">
-    <div class="word" data-word="plumb">plumb<div class="mark" onclick="mark('plumb')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>给…装水管✓ 测（尤指水）的深度✓ 探索，探究</p>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>正好，恰恰✓ 完全，彻底</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>垂直的✓ 不垂直，倾斜</p>
-</div>
-<div class="content">
-    <div class="word" data-word="viaduct">viaduct<div class="mark" onclick="mark('viaduct')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvia_ukvia__005.mp3"></audio>高架桥；高架道路</p>
-</div>
-<div class="content">
-    <div class="word" data-word="span">span<div class="mark" onclick="mark('span')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci011.mp3"></audio>一段时间✓ 长度；宽度；跨度✓ （桥等的）跨度，跨距，墩距</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci011.mp3"></audio>（spin 的过去式）✓ （时间）持续，跨越✓ 横跨</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci011.mp3"></audio>崭新的；极整洁的，极干净的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="dam">dam<div class="mark" onclick="mark('dam')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdag_ukdagoe021.mp3"></audio>（尤指旨在蓄水的）堤坝，水坝✓ （dental dam）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdag_ukdagoe021.mp3"></audio>在（河上）筑坝蓄水</p>
-</div>
-<div class="content">
-    <div class="word" data-word="assemble">assemble<div class="mark" onclick="mark('assemble')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassau004.mp3"></audio>集合，聚集；收集✓ 组装；装配</p>
-</div>
-<div class="content">
-    <div class="word" data-word="install">install<div class="mark" onclick="mark('install')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukins_ukinspe009.mp3"></audio>安装✓ 把…安装到计算机上✓ 正式任命，使正式就职✓ 将（某人）／自己安顿在某处</p>
-</div>
-<div class="content">
-    <div class="word" data-word="furnish">furnish<div class="mark" onclick="mark('furnish')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfun_ukfunk_013.mp3"></audio>为…配备家具；布置（家具）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="placement">placement<div class="mark" onclick="mark('placement')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpkk_ukpkk__010.mp3"></audio>临时职位（或工作）✓ 为…找到合适的位置</p>
-</div>
-<div class="content">
-    <div class="word" data-word="layout">layout<div class="mark" onclick="mark('layout')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklaw_uklawle019.mp3"></audio>布局，布置，排列</p>
-</div>
-<div class="content">
-    <div class="word" data-word="design">design<div class="mark" onclick="mark('design')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdes_ukdescr023.mp3"></audio>设计；制（图）✓ 意图，打算</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdes_ukdescr023.mp3"></audio>设计图，图纸✓ 设计（艺术）✓ 设计（方法）；设计风格✓ 图案✓ 特意；故意，有意✓ 阴谋计划，不良企图</p>
-</div>
-<div class="content">
-    <div class="word" data-word="entrance">entrance<div class="mark" onclick="mark('entrance')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukent_ukentic016.mp3"></audio>入口；大门（口）；通道✓ （演员的）入场，登场✓ 进入；进门✓ 进入权；进入许可</p>
-</div>
-<div class="content">
-    <div class="word" data-word="entry">entry<div class="mark" onclick="mark('entry')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukent_ukentre004.mp3"></audio>进入；加入，参加✓ 门；入口；通道✓ 项目；条目；（一则）记录✓ 参赛作品；参赛</p>
-</div>
-<div class="content">
-    <div class="word" data-word="enter">enter<div class="mark" onclick="mark('enter')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukens_ukensla011.mp3"></audio>进来；进去；进入✓ （为…）报名参加（竞赛、考试等）；安排…参加✓ 输入；登记；登录✓ （正式）提出✓ 成为…的一员，加入；开始从事✓ 进入…时期</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukens_ukensla011.mp3"></audio>回车键</p>
-</div>
-<div class="content">
-    <div class="word" data-word="exit">exit<div class="mark" onclick="mark('exit')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexi_ukexist008.mp3"></audio>（建筑物或大型交通工具的）出口，安全门；（尤指演员）退场✓ （驶出主干道的）出口，出路</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexi_ukexist008.mp3"></audio>离开（建筑物或大型交通工具）✓ 退出，终止（电脑程序）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="outside">outside<div class="mark" onclick="mark('outside')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>在外面（的），在室外（的）；在…外面（的）✓ 外来（的）；来自外地（或组织外）（的）；…以外（的）✓ （电话）外线✓ 最大限度的；最高限度的</p>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>在（…）外面✓ 不在某地，在（…）外面，…以外✓ 超出；不属于✓ 除了，除…之外</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>外部，外面✓ 最多，顶多</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>微小的，极小的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="outward">outward<div class="mark" onclick="mark('outward')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh021.mp3"></audio>外表的，外面的✓ 向外的✓ 出发（去某地）的</p>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh021.mp3"></audio>向外，朝外（同 outwards）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="exterior">exterior<div class="mark" onclick="mark('exterior')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukext_ukexten009.mp3"></audio>外面的；外表的；外来的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukext_ukexten009.mp3"></audio>外部；外表；外面</p>
-</div>
-<div class="content">
-    <div class="word" data-word="external">external<div class="mark" onclick="mark('external')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukext_ukexten013.mp3"></audio>外面的；外表的；来自外部的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="inner">inner<div class="mark" onclick="mark('inner')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukini_ukiniti029.mp3"></audio>里面的✓ 内心的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="interior">interior<div class="mark" onclick="mark('interior')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter028.mp3"></audio>内部✓ 内地，腹地✓ （某些国家的）内政部</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter028.mp3"></audio>内部的✓ （政府）内政的；内务的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="inward">inward<div class="mark" onclick="mark('inward')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinv_ukinvig027.mp3"></audio>里面的；向里的✓ 内心的✓ （金钱）向国内流入的</p>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinv_ukinvig027.mp3"></audio>（同 inwards）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="internal">internal<div class="mark" onclick="mark('internal')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter126.mp3"></audio>体内的；内部的；国内的</p>
-</div>
+    <div class="content">
+        <div class="word" data-word="architecture">architecture<div class="mark" onclick="mark('architecture')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukarc_ukarcha028.mp3"></audio>建筑学；建筑术✓ 建筑风格</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="erection">erection<div class="mark" onclick="mark('erection')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukequ_ukequip021.mp3"></audio>建立；建造✓ 建筑物✓ （阴茎）勃起</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="structure">structure<div class="mark" onclick="mark('structure')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstr_ukstrol018.mp3"></audio>结构；构造；机构；体系✓ 结构体；（尤指）大型建筑物✓ （器官的）结构</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstr_ukstrol018.mp3"></audio>构成；组织</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="construct">construct<div class="mark" onclick="mark('construct')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconst001.mp3"></audio>建造；构筑；构成，组成</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconsp030.mp3"></audio>构想；观念；编造，杜撰</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="obstruct">obstruct<div class="mark" onclick="mark('obstruct')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukobs_ukobsti004.mp3"></audio>阻塞，堵塞，阻挡（道路、通道、入口等）✓ 阻碍；阻止，阻挠；妨碍</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="establish">establish<div class="mark" onclick="mark('establish')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukesq_ukesq__009.mp3"></audio>建立；设立；创立✓ 与…建立关系；与…开始往来✓ 使得到承认；使被接受✓ 确立（某种地位）✓ 查实；确定；证实，证明</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="build">build<div class="mark" onclick="mark('build')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbud_ukbuddh025.mp3"></audio>建造，修建✓ 建立；发展；开辟</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbud_ukbuddh025.mp3"></audio>身材，体形</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="found">found<div class="mark" onclick="mark('found')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfor_ukfortn023.mp3"></audio>（find的过去式及过去分词）✓ 创建；创立；创办✓ 为（建筑物或公路）打地基✓ 把…基于，把…建立在</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="concrete">concrete<div class="mark" onclick="mark('concrete')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconci022.mp3"></audio>混凝土</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconci022.mp3"></audio>用混凝土覆盖</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconci022.mp3"></audio>确定的，确实的；具体的，有形的，实在的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="steel">steel<div class="mark" onclick="mark('steel')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun016.mp3"></audio>钢</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun016.mp3"></audio>下决心做；横下心</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="stability">stability<div class="mark" onclick="mark('stability')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksqu_uksquee027.mp3"></audio>稳定；稳固</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="site">site<div class="mark" onclick="mark('site')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh008.mp3"></audio>（建筑物的）地点，位置；建筑工地；（某事发生的）地点，现场✓ 在（工厂、办公楼等的）内部✓ 网站✓ 宿营地</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh008.mp3"></audio>使坐落于</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="venue">venue<div class="mark" onclick="mark('venue')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukven_ukventr007.mp3"></audio>（公共事件的）发生场所，举行地点；会场✓ 审判地</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="landmark">landmark<div class="mark" onclick="mark('landmark')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklam_uklampl021.mp3"></audio>地标；标志性建筑✓ （发展过程中的）里程碑</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="situated">situated<div class="mark" onclick="mark('situated')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksit_uksitua001.mp3"></audio>位于…的✓ 处于…的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="located">located<div class="mark" onclick="mark('located')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_029.mp3"></audio>位于…／在…附近／坐落在…（等等）✓ 确定…的位置，发现…的位置✓ 搬至…办公</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="reside">reside<div class="mark" onclick="mark('reside')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun026.mp3"></audio>居住；定居</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="inhabit">inhabit<div class="mark" onclick="mark('inhabit')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_uking_ukingra007.mp3"></audio>居住于</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="migrate">migrate<div class="mark" onclick="mark('migrate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmid_ukmidsi022.mp3"></audio>（动物）迁徙，移栖✓ （指人）大批外出；（暂时）移居，迁移✓ 移动，转移✓ 迁移（使用新的操作系统，或将资料从一种操作系统移至另一种操作系统）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="settle">settle<div class="mark" onclick="mark('settle')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukser_ukservi020.mp3"></audio>确定；决定；解决，结束（争端等）✓ 安排✓ （使）（舒舒服服地）坐下；安顿下来✓ （尤指永久性地）定居，安家✓ （尤指从别国）移居殖民地；殖民✓ 降落；沉降✓ 支付（尤指欠款或被索款项）；偿付；结算✓ （使）安静下来；（使）平静下来✓ 稳定下来</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="dwelling">dwelling<div class="mark" onclick="mark('dwelling')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdus_ukdusts017.mp3"></audio>房屋，住所，住处</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="skyscraper">skyscraper<div class="mark" onclick="mark('skyscraper')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksku_ukskunk013.mp3"></audio>摩天大楼</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="villa">villa<div class="mark" onclick="mark('villa')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvig_ukvigil017.mp3"></audio>别墅；花园住宅</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="mansion">mansion<div class="mark" onclick="mark('mansion')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukman_ukmanli020.mp3"></audio>大厦；大楼；豪宅</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="apartment">apartment<div class="mark" onclick="mark('apartment')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukapa_ukapart002.mp3"></audio>公寓套房✓ （公共大楼、城堡等中大而豪华的）套间</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="flat">flat<div class="mark" onclick="mark('flat')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>水平的；平坦的✓ 扁平的✓ （面包）未发酵的✓ 低顶帽✓ 不积极的；不感兴趣的；缺乏热情的✓ 没有电的✓ （饮料）走了气的✓ 彻底的；肯定的；断然的✓ （轮胎或球）瘪了的，撒了气的✓ （尤指钱数）固定的，不变的✓ （利润、销售等）无增长的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>公寓，单元房✓ （常指水边的）平地；低洼地✓ 手掌✓ 在平地上✓ 瘪胎✓ （女式）平跟鞋，平底鞋✓ 降半音；降音符号</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>（音乐）低于标准音高的，偏低的</p>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflami023.mp3"></audio>（常指贴着另一表面）水平地，平直地✓ 扁平地✓ 彻底；断然✓ 刚好3分钟／半小时（等等）✓ 全速；全力以赴</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="hostel">hostel<div class="mark" onclick="mark('hostel')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhor_ukhorsi019.mp3"></audio>（免费或廉价的）旅社，客栈✓ （无家可归者的）收容所</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="lodge">lodge<div class="mark" onclick="mark('lodge')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloc_ukloch_021.mp3"></audio>提出索赔／投诉／抗议（等等）✓ （使）固定；（使）卡住✓ 存放，保管✓ 借宿，借住</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloc_ukloch_021.mp3"></audio>（尤指度假者或体育活动者用的）乡间小屋，小舍✓ 海狸的巢穴✓ 尖顶棚屋，简陋小屋（同 wigwam）✓ （共济会等组织的）地方分会，地方分支机构✓ 门房，传达室</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="hut">hut<div class="mark" onclick="mark('hut')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhur_ukhurly023.mp3"></audio>（通常只有一个房间的）小屋</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="cabin">cabin<div class="mark" onclick="mark('cabin')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbys_ukbysta016.mp3"></audio>小木屋；小棚屋✓ 船舱✓ （飞机）座舱✓ 大办公室内隔离的办公空间</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="cellar">cellar<div class="mark" onclick="mark('cellar')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcel_ukceleb013.mp3"></audio>（通常用于储物的）地窖，地下室</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="shed">shed<div class="mark" onclick="mark('shed')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat005.mp3"></audio>（通常为木质、存放物品用的）棚子，小屋✓ （用于特定活动的）大简易棚</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat005.mp3"></audio>（常为报刊用语）去除，摆脱✓ 使脱落；使掉落；蜕；脱✓ 流泪／流血／发光（等等）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="cottage">cottage<div class="mark" onclick="mark('cottage')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcos_ukcossa018.mp3"></audio>（通常指乡村中的）小屋，村舍</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="nursery">nursery<div class="mark" onclick="mark('nursery')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknum_uknumbe020.mp3"></audio>幼儿园，托儿所✓ （家中的）育儿室✓ （尤指商业目的的）苗圃，育苗场</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknum_uknumbe020.mp3"></audio>幼儿教育的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="cradle">cradle<div class="mark" onclick="mark('cradle')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl001.mp3"></audio>摇床；摇篮✓ （移动电话，相机，掌上电脑等的）传输座（用来充电或连接电脑）✓ （悬挂在建筑物、船等侧面供工作用的）脚手架，吊架，吊篮</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl001.mp3"></audio>（尤指用手臂）轻托，轻抱</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="shelter">shelter<div class="mark" onclick="mark('shelter')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat028.mp3"></audio>掩蔽（处）；遮蔽（处）✓ 躲避</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukshe_uksheat028.mp3"></audio>躲避；保护；遮蔽✓ 为…提供避难的地方✓ 合法避税</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="block">block<div class="mark" onclick="mark('block')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbli_ukbliss017.mp3"></audio>街区；街段✓ 街区里的大楼✓ 在前面转过去的那条街上✓ 一大块（直边的硬物）✓ （罪犯被斩首时的）垫头木✓ 大厦，大楼✓ 一组；一批；一叠✓ 堵塞物</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbli_ukbliss017.mp3"></audio>堵塞；阻挡；阻碍✓ 挡住视线✓ 妨碍</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="grid">grid<div class="mark" onclick="mark('grid')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgre_ukgrena007.mp3"></audio>网格，方格；格栅，格子✓ 电力网，输电网✓ （地图的）坐标方格✓ 赛车起跑线</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="aisle">aisle<div class="mark" onclick="mark('aisle')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukair_ukairwo004.mp3"></audio>（客机、电影院或教堂座席间的）走廊，过道✓ （商店货架间的）通道</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="porch">porch<div class="mark" onclick="mark('porch')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi015.mp3"></audio>门廊✓ 走廊（同 veranda）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="corridor">corridor<div class="mark" onclick="mark('corridor')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcor_ukcorps022.mp3"></audio>（尤指两边是房间的）走廊，通道，过道✓ 走廊（指一国领土通过他国境内的狭长地带）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="stair">stair<div class="mark" onclick="mark('stair')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstabl029.mp3"></audio>楼梯✓ （楼梯的）梯级✓ 楼梯</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="staircase">staircase<div class="mark" onclick="mark('staircase')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstabl030.mp3"></audio>（建筑物内通常带有扶手的）楼梯</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="storey">storey<div class="mark" onclick="mark('storey')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore008.mp3"></audio>楼层，层</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="story">story<div class="mark" onclick="mark('story')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore008.mp3"></audio>（真实或虚构的）故事；叙述，描述；小说✓ 新闻报道✓ 谎话✓ 楼层，层</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="layer">layer<div class="mark" onclick="mark('layer')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklaw_uklawle015.mp3"></audio>层；涂层✓ （机构）层次</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklaw_uklawle015.mp3"></audio>把…按层排列，把…分层放置✓ 把（头发）剪成不同层次</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="elevator">elevator<div class="mark" onclick="mark('elevator')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukele_ukelect021.mp3"></audio>电梯✓ （装有传送带，用以卸货、装货或搬运粮食入库的）升降机，起卸机</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="escalator">escalator<div class="mark" onclick="mark('escalator')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukero_ukeroge028.mp3"></audio>自动扶梯</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="handrail">handrail<div class="mark" onclick="mark('handrail')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhan_ukhando002.mp3"></audio>（楼梯等的）扶手</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="pillar">pillar<div class="mark" onclick="mark('pillar')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpig_ukpigmy023.mp3"></audio>（建筑物的）柱子，支柱；墩✓ 重要成员；栋梁，中坚</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="column">column<div class="mark" onclick="mark('column')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcol_ukcolor019.mp3"></audio>（报纸、杂志上的）栏✓ （报纸、杂志上的）栏目，专栏✓ （词或数字的）纵列✓ 石柱；纪念柱✓ …柱✓ 一队，一列（移动的人或车辆）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="beam">beam<div class="mark" onclick="mark('beam')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbattl030.mp3"></audio>光线；光束；光柱✓ （定向发出的）射束，粒子流✓ （尤指支撑建筑物或其他结构的）梁，桁架，栋梁✓ （女子体操运动中的）平衡木</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbattl030.mp3"></audio>高兴的微笑，眉开眼笑✓ 辐射；发光；闪光；发射电波；播送</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="vault">vault<div class="mark" onclick="mark('vault')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvar_ukvario019.mp3"></audio>（尤指教堂或公共建筑的）拱顶，穹顶✓ （尤指银行的）金库，保险库✓ （教堂的）地下墓室；（墓地的）墓穴</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvar_ukvario019.mp3"></audio>（用手支撑或撑杆）跳跃，跃过✓ 突然提升；使跃居</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="arch">arch<div class="mark" onclick="mark('arch')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat030.mp3"></audio>拱；拱形结构；拱门（或窗、顶、洞等）✓ （常用作装饰的）拱形，拱形物✓ 足弓，足背✓ 弓（身体中曲线形或弧形的结构）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat030.mp3"></audio>（使）拱起；（使）成拱形</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat030.mp3"></audio>淘气的；调皮的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="ceiling">ceiling<div class="mark" onclick="mark('ceiling')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcav_ukcaval029.mp3"></audio>天花板，顶棚✓ （通常指钱款的）上限</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="eaves">eaves<div class="mark" onclick="mark('eaves')">Mark</div></div>
+        <p onclick="play_one(this)">plural noun<audio preload="none"><source src="./mp3/us_pron_e_eav_eaves_eaves.mp3"></audio>the edge of a roof that sticks out over the walls</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="chimney">chimney<div class="mark" onclick="mark('chimney')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukchi_ukchilb028.mp3"></audio>烟囱；烟道✓ （可容一人攀登的）岩石狭缝，一线天</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="reception">reception<div class="mark" onclick="mark('reception')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukreb_ukrebui026.mp3"></audio>欢迎会；招待会✓ 感受；反应；回应✓ 接待；迎接；欢迎✓ （旅馆或办公楼的）接待处，服务台，前台✓ （收音机或电视信号）接收效果，接收质量✓ 学前班</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="lobby">lobby<div class="mark" onclick="mark('lobby')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_018.mp3"></audio>游说，试图说服（政客、政府或官方团体）</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukloa_ukload_018.mp3"></audio>游说团体，游说集团✓ 大堂，大厅，门厅✓ （英国议会的）接见厅，会见厅，表决厅</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="bench">bench<div class="mark" onclick="mark('bench')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbel_ukbelly013.mp3"></audio>长凳✓ 工作台✓ （健身房里的）练习台✓ 运动员休息区；替补队员席✓ 法官；法官席✓ 担任法官✓ 当法官✓ （法官）宣布开庭✓ （英国议会的）议员席</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbel_ukbelly013.mp3"></audio>把（场上队员）换下；罚（场上队员）下场；不让（队员）上场✓ 仰卧推举，卧推</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="parlour">parlour<div class="mark" onclick="mark('parlour')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpar_ukparis016.mp3"></audio>（提供某种服务或销售某种商品的）店堂，店铺✓ （尤指旧时的）起居室，客厅，会客室</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="fireplace">fireplace<div class="mark" onclick="mark('fireplace')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfin_ukfink_021.mp3"></audio>壁炉；火炉</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="radiator">radiator<div class="mark" onclick="mark('radiator')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrad_ukradia007.mp3"></audio>（通常指依靠水循环的）暖气装置；散热器；冷却器</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="living room">living room<div class="mark" onclick="mark('living room')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld00823.mp3"></audio>起居室，客厅</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="cabinet">cabinet<div class="mark" onclick="mark('cabinet')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbys_ukbysta017.mp3"></audio>内阁✓ 贮藏柜；陈列柜；橱柜</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="balcony">balcony<div class="mark" onclick="mark('balcony')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbal_ukbalal004.mp3"></audio>露台，阳台✓ （剧场的）楼座，楼厅，厢房</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="terrace">terrace<div class="mark" onclick="mark('terrace')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukter_uktermi005.mp3"></audio>台地✓ 露天平台，阳台✓ 梯田；阶地✓ （足球）阶梯看台✓ 排屋，排房</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukter_uktermi005.mp3"></audio>使…成梯田</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="kitchen">kitchen<div class="mark" onclick="mark('kitchen')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukk_ukkit_ukkit__002.mp3"></audio>厨房</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="lavatory">lavatory<div class="mark" onclick="mark('lavatory')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklat_uklatvi021.mp3"></audio>厕所，卫生间</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="toilet">toilet<div class="mark" onclick="mark('toilet')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktob_uktobyj023.mp3"></audio>坐便器，马桶✓ 卫生间✓ 上厕所✓ 卫生间，厕所✓ 梳洗打扮</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="bath">bath<div class="mark" onclick="mark('bath')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbatch003.mp3"></audio>澡盆，浴缸✓ 沐浴，洗澡✓ 往浴缸里放水✓ 浴室✓ （保健性）洗浴✓ 池；盆✓ 公共游泳池（同 swimming bath）✓ 公共澡堂</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbat_ukbatch003.mp3"></audio>（给某人）洗澡</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="basin">basin<div class="mark" onclick="mark('basin')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbas_ukbashf009.mp3"></audio>盆；水盆✓ 一盆（的量）✓ 洗手池；洗脸盆✓ 流域✓ 船坞；内湾</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="reserve">reserve<div class="mark" onclick="mark('reserve')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun018.mp3"></audio>把…专门留给；把…留作；保留✓ 预订；预约</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun018.mp3"></audio>拘谨；矜持；内向✓ 贮藏（物）；储备（物）；备用（物）✓ （尤指保护野生动物生存的）自然保护区，禁猎区，保护区✓ 替补队员✓ 后备队员✓ 后备军；后备部队✓ 保留态度；保留意见✓ （尤指拍卖中买方定的）底价，保留价格，最低价</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="store">store<div class="mark" onclick="mark('store')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore001.mp3"></audio>（大型）百货商店✓ 商店，店铺✓ 储存量，储备量✓ 仓库，储藏所</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksto_ukstore001.mp3"></audio>储存；储备；储藏</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="mall">mall<div class="mark" onclick="mark('mall')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmal_ukmalig006.mp3"></audio>（车辆不得入内的）商业街，购物中心</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="complex">complex<div class="mark" onclick="mark('complex')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>由许多相关的不同部分组成的；构造复杂的✓ 难懂的，费解的；错综复杂的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcompe022.mp3"></audio>综合大楼；建筑群✓ （尤指由过去的不快经历或自我评价不高造成的）情结，心理负担，病态心理</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="supermarket">supermarket<div class="mark" onclick="mark('supermarket')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksup_uksuper009.mp3"></audio>超级市场，超市</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="booth">booth<div class="mark" onclick="mark('booth')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukboo_ukboomi011.mp3"></audio>小亭，小房间✓ （集市、展览会等处半封闭的）小棚子，小帐篷，小间✓ （餐馆里墙边的）隔间</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="casino">casino<div class="mark" onclick="mark('casino')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcar_ukcartr018.mp3"></audio>赌场</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="studio">studio<div class="mark" onclick="mark('studio')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukstu_ukstubb013.mp3"></audio>（电视或广播节目的）录制室，演播室；（音乐）录音棚✓ （电影）摄影棚；电影公司，电影制片厂✓ （舞蹈）练功房✓ （艺术家的）工作室；（尤指）画室，摄影室✓ 艺术工作室；摄影工作室✓ 单间公寓（通常一个房间兼作卧室和起居室，带有卫生间，有的有单独的厨房）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="downtown">downtown<div class="mark" onclick="mark('downtown')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_c_cal_cald4_cald4uk0452.mp3"></audio>在市中心（的）；朝市中心（的）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="urban">urban<div class="mark" onclick="mark('urban')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukups_ukupstr016.mp3"></audio>城市的，城镇的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="peripheral">peripheral<div class="mark" onclick="mark('peripheral')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperfu015.mp3"></audio>次要的，附带的✓ 外围的，边缘的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperfu015.mp3"></audio>（计算机的）外围设备（如打印机）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="vicinity">vicinity<div class="mark" onclick="mark('vicinity')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvia_ukvia__028.mp3"></audio>周围地区；邻近地区；附近</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="room">room<div class="mark" onclick="mark('room')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke003.mp3"></audio>房间，室✓ 卧室✓ （用于合成词中）房间，室，厅✓ （尤指大学中租住的）一套房间，住所，寓所✓ 空间，空地方✓ 机会；余地</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukroo_ukrooke003.mp3"></audio>租住；（与某人）合租</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="void">void<div class="mark" onclick="mark('void')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_030.mp3"></audio>空洞；空间；空白✓ 空虚感；失落感</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_030.mp3"></audio>不合法的；无效的✓ 没有；缺少</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukviv_ukviva_030.mp3"></audio>使无效；使作废；取消</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="spacious">spacious<div class="mark" onclick="mark('spacious')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksouth030.mp3"></audio>宽敞的，空间大的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="airtight">airtight<div class="mark" onclick="mark('airtight')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukair_ukairfi027.mp3"></audio>密封的，气密的，不透气的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="expanse">expanse<div class="mark" onclick="mark('expanse')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexi_ukexist023.mp3"></audio>（陆地、水面或天空的）广阔区域</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="plaza">plaza<div class="mark" onclick="mark('plaza')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpla_ukplayg011.mp3"></audio>（尤指西班牙语国家城镇中的）露天广场✓ （城市建筑群中的）购物区，购物中心</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="castle">castle<div class="mark" onclick="mark('castle')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcas_ukcaste003.mp3"></audio>城堡；堡垒✓ （国际象棋）车（rook的非正式说法）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcas_ukcaste003.mp3"></audio>（国际象棋中）王车易位</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="carpenter">carpenter<div class="mark" onclick="mark('carpenter')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcar_ukcarho027.mp3"></audio>木匠；木工</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="mason">mason<div class="mark" onclick="mark('mason')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmar_ukmarve019.mp3"></audio>石匠，石工（同 stonemason）✓ 砌砖工；瓦工（同 bricklayer）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="tile">tile<div class="mark" onclick="mark('tile')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktig_uktight005.mp3"></audio>瓦片；瓷砖</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktig_uktight005.mp3"></audio>给…铺瓦；给…贴瓷砖</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="brickwork">brickwork<div class="mark" onclick="mark('brickwork')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbre_ukbrew_014.mp3"></audio>（建筑物等的）砖造部分，砖结构</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="suspension">suspension<div class="mark" onclick="mark('suspension')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksur_uksurro028.mp3"></audio>暂停，中止✓ （作为处罚的）暂令停职；暂令停学；暂令停止活动✓ （车辆的）悬架，减震装置✓ 悬浮液</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="hook">hook<div class="mark" onclick="mark('hook')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhon_ukhonor015.mp3"></audio>钩子，挂钩✓ （拳击的）勾拳；（板球或高尔夫球的）曲球</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhon_ukhonor015.mp3"></audio>（用钩子）固定，挂，钩住✓ 卖淫</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="lever">lever<div class="mark" onclick="mark('lever')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklea_uklearn016.mp3"></audio>杠杆，操纵杆，控制手柄✓ （用以说服别人的）手段，把柄</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="pole">pole<div class="mark" onclick="mark('pole')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar007.mp3"></audio>杆，柱✓ （地球的）极（点）✓ （意见、立场或特点）截然相反的一端，极端</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="scaffold">scaffold<div class="mark" onclick="mark('scaffold')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksax_uksax__014.mp3"></audio>（建筑工人用的）脚手架✓ （悬挂在建筑物、船等侧面供工作用的）脚手架，吊架，吊篮✓ 断头台；绞刑台</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="infrastructure">infrastructure<div class="mark" onclick="mark('infrastructure')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfor009.mp3"></audio>基础设施</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="apparatus">apparatus<div class="mark" onclick="mark('apparatus')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukapo_ukapolo018.mp3"></audio>设备；仪器；装置；用具✓ （尤指政治）机构，组织，机制</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="crane">crane<div class="mark" onclick="mark('crane')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl018.mp3"></audio>起重机，吊车✓ 鹤</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcra_ukcradl018.mp3"></audio>伸长（脖子），探着身子（看）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="malfunction">malfunction<div class="mark" onclick="mark('malfunction')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmal_ukmalad023.mp3"></audio>运转不正常，发生故障</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmal_ukmalad023.mp3"></audio>失灵，故障</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="maintain">maintain<div class="mark" onclick="mark('maintain')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmai_ukmains002.mp3"></audio>维持；保持✓ 维修；养护；保养✓ 坚称；断言✓ 供养；抚养；赡养</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="fix">fix<div class="mark" onclick="mark('fix')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfis_ukfistf014.mp3"></audio>修理✓ 安排，确定（时间、地点、价格等）✓ 使固定；安装✓ 盯着看，凝视✓ 继续想（某事）；记得（某事）✓ 操纵；在（比赛或选举）中作弊✓ 梳洗，整理（头发、容妆、衣服等）✓ 做（饭）；准备（食物或饮料）✓ 惩罚，收拾（尤指待人不公者）✓ （对摄影感光材料）定（色），定（影）✓ 阉割（动物）✓ 注射毒品</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfis_ukfistf014.mp3"></audio>操纵；在（比赛或选举）中作弊✓ 窘境；困境✓ （毒品或致瘾物的）一次用量✓ （车辆的）方位；方位确定</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="mend">mend<div class="mark" onclick="mark('mend')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmen_ukmenac004.mp3"></audio>修理；修补；缝补</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmen_ukmenac004.mp3"></audio>修补过的地方</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="modify">modify<div class="mark" onclick="mark('modify')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmod_ukmodif001.mp3"></audio>（稍作）修改，更改，改造，改变✓ 修饰，限定</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="trim">trim<div class="mark" onclick="mark('trim')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktri_uktribu030.mp3"></audio>修剪，修整✓ 消减，减少</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktri_uktribu030.mp3"></audio>苗条的✓ 整齐的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_uktri_uktribu030.mp3"></audio>修剪，修整✓ 修剪，修整✓ 身体状况好；状态好</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="weld">weld<div class="mark" onclick="mark('weld')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwee_ukweedk030.mp3"></audio>焊接，锻接（金属）✓ 使紧密结合；使形成整体</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwee_ukweedk030.mp3"></audio>焊接处；锻接点</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="saw">saw<div class="mark" onclick="mark('saw')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce025.mp3"></audio>（see的过去式）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce025.mp3"></audio>锯✓ 拉锯般地来回移动</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksau_uksauce025.mp3"></audio>锯</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="screw">screw<div class="mark" onclick="mark('screw')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukscr_ukscrap025.mp3"></audio>螺丝（钉）✓ 扭转，旋转✓ 监狱看守（尤为犯人用语）✓ 性行为；性伙伴✓ （同 thumbscrew）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukscr_ukscrap025.mp3"></audio>用螺丝固定（或拧紧）✓ （用类似螺丝的东西）固定，拧紧✓ 旋上，拧合✓ （尤指出于不赞同或疼痛）扭曲（面部）✓ 将（尤指纸或布）揉成团✓ 拧牢，旋紧✓ 骗，欺骗✓ （与…）发生性关系</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="drill">drill<div class="mark" onclick="mark('drill')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdre_ukdress017.mp3"></audio>钻；钻床；钻机✓ （尤指军事）训练，练习</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdre_ukdress017.mp3"></audio>（用特殊工具）钻孔；打眼✓ （尤指进行军事）训练，练习✓ （为记忆而）反复训练，重复灌输</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="plumb">plumb<div class="mark" onclick="mark('plumb')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>给…装水管✓ 测（尤指水）的深度✓ 探索，探究</p>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>正好，恰恰✓ 完全，彻底</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukplo_ukplodd020.mp3"></audio>垂直的✓ 不垂直，倾斜</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="viaduct">viaduct<div class="mark" onclick="mark('viaduct')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvia_ukvia__005.mp3"></audio>高架桥；高架道路</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="span">span<div class="mark" onclick="mark('span')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci011.mp3"></audio>一段时间✓ 长度；宽度；跨度✓ （桥等的）跨度，跨距，墩距</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci011.mp3"></audio>（spin 的过去式）✓ （时间）持续，跨越✓ 横跨</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukspa_ukspaci011.mp3"></audio>崭新的；极整洁的，极干净的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="dam">dam<div class="mark" onclick="mark('dam')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdag_ukdagoe021.mp3"></audio>（尤指旨在蓄水的）堤坝，水坝✓ （dental dam）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdag_ukdagoe021.mp3"></audio>在（河上）筑坝蓄水</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="assemble">assemble<div class="mark" onclick="mark('assemble')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassau004.mp3"></audio>集合，聚集；收集✓ 组装；装配</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="install">install<div class="mark" onclick="mark('install')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukins_ukinspe009.mp3"></audio>安装✓ 把…安装到计算机上✓ 正式任命，使正式就职✓ 将（某人）／自己安顿在某处</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="furnish">furnish<div class="mark" onclick="mark('furnish')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfun_ukfunk_013.mp3"></audio>为…配备家具；布置（家具）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="placement">placement<div class="mark" onclick="mark('placement')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpkk_ukpkk__010.mp3"></audio>临时职位（或工作）✓ 为…找到合适的位置</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="layout">layout<div class="mark" onclick="mark('layout')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklaw_uklawle019.mp3"></audio>布局，布置，排列</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="design">design<div class="mark" onclick="mark('design')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdes_ukdescr023.mp3"></audio>设计；制（图）✓ 意图，打算</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdes_ukdescr023.mp3"></audio>设计图，图纸✓ 设计（艺术）✓ 设计（方法）；设计风格✓ 图案✓ 特意；故意，有意✓ 阴谋计划，不良企图</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="entrance">entrance<div class="mark" onclick="mark('entrance')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukent_ukentic016.mp3"></audio>入口；大门（口）；通道✓ （演员的）入场，登场✓ 进入；进门✓ 进入权；进入许可</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="entry">entry<div class="mark" onclick="mark('entry')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukent_ukentre004.mp3"></audio>进入；加入，参加✓ 门；入口；通道✓ 项目；条目；（一则）记录✓ 参赛作品；参赛</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="enter">enter<div class="mark" onclick="mark('enter')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukens_ukensla011.mp3"></audio>进来；进去；进入✓ （为…）报名参加（竞赛、考试等）；安排…参加✓ 输入；登记；登录✓ （正式）提出✓ 成为…的一员，加入；开始从事✓ 进入…时期</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukens_ukensla011.mp3"></audio>回车键</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="exit">exit<div class="mark" onclick="mark('exit')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexi_ukexist008.mp3"></audio>（建筑物或大型交通工具的）出口，安全门；（尤指演员）退场✓ （驶出主干道的）出口，出路</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukexi_ukexist008.mp3"></audio>离开（建筑物或大型交通工具）✓ 退出，终止（电脑程序）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="outside">outside<div class="mark" onclick="mark('outside')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>在外面（的），在室外（的）；在…外面（的）✓ 外来（的）；来自外地（或组织外）（的）；…以外（的）✓ （电话）外线✓ 最大限度的；最高限度的</p>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>在（…）外面✓ 不在某地，在（…）外面，…以外✓ 超出；不属于✓ 除了，除…之外</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>外部，外面✓ 最多，顶多</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh003.mp3"></audio>微小的，极小的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="outward">outward<div class="mark" onclick="mark('outward')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh021.mp3"></audio>外表的，外面的✓ 向外的✓ 出发（去某地）的</p>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutsh021.mp3"></audio>向外，朝外（同 outwards）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="exterior">exterior<div class="mark" onclick="mark('exterior')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukext_ukexten009.mp3"></audio>外面的；外表的；外来的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukext_ukexten009.mp3"></audio>外部；外表；外面</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="external">external<div class="mark" onclick="mark('external')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukext_ukexten013.mp3"></audio>外面的；外表的；来自外部的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="inner">inner<div class="mark" onclick="mark('inner')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukini_ukiniti029.mp3"></audio>里面的✓ 内心的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="interior">interior<div class="mark" onclick="mark('interior')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter028.mp3"></audio>内部✓ 内地，腹地✓ （某些国家的）内政部</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter028.mp3"></audio>内部的✓ （政府）内政的；内务的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="inward">inward<div class="mark" onclick="mark('inward')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinv_ukinvig027.mp3"></audio>里面的；向里的✓ 内心的✓ （金钱）向国内流入的</p>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinv_ukinvig027.mp3"></audio>（同 inwards）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="internal">internal<div class="mark" onclick="mark('internal')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukint_ukinter126.mp3"></audio>体内的；内部的；国内的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>

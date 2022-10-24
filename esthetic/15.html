@@ -1,661 +1,1106 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="./tailwind.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./esthetic.css">
-<script src="./esthetic.js"></script>
-<script>const chapter = '15';</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="./esthetic.js"></script>
+    <script>const chapter = '15';</script>
 </head>
 <body>
-    
-<div class="nav">
-    <a href="./index.html">Index</a>
-    <a href="#/" onclick="hide(this);">Hide</a>
-    <a href="#/" onclick="play(this);">Play</a>
-    <a href="#/" onclick="next(this);">Next</a>
-</div>
+    <div class="nav">
+        <a href="./index.html">Index</a>
+        <a href="#/" onclick="hide(this);">Hide</a>
+        <a href="#/" onclick="play(this);">Play</a>
+        <a href="#/" onclick="next(this);">Next</a>
+    </div>
 
-<div class="content">
-    <div class="word" data-word="republic">republic<div class="mark" onclick="mark('republic')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrep_ukrepro004.mp3"></audio>（通常指由选举产生的人民代表和总统治理的）共和国，共和政体</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Marxism">Marxism<div class="mark" onclick="mark('Marxism')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmar_ukmarve002.mp3"></audio>马克思主义</p>
-</div>
-<div class="content">
-    <div class="word" data-word="socialism">socialism<div class="mark" onclick="mark('socialism')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksob_uksober008.mp3"></audio>社会主义；社会主义制度</p>
-</div>
-<div class="content">
-    <div class="word" data-word="communism">communism<div class="mark" onclick="mark('communism')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcommu009.mp3"></audio>共产主义</p>
-</div>
-<div class="content">
-    <div class="word" data-word="regime">regime<div class="mark" onclick="mark('regime')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukreg_ukregen008.mp3"></audio>政府；政权；政体✓ 组织方法；管理体制；体系✓ 生活规则，养生之道（同 regimen）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="government">government<div class="mark" onclick="mark('government')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgou_ukgourd010.mp3"></audio>政府，内阁✓ 政体，体制✓ 统治，执政；治理，管理✓ 英国女王／国王陛下的政府，英国政府</p>
-</div>
-<div class="content">
-    <div class="word" data-word="authority">authority<div class="mark" onclick="mark('authority')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaur_ukauror027.mp3"></audio>威信；权力；管辖权✓ 当局；官方；当权者✓ 官方；当局✓ 权威人士；专家；泰斗</p>
-</div>
-<div class="content">
-    <div class="word" data-word="political">political<div class="mark" onclick="mark('political')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar025.mp3"></audio>政治的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="hierarchy">hierarchy<div class="mark" onclick="mark('hierarchy')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhho_ukhhok_025.mp3"></audio>等级制度✓ 统治集团</p>
-</div>
-<div class="content">
-    <div class="word" data-word="democracy">democracy<div class="mark" onclick="mark('democracy')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdem_ukdemag028.mp3"></audio>民主；民主思想；民主政体✓ 民主国家</p>
-</div>
-<div class="content">
-    <div class="word" data-word="bureaucracy">bureaucracy<div class="mark" onclick="mark('bureaucracy')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbun_ukbunny013.mp3"></audio>官僚作风；官僚主义；官僚体制</p>
-</div>
-<div class="content">
-    <div class="word" data-word="egalitarian">egalitarian<div class="mark" onclick="mark('egalitarian')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeff_ukeffor007.mp3"></audio>平等主义的；主张人人平等的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeff_ukeffor008.mp3"></audio>平等主义者✓ 平等主义</p>
-</div>
-<div class="content">
-    <div class="word" data-word="materialism">materialism<div class="mark" onclick="mark('materialism')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmat_ukmatch007.mp3"></audio>实利主义，物质主义✓ 唯物主义，唯物论</p>
-</div>
-<div class="content">
-    <div class="word" data-word="revolution">revolution<div class="mark" onclick="mark('revolution')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrev_ukrevie017.mp3"></audio>（通常指改变政治体制的）革命✓ 革命性剧变；大变革✓ 旋转；绕转；循环运动✓ （轮子等的）一转，一圈</p>
-</div>
-<div class="content">
-    <div class="word" data-word="reform">reform<div class="mark" onclick="mark('reform')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefit019.mp3"></audio>（尤指通过改变人的行为或事物的构造而）改革，改进，改造</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefit019.mp3"></audio>（尤指人的行为或事物构造方面的）改革，改进，改造，改良</p>
-</div>
-<div class="content">
-    <div class="word" data-word="process">process<div class="mark" onclick="mark('process')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprobi013.mp3"></audio>过程；步骤✓ 变化过程；进程✓ 制作方法，加工方法</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprobi013.mp3"></audio>处理；办理✓ （计算机）处理（数据）✓ 加工（食品或原料）✓ 消化，处理（艰难、悲伤的事情）✓ 冲洗加工（胶片）；印✓ 缓慢地走</p>
-</div>
-<div class="content">
-    <div class="word" data-word="conservative">conservative<div class="mark" onclick="mark('conservative')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconsc026.mp3"></audio>保守的；守旧的✓ （外表上）保守的，传统的，不赶潮流的✓ （猜测、计算）保守的，低估的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="meltdown">meltdown<div class="mark" onclick="mark('meltdown')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmel_ukmelod006.mp3"></audio>（核电站核燃料的）熔毁✓ （尤指金融方面的）灾难✓ 崩溃（指一个人极度悲伤而不能应对生活）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="municipal">municipal<div class="mark" onclick="mark('municipal')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmul_ukmulli029.mp3"></audio>市政的；市立的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="neutral">neutral<div class="mark" onclick="mark('neutral')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukn_ukneu_ukneuro011.mp3"></audio>中立的，不偏不倚的✓ （体育比赛）中立场地✓ 不引人注意的✓ （化学物质）中性的，既非酸性又非碱性的✓ （物理学中）中性的，不带电的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_ukneu_ukneuro011.mp3"></audio>空档✓ 不活动；停滞✓ 中立者</p>
-</div>
-<div class="content">
-    <div class="word" data-word="bilateral">bilateral<div class="mark" onclick="mark('bilateral')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbif_ukbiff_025.mp3"></audio>双边的，双方的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="arena">arena<div class="mark" onclick="mark('arena')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukarc_ukarchi016.mp3"></audio>（体育比赛或表演用的）场地，竞技场，剧场✓ 活动场所；斗争场所；竞争舞台</p>
-</div>
-<div class="content">
-    <div class="word" data-word="flag">flag<div class="mark" onclick="mark('flag')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflacc003.mp3"></audio>旗，旗帜✓ （同 flagstone）✓ 菖蒲（一种大型鸢尾花）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflacc003.mp3"></audio>给…做标记✓ 标记（计算机里某些信息，以便之后处理）✓ 变得疲倦；兴趣衰减</p>
-</div>
-<div class="content">
-    <div class="word" data-word="banner">banner<div class="mark" onclick="mark('banner')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbands027.mp3"></audio>（游行队伍等用的）横幅✓ （互联网或报纸上的）横幅广告，广告条（同 banner advertisement）✓ 主张；原则；信仰</p>
-</div>
-<div class="content">
-    <div class="word" data-word="president">president<div class="mark" onclick="mark('president')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprese007.mp3"></audio>总统；国家主席✓ （机构的）负责人，会长，主席；（尤指美国的）总裁，董事长</p>
-</div>
-<div class="content">
-    <div class="word" data-word="premier">premier<div class="mark" onclick="mark('premier')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprefe029.mp3"></audio>首位的，首要的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprefe029.mp3"></audio>（尤用于新闻报道）总理，首相</p>
-</div>
-<div class="content">
-    <div class="word" data-word="minister">minister<div class="mark" onclick="mark('minister')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmin_ukminim007.mp3"></audio>部长；大臣✓ 牧师✓ 公使；外交使节</p>
-</div>
-<div class="content">
-    <div class="word" data-word="secretary">secretary<div class="mark" onclick="mark('secretary')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksec_ukseces017.mp3"></audio>秘书✓ （委员会）秘书✓ （负责机构总体管理的）干事，文书</p>
-</div>
-<div class="content">
-    <div class="word" data-word="parliament">parliament<div class="mark" onclick="mark('parliament')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpar_ukparis013.mp3"></audio>议会✓ 议会活动期</p>
-</div>
-<div class="content">
-    <div class="word" data-word="senate">senate<div class="mark" onclick="mark('senate')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksen_uksen__002.mp3"></audio>（诸如美国、澳大利亚、法国的）参议院✓ 大学理事会</p>
-</div>
-<div class="content">
-    <div class="word" data-word="conference">conference<div class="mark" onclick="mark('conference')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukcondu015.mp3"></audio>会议，大会；讨论会，协商会✓ 在参加会议，在开会</p>
-</div>
-<div class="content">
-    <div class="word" data-word="meeting">meeting<div class="mark" onclick="mark('meeting')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmee_ukmeek_004.mp3"></audio>会见；会面；会议✓ （尤指事先未安排的）会面，见面✓ 与会者，参加会议的人✓ 体育运动会</p>
-</div>
-<div class="content">
-    <div class="word" data-word="headquarters">headquarters<div class="mark" onclick="mark('headquarters')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhea_ukhead_026.mp3"></audio>总部；总局；司令部</p>
-</div>
-<div class="content">
-    <div class="word" data-word="delegation">delegation<div class="mark" onclick="mark('delegation')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdej_ukdejur012.mp3"></audio>代表团✓ （工作、职务或权力等）分配；委派；授权</p>
-</div>
-<div class="content">
-    <div class="word" data-word="behalf">behalf<div class="mark" onclick="mark('behalf')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbeg_ukbegui005.mp3"></audio>代表…，作为…的代表；代替…✓ 因为，为了…的利益</p>
-</div>
-<div class="content">
-    <div class="word" data-word="police">police<div class="mark" onclick="mark('police')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar012.mp3"></audio>警察当局，警方✓ 警察</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar012.mp3"></audio>维持…的治安，巡查；在…部署警察✓ 控制；监督</p>
-</div>
-<div class="content">
-    <div class="word" data-word="statesman">statesman<div class="mark" onclick="mark('statesman')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstate007.mp3"></audio>（尤指具有远见卓识而受人尊敬的）政治家</p>
-</div>
-<div class="content">
-    <div class="word" data-word="mayor">mayor<div class="mark" onclick="mark('mayor')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukman_ukmanuf024.mp3"></audio>市长</p>
-</div>
-<div class="content">
-    <div class="word" data-word="service">service<div class="mark" onclick="mark('service')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukser_ukseren028.mp3"></audio>公共服务系统；公共事业✓ 系统的运行✓ （主干道旁的）服务站✓ 接待；招待；服务✓ 服务费✓ 服务时间；上班时间✓ 提供服务的业务✓ 政府机构；公务部门✓ （可提供的）技术服务✓ 在服役；在使用中✓ 当佣人，当仆人✓ 服兵役；军队✓ 军队，部队✓ 在战斗✓ 礼拜仪式；祈祷仪式✓ （在网球等体育运动中）发（球）✓ 一套餐具✓ （汽车或机器的）定期维修</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukser_ukservi002.mp3"></audio>检修；维修✓ 还债✓ 合用的；耐用的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="office">office<div class="mark" onclick="mark('office')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukoff_ukoffen010.mp3"></audio>办公室；办公楼✓ 办事处；事务所✓ （医生或牙医的）诊所✓ 官职；公职；职务；职责</p>
-</div>
-<div class="content">
-    <div class="word" data-word="bureau">bureau<div class="mark" onclick="mark('bureau')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbun_ukbunny012.mp3"></audio>（搜集或提供信息的）办事处，办公室，机构✓ （政府部门的）局，处，科✓ 书桌✓ 五斗橱；（有抽屉的）衣柜，衣橱</p>
-</div>
-<div class="content">
-    <div class="word" data-word="department">department<div class="mark" onclick="mark('department')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukden_ukdensi017.mp3"></audio>（组织或机构中的）部，系，处，科，室</p>
-</div>
-<div class="content">
-    <div class="word" data-word="harness">harness<div class="mark" onclick="mark('harness')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhar_ukharne001.mp3"></audio>挽具；系带</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhar_ukharne001.mp3"></audio>给（马）上挽具✓ 控制；利用…的动力</p>
-</div>
-<div class="content">
-    <div class="word" data-word="administration">administration<div class="mark" onclick="mark('administration')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadj_ukadjus007.mp3"></audio>管理；经营；行政✓ （企业、机关等的）管理人员；行政人员；管理部门✓ 一届政府或政府人员（如总统及其内阁）✓ 提供；施用✓ 管理令程序，即公司资不抵债时的一种拯救程序，允许公司变更管理人以避免清算。</p>
-</div>
-<div class="content">
-    <div class="word" data-word="dominate">dominate<div class="mark" onclick="mark('dominate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdol_ukdolph014.mp3"></audio>统治；控制✓ 在…中占首要地位；拥有优势；最明显的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="power">power<div class="mark" onclick="mark('power')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpot_ukpotti017.mp3"></audio>影响力；操控力；势力✓ 权力；政权✓ 力，力量✓ 权力，权限；职权✓ 权力，职权，权势✓ 电力✓ 能力，本领✓ 能力，本领✓ 掌握大权的人；有影响力的机构；强国✓ 动力，功率✓ 放大率；放大倍数✓ 幂，乘方</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpot_ukpotti017.mp3"></audio>为…提供动力，驱动✓ 增加力量；奋力行动</p>
-</div>
-<div class="content">
-    <div class="word" data-word="influence">influence<div class="mark" onclick="mark('influence')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfir019.mp3"></audio>影响，作用；有影响的人（或物）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfir019.mp3"></audio>影响</p>
-</div>
-<div class="content">
-    <div class="word" data-word="affect">affect<div class="mark" onclick="mark('affect')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaer_ukaerog018.mp3"></audio>影响；侵袭；感染；打动✓ 假装✓ （为引人注意或自抬身价而）刻意穿戴，故作</p>
-</div>
-<div class="content">
-    <div class="word" data-word="importance">importance<div class="mark" onclick="mark('importance')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimp_ukimplo010.mp3"></audio>重要性</p>
-</div>
-<div class="content">
-    <div class="word" data-word="significance">significance<div class="mark" onclick="mark('significance')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksie_uksiege022.mp3"></audio>重要性，重要意义✓ 特别意义，特殊含义</p>
-</div>
-<div class="content">
-    <div class="word" data-word="organization">organization<div class="mark" onclick="mark('organization')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukord_ukordin009.mp3"></audio>组织，机构✓ 组织，筹划（活动等）✓ 安排，配置</p>
-</div>
-<div class="content">
-    <div class="word" data-word="association">association<div class="mark" onclick="mark('association')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassiz006.mp3"></audio>协会；社团；联盟✓ 联系；关系；关联✓ 联想</p>
-</div>
-<div class="content">
-    <div class="word" data-word="union">union<div class="mark" onclick="mark('union')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukuni_ukunins008.mp3"></audio>联合；结合；合并；统一✓ （美国内战时的）联邦✓ 工会（同 trade union）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="community">community<div class="mark" onclick="mark('community')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcommu011.mp3"></audio>社区；群体；社团，团体，界✓ （动植物的）群落✓ 公众，群众</p>
-</div>
-<div class="content">
-    <div class="word" data-word="consortium">consortium<div class="mark" onclick="mark('consortium')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconse028.mp3"></audio>（数家公司或银行联合组成的）联营企业；财团，银团</p>
-</div>
-<div class="content">
-    <div class="word" data-word="league">league<div class="mark" onclick="mark('league')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukldr_ukldriv015.mp3"></audio>（体育项目）联合会，联赛，联盟✓ 联盟，联合会</p>
-</div>
-<div class="content">
-    <div class="word" data-word="institution">institution<div class="mark" onclick="mark('institution')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukins_ukinspe027.mp3"></audio>（大学、银行等）机构，团体✓ 社会收容机构（尤指医院或监狱）✓ 制度；习俗✓ 开创；制定；设立</p>
-</div>
-<div class="content">
-    <div class="word" data-word="unite">unite<div class="mark" onclick="mark('unite')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukuni_ukunins019.mp3"></audio>（使）结合；（使）联合；（使）团结</p>
-</div>
-<div class="content">
-    <div class="word" data-word="unique">unique<div class="mark" onclick="mark('unique')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukuni_ukunins011.mp3"></audio>独一无二的；与众不同的；唯一的；独特的；罕见的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="nation">nation<div class="mark" onclick="mark('nation')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknar_uknark_020.mp3"></audio>国家✓ 民族</p>
-</div>
-<div class="content">
-    <div class="word" data-word="global">global<div class="mark" onclick="mark('global')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgli_ukglitc012.mp3"></audio>全球的，全世界的✓ 整体的，全面的；总括的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="worldwide">worldwide<div class="mark" onclick="mark('worldwide')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_c_cuk_cuk03_cuk03084.mp3"></audio>世界范围的，全世界的；在全世界的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="federal">federal<div class="mark" onclick="mark('federal')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfea_ukfeast021.mp3"></audio>联邦政府的✓ 联邦（制）的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="foreign">foreign<div class="mark" onclick="mark('foreign')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfor_ukforef013.mp3"></audio>外国的✓ 对…来说是陌生的✓ 异质的；外来的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="overseas">overseas<div class="mark" onclick="mark('overseas')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukove_ukovers002.mp3"></audio>在海外（的）；从国外来（的）；到国外（的）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="abroad">abroad<div class="mark" onclick="mark('abroad')">Mark</div></div>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukabr_ukabrea004.mp3"></audio>在国外；到国外✓ 在室外；到室外✓ 广为流传的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="civil">civil<div class="mark" onclick="mark('civil')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh021.mp3"></audio>文职的；民用的；平民的，国民的✓ 民事的✓ 有礼貌的；文明的；客气的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="emigrate">emigrate<div class="mark" onclick="mark('emigrate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukemb_ukembry016.mp3"></audio>移居外国；移民</p>
-</div>
-<div class="content">
-    <div class="word" data-word="immigrate">immigrate<div class="mark" onclick="mark('immigrate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimm_ukimmac020.mp3"></audio>（外来的）移民</p>
-</div>
-<div class="content">
-    <div class="word" data-word="reign">reign<div class="mark" onclick="mark('reign')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukraf_ukraffl025.mp3"></audio>为王，为君；当政；统治✓ 主宰；起支配作用；盛行</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukraf_ukraffl025.mp3"></audio>为王，为君；当政；统治✓ 主宰（或支配）的时期</p>
-</div>
-<div class="content">
-    <div class="word" data-word="puppet">puppet<div class="mark" onclick="mark('puppet')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpun_ukpunst010.mp3"></audio>木偶✓ 傀儡</p>
-</div>
-<div class="content">
-    <div class="word" data-word="throne">throne<div class="mark" onclick="mark('throne')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukthr_ukthroa008.mp3"></audio>王座；王位✓ 王位；王权；君权</p>
-</div>
-<div class="content">
-    <div class="word" data-word="crown">crown<div class="mark" onclick="mark('crown')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcro_ukcrowe002.mp3"></audio>王冠，皇冠；冕✓ 冠军✓ （头、帽或山的）顶部✓ （受损牙齿的）人造冠✓ 克朗（英国旧币）</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcro_ukcrowe002.mp3"></audio>为…加冕；立…为君主✓ 使达到顶峰；使圆满✓ 加顶于；覆盖…的顶部✓ 打…的头部✓ 给牙镶齿冠</p>
-</div>
-<div class="content">
-    <div class="word" data-word="wreath">wreath<div class="mark" onclick="mark('wreath')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwre_ukwreat001.mp3"></audio>花环；花圈</p>
-</div>
-<div class="content">
-    <div class="word" data-word="colony">colony<div class="mark" onclick="mark('colony')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcol_ukcolle028.mp3"></audio>殖民地✓ 殖民地定居者群体✓ （具有共同爱好或工作的）聚居人群，群体✓ （动物、昆虫或植物的）群，群落；生物群✓ （有篱笆或围墙环绕的）住宅区</p>
-</div>
-<div class="content">
-    <div class="word" data-word="liberty">liberty<div class="mark" onclick="mark('liberty')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklib_ukliber015.mp3"></audio>自由✓ 被准许做…✓ 自由✓ 放肆，无礼，失礼✓ 任意歪曲，随意改动✓ （对某人）过分亲昵，过分亲热；调戏</p>
-</div>
-<div class="content">
-    <div class="word" data-word="independence">independence<div class="mark" onclick="mark('independence')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukind_ukindel008.mp3"></audio>（国家的）独立✓ 自主，自立，独立</p>
-</div>
-<div class="content">
-    <div class="word" data-word="slum">slum<div class="mark" onclick="mark('slum')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukslo_ukslove017.mp3"></audio>（尤指城市中的）贫民窟，棚户区✓ 脏乱的地方</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukslo_ukslove017.mp3"></audio>过穷日子，过简朴的生活</p>
-</div>
-<div class="content">
-    <div class="word" data-word="refuge">refuge<div class="mark" onclick="mark('refuge')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefre006.mp3"></audio>避难（所）；庇护（所）；慰藉</p>
-</div>
-<div class="content">
-    <div class="word" data-word="asylum">asylum<div class="mark" onclick="mark('asylum')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukasu_ukasund002.mp3"></audio>（尤指政治）避难，庇护✓ 精神病院</p>
-</div>
-<div class="content">
-    <div class="word" data-word="population">population<div class="mark" onclick="mark('population')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi011.mp3"></audio>人口；全体居民✓ （统称）（一定范围内的）人口，动物总数</p>
-</div>
-<div class="content">
-    <div class="word" data-word="demographic">demographic<div class="mark" onclick="mark('demographic')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/us_pron_u_usd_usdem_usdemis009.mp3"></audio>人口的；人口统计的；人口学的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_e_epd_epd31_epd31644.mp3"></audio>（顾客）族群</p>
-</div>
-<div class="content">
-    <div class="word" data-word="citizen">citizen<div class="mark" onclick="mark('citizen')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh009.mp3"></audio>公民；市民，城镇居民</p>
-</div>
-<div class="content">
-    <div class="word" data-word="resident">resident<div class="mark" onclick="mark('resident')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun029.mp3"></audio>居民；住户✓ （美国的）高级专科住院实习医生</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun029.mp3"></audio>居住的；定居的；居留的✓ （有特殊技能或品质者）常驻的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="ethnic">ethnic<div class="mark" onclick="mark('ethnic')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukete_uketern012.mp3"></audio>民族的；种族的✓ 异族的；具有民族特色的；异国风味的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukete_uketern012.mp3"></audio>少数民族的一员</p>
-</div>
-<div class="content">
-    <div class="word" data-word="racial">racial<div class="mark" onclick="mark('racial')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrab_ukrabbi014.mp3"></audio>种族的；种族间的；种族关系的✓ 人种的，种族的；作为人种（或种族、民族）特点的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="clan">clan<div class="mark" onclick="mark('clan')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukciv_ukcivvy021.mp3"></audio>（尤指苏格兰的）宗族，氏族✓ 家族，氏族；（享有共同利益的）群体，集团</p>
-</div>
-<div class="content">
-    <div class="word" data-word="franchise">franchise<div class="mark" onclick="mark('franchise')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfra_ukfragm014.mp3"></audio>特许经销权✓ （尤指投票选举议员等立法机构成员的）选举权</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfra_ukfragm014.mp3"></audio>向…授予（或出售）特许经销权</p>
-</div>
-<div class="content">
-    <div class="word" data-word="entitle">entitle<div class="mark" onclick="mark('entitle')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukent_ukentic007.mp3"></audio>给予权利；使符合资格✓ 给…命名，给…题名</p>
-</div>
-<div class="content">
-    <div class="word" data-word="preference">preference<div class="mark" onclick="mark('preference')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukpredi030.mp3"></audio>偏爱；爱好；喜爱✓ 优先（权），偏袒✓ 优先于；而不是</p>
-</div>
-<div class="content">
-    <div class="word" data-word="vote">vote<div class="mark" onclick="mark('vote')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvor_ukvorte004.mp3"></audio>投票；选举；（对…）进行表决</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvor_ukvorte004.mp3"></audio>（选）票；表决意见✓ 投票；表决；选举✓ 总投票数✓ 选举权；表决权✓ 对…进行表决</p>
-</div>
-<div class="content">
-    <div class="word" data-word="elect">elect<div class="mark" onclick="mark('elect')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeld_ukelder005.mp3"></audio>选举，推选✓ 选择做…</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeld_ukelder005.mp3"></audio>（《圣经》中所称的）上帝的选民✓ 特权集团；特殊阶层</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeld_ukelder005.mp3"></audio>候任总统／首相等</p>
-</div>
-<div class="content">
-    <div class="word" data-word="respondent">respondent<div class="mark" onclick="mark('respondent')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukres_ukresou028.mp3"></audio>回答者；答复者；应答者✓ （尤指离婚案件中的）被告</p>
-</div>
-<div class="content">
-    <div class="word" data-word="poll">poll<div class="mark" onclick="mark('poll')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar007.mp3"></audio>民意测验，民意调查✓ 投票处✓ 投票，去投票</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar007.mp3"></audio>获得（若干选票）✓ 对…进行民意测验</p>
-</div>
-<div class="content">
-    <div class="word" data-word="ambition">ambition<div class="mark" onclick="mark('ambition')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukama_ukamalg029.mp3"></audio>抱负；志向；雄心；野心✓ 抱负；志向；雄心；野心</p>
-</div>
-<div class="content">
-    <div class="word" data-word="nominate">nominate<div class="mark" onclick="mark('nominate')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknoc_uknoctu028.mp3"></audio>（为选举、工作、职位或荣誉）提名，推荐✓ 提名（电影、歌曲、节目等）✓ 任命；指定</p>
-</div>
-<div class="content">
-    <div class="word" data-word="checklist">checklist<div class="mark" onclick="mark('checklist')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukcheat010.mp3"></audio>（记事）清单</p>
-</div>
-<div class="content">
-    <div class="word" data-word="succession">succession<div class="mark" onclick="mark('succession')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksub_uksubur014.mp3"></audio>一连串；一系列；接连✓ 接连地，连续地✓ 继任，接任；继承</p>
-</div>
-<div class="content">
-    <div class="word" data-word="safety">safety<div class="mark" onclick="mark('safety')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksaf_uksafek004.mp3"></audio>安全，平安</p>
-</div>
-<div class="content">
-    <div class="word" data-word="welfare">welfare<div class="mark" onclick="mark('welfare')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwel_ukwelde003.mp3"></audio>福利救济；社会福利✓ （因贫困或失业而）接受福利救济✓ （尤指人的）幸福，福祉；安康</p>
-</div>
-<div class="content">
-    <div class="word" data-word="well-being">well-being<div class="mark" onclick="mark('well-being')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwel_ukwelde012.mp3"></audio>幸福；安康</p>
-</div>
-<div class="content">
-    <div class="word" data-word="harmony">harmony<div class="mark" onclick="mark('harmony')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhar_ukhardw030.mp3"></audio>（音乐中的）和声✓ 协调，和谐，一致</p>
-</div>
-<div class="content">
-    <div class="word" data-word="steady">steady<div class="mark" onclick="mark('steady')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun015.mp3"></audio>稳步的；持续的；有规律的✓ 固定不动的；稳固的，平稳的✓ 长期稳定的工作✓ 稳的；冷静的，沉着的✓ 可靠的；稳重的</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun015.mp3"></audio>使稳定；使固定不动✓ （使）冷静，（使）镇定下来</p>
-    <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun015.mp3"></audio>（和某人）保持稳定的恋爱关系</p>
-</div>
-<div class="content">
-    <div class="word" data-word="flourish">flourish<div class="mark" onclick="mark('flourish')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukflo_ukflori017.mp3"></audio>茁壮成长；繁荣；蓬勃发展✓ （为引人注意）挥舞</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukflo_ukflori017.mp3"></audio>动作夸张地</p>
-</div>
-<div class="content">
-    <div class="word" data-word="succeed">succeed<div class="mark" onclick="mark('succeed')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksub_uksubur010.mp3"></audio>成功；实现目标；达到目的✓ 接替，继任；继承✓ 随后出现；接着发生</p>
-</div>
-<div class="content">
-    <div class="word" data-word="prospect">prospect<div class="mark" onclick="mark('prospect')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprose002.mp3"></audio>（发生好事情的）可能，可能性，机会✓ 成功的机会；前景，前途✓ 前景；展望；设想✓ 有前途的候选人✓ 景色，景观</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprose003.mp3"></audio>勘探</p>
-</div>
-<div class="content">
-    <div class="word" data-word="perspective">perspective<div class="mark" onclick="mark('perspective')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperso009.mp3"></audio>（思考问题的）角度，观点，想法✓ 恰当地估计；合理地评价；正确地看待✓ 客观地比较；客观地审查✓ 透视（画）法✓ 透视比例正确的；有透视效果的✓ 透视尺度失真的；比例（或位置）不当的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="viewpoint">viewpoint<div class="mark" onclick="mark('viewpoint')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvic_ukvicio030.mp3"></audio>观察位置；角度✓ （思考的）角度，着眼点（同 point of view）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="standpoint">standpoint<div class="mark" onclick="mark('standpoint')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstand014.mp3"></audio>观点，立场</p>
-</div>
-<div class="content">
-    <div class="word" data-word="outlook">outlook<div class="mark" onclick="mark('outlook')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutle004.mp3"></audio>前景；展望✓ 观点，看法✓ 景色，风光，景致</p>
-</div>
-<div class="content">
-    <div class="word" data-word="guideline">guideline<div class="mark" onclick="mark('guideline')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld00609.mp3"></audio>指导方针，指导原则，准则</p>
-</div>
-<div class="content">
-    <div class="word" data-word="ethic">ethic<div class="mark" onclick="mark('ethic')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukete_uketern006.mp3"></audio>行为准则，伦理；（尤指）道德体系，道德规范✓ 伦理学；道德学</p>
-</div>
-<div class="content">
-    <div class="word" data-word="suggest">suggest<div class="mark" onclick="mark('suggest')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksug_uksugar002.mp3"></audio>提议；建议✓ 暗示；间接表明；意味着✓ 使想到；使联想到</p>
-</div>
-<div class="content">
-    <div class="word" data-word="advise">advise<div class="mark" onclick="mark('advise')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadv_ukadver007.mp3"></audio>劝告；忠告；向…提供意见，给…出主意✓ 通知；（正式）告知</p>
-</div>
-<div class="content">
-    <div class="word" data-word="proposal">proposal<div class="mark" onclick="mark('proposal')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukpropo007.mp3"></audio>建议；计划；提案✓ 求婚</p>
-</div>
-<div class="content">
-    <div class="word" data-word="hint">hint<div class="mark" onclick="mark('hint')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhim_ukhimal015.mp3"></audio>暗示，提示，示意✓ 建议✓ 很少量</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhim_ukhimal015.mp3"></audio>暗示</p>
-</div>
-<div class="content">
-    <div class="word" data-word="declare">declare<div class="mark" onclick="mark('declare')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdec_ukdecep026.mp3"></audio>宣布；声明；公布✓ 申报（应纳税的货物价值或收入）✓ （板球比赛中，一方因已达足够分数获胜而在一局未结束前的）宣布停止击球，宣布结束赛局</p>
-</div>
-<div class="content">
-    <div class="word" data-word="affirm">affirm<div class="mark" onclick="mark('affirm')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaff_ukaffir001.mp3"></audio>证实；确认；断言✓ （公开）声明</p>
-</div>
-<div class="content">
-    <div class="word" data-word="claim">claim<div class="mark" onclick="mark('claim')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukciv_ukcivvy008.mp3"></audio>声称；宣称；断言；主张✓ 声称拥有（成员）✓ 要求（拥有）；认领；索取✓ （向政府或组织）索要，索取（钱）；索（款）；索赔✓ 要求赔偿损失；索赔</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukciv_ukcivvy008.mp3"></audio>声明；说法；断言✓ 索款；索赔✓ （对某事物的）权利，所有权</p>
-</div>
-<div class="content">
-    <div class="word" data-word="proclaim">proclaim<div class="mark" onclick="mark('proclaim')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprobi020.mp3"></audio>宣布；声明✓ 表明；显示</p>
-</div>
-<div class="content">
-    <div class="word" data-word="state">state<div class="mark" onclick="mark('state')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstarg028.mp3"></audio>状态；情形；状况✓ 现状✓ 国家；政府✓ （德国、澳大利亚、美国等的）州，邦✓ 美国✓ （君主或政府首脑）正式地，隆重地</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstarg028.mp3"></audio>（尤指清楚谨慎地）陈述，说明，声明</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstarg028.mp3"></audio>国家的；政府的；州的✓ 国事的；国事规格的；正式的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="announce">announce<div class="mark" onclick="mark('announce')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukani_ukanima029.mp3"></audio>（尤指公开地）宣布，宣告，通告✓ 作为…的迹象；显示</p>
-</div>
-<div class="content">
-    <div class="word" data-word="clarify">clarify<div class="mark" onclick="mark('clarify')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcla_ukclap_013.mp3"></audio>澄清；阐明；使更清晰易懂✓ （通过加热黄油等脂肪）使澄清，使纯净，使净化</p>
-</div>
-<div class="content">
-    <div class="word" data-word="assist">assist<div class="mark" onclick="mark('assist')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassau028.mp3"></audio>帮助；协助；援助✓ 配合警方的询问</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassau028.mp3"></audio>（篮球、足球等的）助攻；（棒球等的）助杀</p>
-</div>
-<div class="content">
-    <div class="word" data-word="aid">aid<div class="mark" onclick="mark('aid')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaha_ukaha__008.mp3"></audio>帮助；支持✓ 辅助物，辅助设施；辅助工具✓ （向贫弱国家提供的食品、金钱、医疗物资、武器等）援助，救助✓ 为帮助…，为救援…</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaha_ukaha__008.mp3"></audio>帮助；援助✓ 伙同…作案，与…同谋</p>
-</div>
-<div class="content">
-    <div class="word" data-word="encourage">encourage<div class="mark" onclick="mark('encourage')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukenc_ukencas019.mp3"></audio>刺激，激励；促进；助长✓ （通过言语或行动）鼓励，支持</p>
-</div>
-<div class="content">
-    <div class="word" data-word="implement">implement<div class="mark" onclick="mark('implement')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimp_ukimpet019.mp3"></audio>实施，贯彻</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimp_ukimpet020.mp3"></audio>工具，器具</p>
-</div>
-<div class="content">
-    <div class="word" data-word="monitor">monitor<div class="mark" onclick="mark('monitor')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmon_ukmonac030.mp3"></audio>监督员，核查员✓ 监控器，监测器✓ 显示器，屏幕✓ （学校的）班长，年级长，教务助理生</p>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmon_ukmonac030.mp3"></audio>监控；监测；监视，密切注视</p>
-</div>
-<div class="content">
-    <div class="word" data-word="admit">admit<div class="mark" onclick="mark('admit')">Mark</div></div>
-    <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadj_ukadjus024.mp3"></audio>（尤指不情愿地）承认；供认；招认✓ 认输，承认失败✓ 允许…进入✓ 准许…加入；接纳✓ 接收…入院；收治</p>
-</div>
-<div class="content">
-    <div class="word" data-word="African">African<div class="mark" onclick="mark('African')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukafo_ukafore005.mp3"></audio>非洲的；非洲人的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukafo_ukafore005.mp3"></audio>非洲人</p>
-</div>
-<div class="content">
-    <div class="word" data-word="European">European<div class="mark" onclick="mark('European')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeur_ukeuro_006.mp3"></audio>欧洲的；欧洲人的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeur_ukeuro_006.mp3"></audio>欧洲人</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Latin">Latin<div class="mark" onclick="mark('Latin')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklat_uklat__018.mp3"></audio>拉丁语</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklat_uklat__018.mp3"></audio>用拉丁语写的✓ 拉丁语系国家的；拉丁语系民族的；拉丁人的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Jewish">Jewish<div class="mark" onclick="mark('Jewish')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukj_ukjet_ukjetsa012.mp3"></audio>犹太的，犹太教民的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Arabian">Arabian<div class="mark" onclick="mark('Arabian')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat006.mp3"></audio>阿拉伯人</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat006.mp3"></audio>阿拉伯的；阿拉伯人的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Portuguese">Portuguese<div class="mark" onclick="mark('Portuguese')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04289.mp3"></audio>葡萄牙的；葡萄牙人的；葡萄牙语的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04289.mp3"></audio>葡萄牙语✓ 葡萄牙人</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Roman">Roman<div class="mark" onclick="mark('Roman')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrol_ukrolli007.mp3"></audio>（印刷常用的）罗马体的，正体的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Russian">Russian<div class="mark" onclick="mark('Russian')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04295.mp3"></audio>俄国的，俄罗斯的；俄国人的，俄罗斯人的；俄语的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04295.mp3"></audio>俄国人，俄罗斯人✓ 俄语，俄罗斯语</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Spanish">Spanish<div class="mark" onclick="mark('Spanish')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04333.mp3"></audio>西班牙的；西班牙人的；西班牙语的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04333.mp3"></audio>西班牙语</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Swiss">Swiss<div class="mark" onclick="mark('Swiss')">Mark</div></div>
-    <p onclick="play_one(this)"><audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04347.mp3"></audio>瑞士的；瑞士人的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04347.mp3"></audio>瑞士人</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Greek">Greek<div class="mark" onclick="mark('Greek')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgravi024.mp3"></audio>希腊的；希腊式的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgravi024.mp3"></audio>希腊语✓ 希腊人</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Italian">Italian<div class="mark" onclick="mark('Italian')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04175.mp3"></audio>意大利的；意大利人的；意大利语的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04175.mp3"></audio>意大利人✓ 意大利语</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Soviet">Soviet<div class="mark" onclick="mark('Soviet')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksouth011.mp3"></audio>苏维埃（指共产主义国家，尤指前苏联的各级代表会议）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Indian">Indian<div class="mark" onclick="mark('Indian')">Mark</div></div>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukind_ukindel021.mp3"></audio>印度的；印度人的✓ 印第安人的</p>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukind_ukindel021.mp3"></audio>印度人✓ 印第安人</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Australia">Australia<div class="mark" onclick="mark('Australia')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04017.mp3"></audio>澳大利亚</p>
-</div>
-<div class="content">
-    <div class="word" data-word="New Zealand">New Zealand<div class="mark" onclick="mark('New Zealand')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04260.mp3"></audio>新西兰（南太平洋国家）</p>
-    <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04260.mp3"></audio>新西兰的；新西兰人的</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Canada">Canada<div class="mark" onclick="mark('Canada')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04064.mp3"></audio>加拿大</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Britain">Britain<div class="mark" onclick="mark('Britain')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbri_ukbrit_002.mp3"></audio>英格兰，苏格兰，威尔士的统称</p>
-</div>
-<div class="content">
-    <div class="word" data-word="France">France<div class="mark" onclick="mark('France')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04127.mp3"></audio>法国（西欧国家）</p>
-</div>
-<div class="content">
-    <div class="word" data-word="Germany">Germany<div class="mark" onclick="mark('Germany')">Mark</div></div>
-    <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04136.mp3"></audio>德国（中部欧洲国家）</p>
-</div>
+    <div class="content">
+        <div class="word" data-word="republic">republic<div class="mark" onclick="mark('republic')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrep_ukrepro004.mp3"></audio>（通常指由选举产生的人民代表和总统治理的）共和国，共和政体</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Marxism">Marxism<div class="mark" onclick="mark('Marxism')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmar_ukmarve002.mp3"></audio>马克思主义</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="socialism">socialism<div class="mark" onclick="mark('socialism')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksob_uksober008.mp3"></audio>社会主义；社会主义制度</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="communism">communism<div class="mark" onclick="mark('communism')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcommu009.mp3"></audio>共产主义</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="regime">regime<div class="mark" onclick="mark('regime')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukreg_ukregen008.mp3"></audio>政府；政权；政体✓ 组织方法；管理体制；体系✓ 生活规则，养生之道（同 regimen）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="government">government<div class="mark" onclick="mark('government')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgou_ukgourd010.mp3"></audio>政府，内阁✓ 政体，体制✓ 统治，执政；治理，管理✓ 英国女王／国王陛下的政府，英国政府</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="authority">authority<div class="mark" onclick="mark('authority')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaur_ukauror027.mp3"></audio>威信；权力；管辖权✓ 当局；官方；当权者✓ 官方；当局✓ 权威人士；专家；泰斗</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="political">political<div class="mark" onclick="mark('political')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar025.mp3"></audio>政治的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="hierarchy">hierarchy<div class="mark" onclick="mark('hierarchy')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhho_ukhhok_025.mp3"></audio>等级制度✓ 统治集团</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="democracy">democracy<div class="mark" onclick="mark('democracy')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdem_ukdemag028.mp3"></audio>民主；民主思想；民主政体✓ 民主国家</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="bureaucracy">bureaucracy<div class="mark" onclick="mark('bureaucracy')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbun_ukbunny013.mp3"></audio>官僚作风；官僚主义；官僚体制</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="egalitarian">egalitarian<div class="mark" onclick="mark('egalitarian')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeff_ukeffor007.mp3"></audio>平等主义的；主张人人平等的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeff_ukeffor008.mp3"></audio>平等主义者✓ 平等主义</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="materialism">materialism<div class="mark" onclick="mark('materialism')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmat_ukmatch007.mp3"></audio>实利主义，物质主义✓ 唯物主义，唯物论</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="revolution">revolution<div class="mark" onclick="mark('revolution')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrev_ukrevie017.mp3"></audio>（通常指改变政治体制的）革命✓ 革命性剧变；大变革✓ 旋转；绕转；循环运动✓ （轮子等的）一转，一圈</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="reform">reform<div class="mark" onclick="mark('reform')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefit019.mp3"></audio>（尤指通过改变人的行为或事物的构造而）改革，改进，改造</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefit019.mp3"></audio>（尤指人的行为或事物构造方面的）改革，改进，改造，改良</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="process">process<div class="mark" onclick="mark('process')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprobi013.mp3"></audio>过程；步骤✓ 变化过程；进程✓ 制作方法，加工方法</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprobi013.mp3"></audio>处理；办理✓ （计算机）处理（数据）✓ 加工（食品或原料）✓ 消化，处理（艰难、悲伤的事情）✓ 冲洗加工（胶片）；印✓ 缓慢地走</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="conservative">conservative<div class="mark" onclick="mark('conservative')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconsc026.mp3"></audio>保守的；守旧的✓ （外表上）保守的，传统的，不赶潮流的✓ （猜测、计算）保守的，低估的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="meltdown">meltdown<div class="mark" onclick="mark('meltdown')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmel_ukmelod006.mp3"></audio>（核电站核燃料的）熔毁✓ （尤指金融方面的）灾难✓ 崩溃（指一个人极度悲伤而不能应对生活）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="municipal">municipal<div class="mark" onclick="mark('municipal')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmul_ukmulli029.mp3"></audio>市政的；市立的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="neutral">neutral<div class="mark" onclick="mark('neutral')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukn_ukneu_ukneuro011.mp3"></audio>中立的，不偏不倚的✓ （体育比赛）中立场地✓ 不引人注意的✓ （化学物质）中性的，既非酸性又非碱性的✓ （物理学中）中性的，不带电的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_ukneu_ukneuro011.mp3"></audio>空档✓ 不活动；停滞✓ 中立者</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="bilateral">bilateral<div class="mark" onclick="mark('bilateral')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbif_ukbiff_025.mp3"></audio>双边的，双方的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="arena">arena<div class="mark" onclick="mark('arena')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukarc_ukarchi016.mp3"></audio>（体育比赛或表演用的）场地，竞技场，剧场✓ 活动场所；斗争场所；竞争舞台</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="flag">flag<div class="mark" onclick="mark('flag')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflacc003.mp3"></audio>旗，旗帜✓ （同 flagstone）✓ 菖蒲（一种大型鸢尾花）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfla_ukflacc003.mp3"></audio>给…做标记✓ 标记（计算机里某些信息，以便之后处理）✓ 变得疲倦；兴趣衰减</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="banner">banner<div class="mark" onclick="mark('banner')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukban_ukbands027.mp3"></audio>（游行队伍等用的）横幅✓ （互联网或报纸上的）横幅广告，广告条（同 banner advertisement）✓ 主张；原则；信仰</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="president">president<div class="mark" onclick="mark('president')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprese007.mp3"></audio>总统；国家主席✓ （机构的）负责人，会长，主席；（尤指美国的）总裁，董事长</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="premier">premier<div class="mark" onclick="mark('premier')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprefe029.mp3"></audio>首位的，首要的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukprefe029.mp3"></audio>（尤用于新闻报道）总理，首相</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="minister">minister<div class="mark" onclick="mark('minister')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmin_ukminim007.mp3"></audio>部长；大臣✓ 牧师✓ 公使；外交使节</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="secretary">secretary<div class="mark" onclick="mark('secretary')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksec_ukseces017.mp3"></audio>秘书✓ （委员会）秘书✓ （负责机构总体管理的）干事，文书</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="parliament">parliament<div class="mark" onclick="mark('parliament')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpar_ukparis013.mp3"></audio>议会✓ 议会活动期</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="senate">senate<div class="mark" onclick="mark('senate')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksen_uksen__002.mp3"></audio>（诸如美国、澳大利亚、法国的）参议院✓ 大学理事会</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="conference">conference<div class="mark" onclick="mark('conference')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukcondu015.mp3"></audio>会议，大会；讨论会，协商会✓ 在参加会议，在开会</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="meeting">meeting<div class="mark" onclick="mark('meeting')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmee_ukmeek_004.mp3"></audio>会见；会面；会议✓ （尤指事先未安排的）会面，见面✓ 与会者，参加会议的人✓ 体育运动会</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="headquarters">headquarters<div class="mark" onclick="mark('headquarters')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhea_ukhead_026.mp3"></audio>总部；总局；司令部</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="delegation">delegation<div class="mark" onclick="mark('delegation')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdej_ukdejur012.mp3"></audio>代表团✓ （工作、职务或权力等）分配；委派；授权</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="behalf">behalf<div class="mark" onclick="mark('behalf')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbeg_ukbegui005.mp3"></audio>代表…，作为…的代表；代替…✓ 因为，为了…的利益</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="police">police<div class="mark" onclick="mark('police')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar012.mp3"></audio>警察当局，警方✓ 警察</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar012.mp3"></audio>维持…的治安，巡查；在…部署警察✓ 控制；监督</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="statesman">statesman<div class="mark" onclick="mark('statesman')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstate007.mp3"></audio>（尤指具有远见卓识而受人尊敬的）政治家</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="mayor">mayor<div class="mark" onclick="mark('mayor')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukman_ukmanuf024.mp3"></audio>市长</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="service">service<div class="mark" onclick="mark('service')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukser_ukseren028.mp3"></audio>公共服务系统；公共事业✓ 系统的运行✓ （主干道旁的）服务站✓ 接待；招待；服务✓ 服务费✓ 服务时间；上班时间✓ 提供服务的业务✓ 政府机构；公务部门✓ （可提供的）技术服务✓ 在服役；在使用中✓ 当佣人，当仆人✓ 服兵役；军队✓ 军队，部队✓ 在战斗✓ 礼拜仪式；祈祷仪式✓ （在网球等体育运动中）发（球）✓ 一套餐具✓ （汽车或机器的）定期维修</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukser_ukservi002.mp3"></audio>检修；维修✓ 还债✓ 合用的；耐用的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="office">office<div class="mark" onclick="mark('office')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukoff_ukoffen010.mp3"></audio>办公室；办公楼✓ 办事处；事务所✓ （医生或牙医的）诊所✓ 官职；公职；职务；职责</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="bureau">bureau<div class="mark" onclick="mark('bureau')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbun_ukbunny012.mp3"></audio>（搜集或提供信息的）办事处，办公室，机构✓ （政府部门的）局，处，科✓ 书桌✓ 五斗橱；（有抽屉的）衣柜，衣橱</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="department">department<div class="mark" onclick="mark('department')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukden_ukdensi017.mp3"></audio>（组织或机构中的）部，系，处，科，室</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="harness">harness<div class="mark" onclick="mark('harness')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhar_ukharne001.mp3"></audio>挽具；系带</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhar_ukharne001.mp3"></audio>给（马）上挽具✓ 控制；利用…的动力</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="administration">administration<div class="mark" onclick="mark('administration')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadj_ukadjus007.mp3"></audio>管理；经营；行政✓ （企业、机关等的）管理人员；行政人员；管理部门✓ 一届政府或政府人员（如总统及其内阁）✓ 提供；施用✓ 管理令程序，即公司资不抵债时的一种拯救程序，允许公司变更管理人以避免清算。</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="dominate">dominate<div class="mark" onclick="mark('dominate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdol_ukdolph014.mp3"></audio>统治；控制✓ 在…中占首要地位；拥有优势；最明显的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="power">power<div class="mark" onclick="mark('power')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpot_ukpotti017.mp3"></audio>影响力；操控力；势力✓ 权力；政权✓ 力，力量✓ 权力，权限；职权✓ 权力，职权，权势✓ 电力✓ 能力，本领✓ 能力，本领✓ 掌握大权的人；有影响力的机构；强国✓ 动力，功率✓ 放大率；放大倍数✓ 幂，乘方</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpot_ukpotti017.mp3"></audio>为…提供动力，驱动✓ 增加力量；奋力行动</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="influence">influence<div class="mark" onclick="mark('influence')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfir019.mp3"></audio>影响，作用；有影响的人（或物）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukinf_ukinfir019.mp3"></audio>影响</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="affect">affect<div class="mark" onclick="mark('affect')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaer_ukaerog018.mp3"></audio>影响；侵袭；感染；打动✓ 假装✓ （为引人注意或自抬身价而）刻意穿戴，故作</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="importance">importance<div class="mark" onclick="mark('importance')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimp_ukimplo010.mp3"></audio>重要性</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="significance">significance<div class="mark" onclick="mark('significance')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksie_uksiege022.mp3"></audio>重要性，重要意义✓ 特别意义，特殊含义</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="organization">organization<div class="mark" onclick="mark('organization')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukord_ukordin009.mp3"></audio>组织，机构✓ 组织，筹划（活动等）✓ 安排，配置</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="association">association<div class="mark" onclick="mark('association')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassiz006.mp3"></audio>协会；社团；联盟✓ 联系；关系；关联✓ 联想</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="union">union<div class="mark" onclick="mark('union')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukuni_ukunins008.mp3"></audio>联合；结合；合并；统一✓ （美国内战时的）联邦✓ 工会（同 trade union）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="community">community<div class="mark" onclick="mark('community')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcom_ukcommu011.mp3"></audio>社区；群体；社团，团体，界✓ （动植物的）群落✓ 公众，群众</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="consortium">consortium<div class="mark" onclick="mark('consortium')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcon_ukconse028.mp3"></audio>（数家公司或银行联合组成的）联营企业；财团，银团</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="league">league<div class="mark" onclick="mark('league')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_ukldr_ukldriv015.mp3"></audio>（体育项目）联合会，联赛，联盟✓ 联盟，联合会</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="institution">institution<div class="mark" onclick="mark('institution')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukins_ukinspe027.mp3"></audio>（大学、银行等）机构，团体✓ 社会收容机构（尤指医院或监狱）✓ 制度；习俗✓ 开创；制定；设立</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="unite">unite<div class="mark" onclick="mark('unite')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukuni_ukunins019.mp3"></audio>（使）结合；（使）联合；（使）团结</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="unique">unique<div class="mark" onclick="mark('unique')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uku_ukuni_ukunins011.mp3"></audio>独一无二的；与众不同的；唯一的；独特的；罕见的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="nation">nation<div class="mark" onclick="mark('nation')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknar_uknark_020.mp3"></audio>国家✓ 民族</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="global">global<div class="mark" onclick="mark('global')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgli_ukglitc012.mp3"></audio>全球的，全世界的✓ 整体的，全面的；总括的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="worldwide">worldwide<div class="mark" onclick="mark('worldwide')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_c_cuk_cuk03_cuk03084.mp3"></audio>世界范围的，全世界的；在全世界的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="federal">federal<div class="mark" onclick="mark('federal')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfea_ukfeast021.mp3"></audio>联邦政府的✓ 联邦（制）的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="foreign">foreign<div class="mark" onclick="mark('foreign')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfor_ukforef013.mp3"></audio>外国的✓ 对…来说是陌生的✓ 异质的；外来的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="overseas">overseas<div class="mark" onclick="mark('overseas')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukove_ukovers002.mp3"></audio>在海外（的）；从国外来（的）；到国外（的）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="abroad">abroad<div class="mark" onclick="mark('abroad')">Mark</div></div>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukabr_ukabrea004.mp3"></audio>在国外；到国外✓ 在室外；到室外✓ 广为流传的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="civil">civil<div class="mark" onclick="mark('civil')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh021.mp3"></audio>文职的；民用的；平民的，国民的✓ 民事的✓ 有礼貌的；文明的；客气的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="emigrate">emigrate<div class="mark" onclick="mark('emigrate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukemb_ukembry016.mp3"></audio>移居外国；移民</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="immigrate">immigrate<div class="mark" onclick="mark('immigrate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimm_ukimmac020.mp3"></audio>（外来的）移民</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="reign">reign<div class="mark" onclick="mark('reign')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukraf_ukraffl025.mp3"></audio>为王，为君；当政；统治✓ 主宰；起支配作用；盛行</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukraf_ukraffl025.mp3"></audio>为王，为君；当政；统治✓ 主宰（或支配）的时期</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="puppet">puppet<div class="mark" onclick="mark('puppet')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpun_ukpunst010.mp3"></audio>木偶✓ 傀儡</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="throne">throne<div class="mark" onclick="mark('throne')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukt_ukthr_ukthroa008.mp3"></audio>王座；王位✓ 王位；王权；君权</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="crown">crown<div class="mark" onclick="mark('crown')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcro_ukcrowe002.mp3"></audio>王冠，皇冠；冕✓ 冠军✓ （头、帽或山的）顶部✓ （受损牙齿的）人造冠✓ 克朗（英国旧币）</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcro_ukcrowe002.mp3"></audio>为…加冕；立…为君主✓ 使达到顶峰；使圆满✓ 加顶于；覆盖…的顶部✓ 打…的头部✓ 给牙镶齿冠</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="wreath">wreath<div class="mark" onclick="mark('wreath')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwre_ukwreat001.mp3"></audio>花环；花圈</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="colony">colony<div class="mark" onclick="mark('colony')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcol_ukcolle028.mp3"></audio>殖民地✓ 殖民地定居者群体✓ （具有共同爱好或工作的）聚居人群，群体✓ （动物、昆虫或植物的）群，群落；生物群✓ （有篱笆或围墙环绕的）住宅区</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="liberty">liberty<div class="mark" onclick="mark('liberty')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklib_ukliber015.mp3"></audio>自由✓ 被准许做…✓ 自由✓ 放肆，无礼，失礼✓ 任意歪曲，随意改动✓ （对某人）过分亲昵，过分亲热；调戏</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="independence">independence<div class="mark" onclick="mark('independence')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukind_ukindel008.mp3"></audio>（国家的）独立✓ 自主，自立，独立</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="slum">slum<div class="mark" onclick="mark('slum')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukslo_ukslove017.mp3"></audio>（尤指城市中的）贫民窟，棚户区✓ 脏乱的地方</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_ukslo_ukslove017.mp3"></audio>过穷日子，过简朴的生活</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="refuge">refuge<div class="mark" onclick="mark('refuge')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukref_ukrefre006.mp3"></audio>避难（所）；庇护（所）；慰藉</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="asylum">asylum<div class="mark" onclick="mark('asylum')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukasu_ukasund002.mp3"></audio>（尤指政治）避难，庇护✓ 精神病院</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="population">population<div class="mark" onclick="mark('population')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpop_ukpopsi011.mp3"></audio>人口；全体居民✓ （统称）（一定范围内的）人口，动物总数</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="demographic">demographic<div class="mark" onclick="mark('demographic')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/us_pron_u_usd_usdem_usdemis009.mp3"></audio>人口的；人口统计的；人口学的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_e_epd_epd31_epd31644.mp3"></audio>（顾客）族群</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="citizen">citizen<div class="mark" onclick="mark('citizen')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcir_ukcirrh009.mp3"></audio>公民；市民，城镇居民</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="resident">resident<div class="mark" onclick="mark('resident')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun029.mp3"></audio>居民；住户✓ （美国的）高级专科住院实习医生</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrer_ukrerun029.mp3"></audio>居住的；定居的；居留的✓ （有特殊技能或品质者）常驻的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="ethnic">ethnic<div class="mark" onclick="mark('ethnic')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukete_uketern012.mp3"></audio>民族的；种族的✓ 异族的；具有民族特色的；异国风味的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukete_uketern012.mp3"></audio>少数民族的一员</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="racial">racial<div class="mark" onclick="mark('racial')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrab_ukrabbi014.mp3"></audio>种族的；种族间的；种族关系的✓ 人种的，种族的；作为人种（或种族、民族）特点的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="clan">clan<div class="mark" onclick="mark('clan')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukciv_ukcivvy021.mp3"></audio>（尤指苏格兰的）宗族，氏族✓ 家族，氏族；（享有共同利益的）群体，集团</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="franchise">franchise<div class="mark" onclick="mark('franchise')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfra_ukfragm014.mp3"></audio>特许经销权✓ （尤指投票选举议员等立法机构成员的）选举权</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukfra_ukfragm014.mp3"></audio>向…授予（或出售）特许经销权</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="entitle">entitle<div class="mark" onclick="mark('entitle')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukent_ukentic007.mp3"></audio>给予权利；使符合资格✓ 给…命名，给…题名</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="preference">preference<div class="mark" onclick="mark('preference')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpre_ukpredi030.mp3"></audio>偏爱；爱好；喜爱✓ 优先（权），偏袒✓ 优先于；而不是</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="vote">vote<div class="mark" onclick="mark('vote')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvor_ukvorte004.mp3"></audio>投票；选举；（对…）进行表决</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvor_ukvorte004.mp3"></audio>（选）票；表决意见✓ 投票；表决；选举✓ 总投票数✓ 选举权；表决权✓ 对…进行表决</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="elect">elect<div class="mark" onclick="mark('elect')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeld_ukelder005.mp3"></audio>选举，推选✓ 选择做…</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeld_ukelder005.mp3"></audio>（《圣经》中所称的）上帝的选民✓ 特权集团；特殊阶层</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeld_ukelder005.mp3"></audio>候任总统／首相等</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="respondent">respondent<div class="mark" onclick="mark('respondent')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukres_ukresou028.mp3"></audio>回答者；答复者；应答者✓ （尤指离婚案件中的）被告</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="poll">poll<div class="mark" onclick="mark('poll')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar007.mp3"></audio>民意测验，民意调查✓ 投票处✓ 投票，去投票</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpol_ukpolar007.mp3"></audio>获得（若干选票）✓ 对…进行民意测验</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="ambition">ambition<div class="mark" onclick="mark('ambition')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukama_ukamalg029.mp3"></audio>抱负；志向；雄心；野心✓ 抱负；志向；雄心；野心</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="nominate">nominate<div class="mark" onclick="mark('nominate')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukn_uknoc_uknoctu028.mp3"></audio>（为选举、工作、职位或荣誉）提名，推荐✓ 提名（电影、歌曲、节目等）✓ 任命；指定</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="checklist">checklist<div class="mark" onclick="mark('checklist')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukche_ukcheat010.mp3"></audio>（记事）清单</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="succession">succession<div class="mark" onclick="mark('succession')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksub_uksubur014.mp3"></audio>一连串；一系列；接连✓ 接连地，连续地✓ 继任，接任；继承</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="safety">safety<div class="mark" onclick="mark('safety')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksaf_uksafek004.mp3"></audio>安全，平安</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="welfare">welfare<div class="mark" onclick="mark('welfare')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwel_ukwelde003.mp3"></audio>福利救济；社会福利✓ （因贫困或失业而）接受福利救济✓ （尤指人的）幸福，福祉；安康</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="well-being">well-being<div class="mark" onclick="mark('well-being')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukw_ukwel_ukwelde012.mp3"></audio>幸福；安康</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="harmony">harmony<div class="mark" onclick="mark('harmony')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhar_ukhardw030.mp3"></audio>（音乐中的）和声✓ 协调，和谐，一致</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="steady">steady<div class="mark" onclick="mark('steady')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun015.mp3"></audio>稳步的；持续的；有规律的✓ 固定不动的；稳固的，平稳的✓ 长期稳定的工作✓ 稳的；冷静的，沉着的✓ 可靠的；稳重的</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun015.mp3"></audio>使稳定；使固定不动✓ （使）冷静，（使）镇定下来</p>
+        <p onclick="play_one(this)">adverb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstaun015.mp3"></audio>（和某人）保持稳定的恋爱关系</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="flourish">flourish<div class="mark" onclick="mark('flourish')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukflo_ukflori017.mp3"></audio>茁壮成长；繁荣；蓬勃发展✓ （为引人注意）挥舞</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukf_ukflo_ukflori017.mp3"></audio>动作夸张地</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="succeed">succeed<div class="mark" onclick="mark('succeed')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksub_uksubur010.mp3"></audio>成功；实现目标；达到目的✓ 接替，继任；继承✓ 随后出现；接着发生</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="prospect">prospect<div class="mark" onclick="mark('prospect')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprose002.mp3"></audio>（发生好事情的）可能，可能性，机会✓ 成功的机会；前景，前途✓ 前景；展望；设想✓ 有前途的候选人✓ 景色，景观</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprose003.mp3"></audio>勘探</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="perspective">perspective<div class="mark" onclick="mark('perspective')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukper_ukperso009.mp3"></audio>（思考问题的）角度，观点，想法✓ 恰当地估计；合理地评价；正确地看待✓ 客观地比较；客观地审查✓ 透视（画）法✓ 透视比例正确的；有透视效果的✓ 透视尺度失真的；比例（或位置）不当的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="viewpoint">viewpoint<div class="mark" onclick="mark('viewpoint')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukv_ukvic_ukvicio030.mp3"></audio>观察位置；角度✓ （思考的）角度，着眼点（同 point of view）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="standpoint">standpoint<div class="mark" onclick="mark('standpoint')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstand014.mp3"></audio>观点，立场</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="outlook">outlook<div class="mark" onclick="mark('outlook')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uko_ukout_ukoutle004.mp3"></audio>前景；展望✓ 观点，看法✓ 景色，风光，景致</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="guideline">guideline<div class="mark" onclick="mark('guideline')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld00609.mp3"></audio>指导方针，指导原则，准则</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="ethic">ethic<div class="mark" onclick="mark('ethic')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukete_uketern006.mp3"></audio>行为准则，伦理；（尤指）道德体系，道德规范✓ 伦理学；道德学</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="suggest">suggest<div class="mark" onclick="mark('suggest')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksug_uksugar002.mp3"></audio>提议；建议✓ 暗示；间接表明；意味着✓ 使想到；使联想到</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="advise">advise<div class="mark" onclick="mark('advise')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadv_ukadver007.mp3"></audio>劝告；忠告；向…提供意见，给…出主意✓ 通知；（正式）告知</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="proposal">proposal<div class="mark" onclick="mark('proposal')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukpropo007.mp3"></audio>建议；计划；提案✓ 求婚</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="hint">hint<div class="mark" onclick="mark('hint')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhim_ukhimal015.mp3"></audio>暗示，提示，示意✓ 建议✓ 很少量</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukh_ukhim_ukhimal015.mp3"></audio>暗示</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="declare">declare<div class="mark" onclick="mark('declare')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukd_ukdec_ukdecep026.mp3"></audio>宣布；声明；公布✓ 申报（应纳税的货物价值或收入）✓ （板球比赛中，一方因已达足够分数获胜而在一局未结束前的）宣布停止击球，宣布结束赛局</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="affirm">affirm<div class="mark" onclick="mark('affirm')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaff_ukaffir001.mp3"></audio>证实；确认；断言✓ （公开）声明</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="claim">claim<div class="mark" onclick="mark('claim')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukciv_ukcivvy008.mp3"></audio>声称；宣称；断言；主张✓ 声称拥有（成员）✓ 要求（拥有）；认领；索取✓ （向政府或组织）索要，索取（钱）；索（款）；索赔✓ 要求赔偿损失；索赔</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukciv_ukcivvy008.mp3"></audio>声明；说法；断言✓ 索款；索赔✓ （对某事物的）权利，所有权</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="proclaim">proclaim<div class="mark" onclick="mark('proclaim')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukp_ukpro_ukprobi020.mp3"></audio>宣布；声明✓ 表明；显示</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="state">state<div class="mark" onclick="mark('state')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstarg028.mp3"></audio>状态；情形；状况✓ 现状✓ 国家；政府✓ （德国、澳大利亚、美国等的）州，邦✓ 美国✓ （君主或政府首脑）正式地，隆重地</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstarg028.mp3"></audio>（尤指清楚谨慎地）陈述，说明，声明</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksta_ukstarg028.mp3"></audio>国家的；政府的；州的✓ 国事的；国事规格的；正式的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="announce">announce<div class="mark" onclick="mark('announce')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukani_ukanima029.mp3"></audio>（尤指公开地）宣布，宣告，通告✓ 作为…的迹象；显示</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="clarify">clarify<div class="mark" onclick="mark('clarify')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcla_ukclap_013.mp3"></audio>澄清；阐明；使更清晰易懂✓ （通过加热黄油等脂肪）使澄清，使纯净，使净化</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="assist">assist<div class="mark" onclick="mark('assist')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassau028.mp3"></audio>帮助；协助；援助✓ 配合警方的询问</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukass_ukassau028.mp3"></audio>（篮球、足球等的）助攻；（棒球等的）助杀</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="aid">aid<div class="mark" onclick="mark('aid')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaha_ukaha__008.mp3"></audio>帮助；支持✓ 辅助物，辅助设施；辅助工具✓ （向贫弱国家提供的食品、金钱、医疗物资、武器等）援助，救助✓ 为帮助…，为救援…</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaha_ukaha__008.mp3"></audio>帮助；援助✓ 伙同…作案，与…同谋</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="encourage">encourage<div class="mark" onclick="mark('encourage')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukenc_ukencas019.mp3"></audio>刺激，激励；促进；助长✓ （通过言语或行动）鼓励，支持</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="implement">implement<div class="mark" onclick="mark('implement')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimp_ukimpet019.mp3"></audio>实施，贯彻</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukimp_ukimpet020.mp3"></audio>工具，器具</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="monitor">monitor<div class="mark" onclick="mark('monitor')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmon_ukmonac030.mp3"></audio>监督员，核查员✓ 监控器，监测器✓ 显示器，屏幕✓ （学校的）班长，年级长，教务助理生</p>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_ukm_ukmon_ukmonac030.mp3"></audio>监控；监测；监视，密切注视</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="admit">admit<div class="mark" onclick="mark('admit')">Mark</div></div>
+        <p onclick="play_one(this)">verb<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukadj_ukadjus024.mp3"></audio>（尤指不情愿地）承认；供认；招认✓ 认输，承认失败✓ 允许…进入✓ 准许…加入；接纳✓ 接收…入院；收治</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="African">African<div class="mark" onclick="mark('African')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukafo_ukafore005.mp3"></audio>非洲的；非洲人的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukafo_ukafore005.mp3"></audio>非洲人</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="European">European<div class="mark" onclick="mark('European')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeur_ukeuro_006.mp3"></audio>欧洲的；欧洲人的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uke_ukeur_ukeuro_006.mp3"></audio>欧洲人</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Latin">Latin<div class="mark" onclick="mark('Latin')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklat_uklat__018.mp3"></audio>拉丁语</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukl_uklat_uklat__018.mp3"></audio>用拉丁语写的✓ 拉丁语系国家的；拉丁语系民族的；拉丁人的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Jewish">Jewish<div class="mark" onclick="mark('Jewish')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukj_ukjet_ukjetsa012.mp3"></audio>犹太的，犹太教民的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Arabian">Arabian<div class="mark" onclick="mark('Arabian')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat006.mp3"></audio>阿拉伯人</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uka_ukaqu_ukaquat006.mp3"></audio>阿拉伯的；阿拉伯人的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Portuguese">Portuguese<div class="mark" onclick="mark('Portuguese')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04289.mp3"></audio>葡萄牙的；葡萄牙人的；葡萄牙语的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04289.mp3"></audio>葡萄牙语✓ 葡萄牙人</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Roman">Roman<div class="mark" onclick="mark('Roman')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukr_ukrol_ukrolli007.mp3"></audio>（印刷常用的）罗马体的，正体的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Russian">Russian<div class="mark" onclick="mark('Russian')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04295.mp3"></audio>俄国的，俄罗斯的；俄国人的，俄罗斯人的；俄语的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04295.mp3"></audio>俄国人，俄罗斯人✓ 俄语，俄罗斯语</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Spanish">Spanish<div class="mark" onclick="mark('Spanish')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04333.mp3"></audio>西班牙的；西班牙人的；西班牙语的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04333.mp3"></audio>西班牙语</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Swiss">Swiss<div class="mark" onclick="mark('Swiss')">Mark</div></div>
+        <p onclick="play_one(this)"><audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04347.mp3"></audio>瑞士的；瑞士人的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04347.mp3"></audio>瑞士人</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Greek">Greek<div class="mark" onclick="mark('Greek')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgravi024.mp3"></audio>希腊的；希腊式的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukg_ukgra_ukgravi024.mp3"></audio>希腊语✓ 希腊人</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Italian">Italian<div class="mark" onclick="mark('Italian')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04175.mp3"></audio>意大利的；意大利人的；意大利语的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04175.mp3"></audio>意大利人✓ 意大利语</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Soviet">Soviet<div class="mark" onclick="mark('Soviet')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uks_uksou_uksouth011.mp3"></audio>苏维埃（指共产主义国家，尤指前苏联的各级代表会议）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Indian">Indian<div class="mark" onclick="mark('Indian')">Mark</div></div>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukind_ukindel021.mp3"></audio>印度的；印度人的✓ 印第安人的</p>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_uki_ukind_ukindel021.mp3"></audio>印度人✓ 印第安人</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Australia">Australia<div class="mark" onclick="mark('Australia')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04017.mp3"></audio>澳大利亚</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="New Zealand">New Zealand<div class="mark" onclick="mark('New Zealand')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04260.mp3"></audio>新西兰（南太平洋国家）</p>
+        <p onclick="play_one(this)">adjective<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04260.mp3"></audio>新西兰的；新西兰人的</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Canada">Canada<div class="mark" onclick="mark('Canada')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04064.mp3"></audio>加拿大</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Britain">Britain<div class="mark" onclick="mark('Britain')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukb_ukbri_ukbrit_002.mp3"></audio>英格兰，苏格兰，威尔士的统称</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="France">France<div class="mark" onclick="mark('France')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04127.mp3"></audio>法国（西欧国家）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
+    <div class="content">
+        <div class="word" data-word="Germany">Germany<div class="mark" onclick="mark('Germany')">Mark</div></div>
+        <p onclick="play_one(this)">noun<audio preload="none"><source src="./mp3/uk_pron_u_ukc_ukcld_ukcld04136.mp3"></audio>德国（中部欧洲国家）</p>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
+</html>
