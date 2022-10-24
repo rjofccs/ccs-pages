@@ -93,9 +93,18 @@ def do_query(word):
 def txt_append(fina, word, con):
     input_filename = os.path.dirname(dire)+'/esthetic/' + fina + '.html'
     if not os.path.exists(input_filename):
-        pre = '''<link rel="stylesheet" type="text/css" href="./esthetic.css">
+        pre = '''<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="./tailwind.css" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./esthetic.css">
 <script src="./esthetic.js"></script>
 <script>const chapter = \''''+fina+'''\';</script>
+</head>
+<body>
+    
 <div class="nav">
     <a href="./index.html">Index</a>
     <a href="#/" onclick="hide(this);">Hide</a>
@@ -142,6 +151,8 @@ def read_file():
             mean = mean + '''
 </div>'''
         txt_append(chapter, word, mean)
+    txt_append(chapter, word, '''</body>
+</html>''')
 
 #下载mp3
 def down_mp3():
