@@ -120,8 +120,9 @@ def read_file():
     input_filename = os.path.join(dire, 'esthetic2.txt')
     f = open(input_filename, 'r')
     lines = f.readlines()
-    for tline in lines:
-        line = tline.strip()
+    tl = len(lines)
+    for m in range(tl):
+        line = lines[m].strip()
         word = ''
         if line:
             pp = line.split(' == ')
@@ -148,10 +149,10 @@ def read_file():
                 mean = mean + p + ('\n' if k<(size-1) else '')
             mean = mean + '''
     </div>'''
-        txt_append(chapter, word, mean)
-        if k == (size-1):
-            txt_append(chapter, word, '''<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-            </body>
+            txt_append(chapter, word, mean)
+            if m == (tl-1):
+                txt_append(chapter, word, '''    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
 </html>''')
 
 #下载mp3
