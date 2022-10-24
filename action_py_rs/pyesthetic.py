@@ -104,12 +104,12 @@ def txt_append(fina, word, con):
     <script>const chapter = \''''+fina+'''\';</script>
 </head>
 <body>
-    <div class="nav">
-        <p><a href="./index.html">Index</a></p>
-        <p><a href="#/" onclick="hide(this);">Hide</a></p>
-        <p><a href="#/" onclick="play(this);">Play</a></p>
-        <p><a href="#/" onclick="next(this);">Next</a></p>
-    </div>
+    <ul class="nav list-group">
+        <li class="list-group-item"><a href="./index.html">Index</a></li>
+        <li class="list-group-item"><a href="#/" onclick="hide(this);">Hide</a></li>
+        <li class="list-group-item"><a href="#/" onclick="play(this);">Play</a></li>
+        <li class="list-group-item"><a href="#/" onclick="next(this);">Next</a></li>
+    </ul>
     <div class="list-group w-auto">
 '''
         with open(input_filename, 'a') as f:
