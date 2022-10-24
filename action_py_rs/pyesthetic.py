@@ -94,23 +94,21 @@ def txt_append(fina, word, con):
     input_filename = os.path.dirname(dire)+'/esthetic/' + fina + '.html'
     if not os.path.exists(input_filename):
         pre = '''<!doctype html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<link href="./tailwind.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="./esthetic.css">
-<script src="./esthetic.js"></script>
-<script>const chapter = \''''+fina+'''\';</script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="./esthetic.js"></script>
+    <script>const chapter = \''''+fina+'''\';</script>
 </head>
 <body>
-    
-<div class="nav">
-    <a href="./index.html">Index</a>
-    <a href="#/" onclick="hide(this);">Hide</a>
-    <a href="#/" onclick="play(this);">Play</a>
-    <a href="#/" onclick="next(this);">Next</a>
-</div>
+    <div class="nav">
+        <a href="./index.html">Index</a>
+        <a href="#/" onclick="hide(this);">Hide</a>
+        <a href="#/" onclick="play(this);">Play</a>
+        <a href="#/" onclick="next(this);">Next</a>
+    </div>
 '''
         with open(input_filename, 'a') as f:
             f.write(pre+'\n')
@@ -131,8 +129,8 @@ def read_file():
             word = pp[1]
             js = json.loads(pp[2])
 
-            mean = '''<div class="content">
-    <div class="word" data-word="{}">{}<div class="mark" onclick="mark('{}')">Mark</div></div>
+            mean = '''    <div class="content">
+        <div class="word" data-word="{}">{}<div class="mark" onclick="mark('{}')">Mark</div></div>
 '''.format(word, word, word)
             size = len(js)
             for k in range(size):
@@ -146,12 +144,14 @@ def read_file():
                     # fetch first uk
                     aud = j['prons'][0]
                     ind = aud.find('pron/')
-                    p = '    <p onclick="play_one(this)">{}<audio preload="none"><source src="{}"></audio>{}</p>'.format(j['noun'], './mp3/'+aud[ind-3:].replace('/','_'), t)
+                    p = '        <p onclick="play_one(this)">{}<audio preload="none"><source src="{}"></audio>{}</p>'.format(j['noun'], './mp3/'+aud[ind-3:].replace('/','_'), t)
                 mean = mean + p + ('\n' if k<(size-1) else '')
             mean = mean + '''
-</div>'''
+    </div>'''
         txt_append(chapter, word, mean)
-    txt_append(chapter, word, '''</body>
+        if k == (size-1):
+            txt_append(chapter, word, '''<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+            </body>
 </html>''')
 
 #下载mp3
