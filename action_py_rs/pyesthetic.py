@@ -131,7 +131,7 @@ def read_file():
             word = pp[1]
             js = json.loads(pp[2])
 
-            mean = '''    <a href="#" class="content list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+            mean = '''    <a class="content list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
     <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
     <div class="d-flex gap-2 w-100 justify-content-between">
       <div>
@@ -155,7 +155,7 @@ def read_file():
                     mean = mean + '\n'                    
             mean = mean + '''
       </div>
-      <small class="mark opacity-50 text-nowrap" data-word="{}" onclick="mark('{}')">mark</small>
+      <small class="markt opacity-50 text-nowrap" data-word="{}" onclick="mark('{}')">mark</small>
     </div>
     </a>'''.format(word, word)
             txt_append(chapter, word, mean)
