@@ -32,6 +32,11 @@ pip3 install requests
 pip3 install arrow
 pip3 install lxml
 pip3 install PyMySQL
+pip3 install you-get
+
+cd /usr/local/www/html
+you-get 'https://www.youtube.com/watch?v=fhIrySD7SXo' -O test
+ffmpeg -i test.mp4 -f mp3 -vn test.mp3
 #################################################
 curl -sSL https://get.daocloud.io/docker | sh
 systemctl daemon-reload && systemctl restart docker
@@ -47,7 +52,7 @@ events {
 }
 
 http {
-    default_type  application/octet-stream;
+    #default_type  application/octet-stream;
     sendfile        on;
     keepalive_timeout  65;
 
@@ -76,9 +81,7 @@ docker pull mysql
 mkdir -p /usr/local/mysql/{conf,logs,data}
 
 docker run -p 3306:3306 --name mymysql \
--v /usr/local/mysql/conf:/etc/mysql \
--v /usr/local/mysql/logs:/var/log/mysql \
--v /usr/local/mysql/data:/var/lib/mysql \
+-v /usr/local/mysql/conf:/etc/mysql/mysql.conf.d \
 -e MYSQL_ROOT_PASSWORD=S1234567 \
 -d mysql
 #################################################
