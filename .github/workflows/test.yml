@@ -1,40 +1,40 @@
 name: test
 on: push
 jobs:
-  # test-node:
-  #   runs-on: macOS-latest
-  #   steps:
-  #   - uses: actions/checkout@v3
-  #   - uses: actions/setup-node@v2
-  #   - run: |
-  #       brew install tree
-  #       echo 'java version:'
-  #       java -version
-  #       echo 'node version:'
-  #       node -v
-  #       echo 'npm version:'
-  #       npm -v
+  test-node:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v2
+    - run: |
+        brew install tree
+        echo 'java version:'
+        java -version
+        echo 'node version:'
+        node -v
+        echo 'npm version:'
+        npm -v
     # - run: |
     #     cd ./node1015
     #     npm install
     #     npm start
 
-  test-cam:
-    name: Run test-cam
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: FedericoCarboni/setup-ffmpeg@v1
-    - run: |
-        pip install requests
-        pip install arrow
-        pip install lxml
-    - run: |
-        python ./action_py_rs/pyesthetic.py
-    - run: |
-        git config --global user.name 'esthetic'
-        git config --global user.email 'esthetic@google.com'
-        git add ./esthetic/*.html
-        git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
-        git commit -am "esthetic"
-        git push
+  # test-cam:
+  #   name: Run test-cam
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - uses: actions/checkout@v3
+  #   - uses: FedericoCarboni/setup-ffmpeg@v1
+  #   - run: |
+  #       pip install requests
+  #       pip install arrow
+  #       pip install lxml
+  #   - run: |
+  #       python ./action_py_rs/pyesthetic.py
+  #   - run: |
+  #       git config --global user.name 'esthetic'
+  #       git config --global user.email 'esthetic@google.com'
+  #       git add ./esthetic/*.html
+  #       git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+  #       git commit -am "esthetic"
+  #       git push
