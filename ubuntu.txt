@@ -1,0 +1,111 @@
+#################################################
+node01:sed 's/192.168.32.10/192.168.32.11/' /etc/sysconfig/network-scripts/ifcfg-ens33 -i
+echo 'root:uw'|chpasswd
+https://www.17ce.com/
+139.144.171.90
+
+apt-get install -y openssh-server
+ssh-server配置文件位于/etc/ssh/sshd_config，
+在这里可以定义SSH的服务端口，默认端口是22，你可以自己定义成其他端口号，如222。
+（或把配置文件中的”PermitRootLogin without-password”加一个”#”号,把它注释掉，
+再增加一句”PermitRootLogin yes”）
+/etc/init.d/ssh start或service ssh start
+
+vim /etc/resolv.conf
+nameserver 8.8.8.8
+nameserver 8.8.4.4
+/etc/init.d/networking restart
+
+docker-compose up -d
+
+root  /usr/share/nginx/html;
+autoindex  on;
+set $node_port 1080;
+proxy_pass http://120.78.191.195:$node_port$request_uri;
+proxy_redirect off;
+
+apt-get install -y python3-pip
+apt-get install -y ffmpeg
+ffmpeg -decoders && ffmpeg -version
+wget https://raw.githubusercontent.com/rjofccs/ccs-pages/master/action_py_rs/test.py
+pip3 install requests
+pip3 install arrow
+pip3 install lxml
+pip3 install PyMySQL
+#################################################
+curl -sSL https://get.daocloud.io/docker | sh
+systemctl daemon-reload && systemctl restart docker
+#################################################
+docker pull nginx:latest
+mkdir -p /usr/local/www/config
+tee /usr/local/www/config/nginx.conf <<-'EOF'
+user root;
+worker_processes  1;
+
+events {
+    worker_connections  1024;
+}
+
+http {
+    default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+
+    server {
+        listen       80;
+        server_name  localhost;
+
+        location / {
+            root  /usr/share/nginx/html;
+            autoindex  on;
+        }
+    }
+}
+EOF
+docker rm -f mynginx
+docker run --name mynginx -p 80:80 \
+--restart always \
+-v /usr/local/www/html:/usr/share/nginx/html \
+-v /usr/local/www/config:/etc/nginx \
+-d nginx
+docker ps
+docker exec -it mynginx sh
+docker logs mynginx
+#################################################
+docker pull mysql
+mkdir -p /usr/local/mysql/{conf,logs,data}
+
+docker run -p 3306:3306 --name mymysql \
+-v /usr/local/mysql/conf:/etc/mysql \
+-v /usr/local/mysql/logs:/var/log/mysql \
+-v /usr/local/mysql/data:/var/lib/mysql \
+-e MYSQL_ROOT_PASSWORD=S1234567 \
+-d mysql
+#################################################
+docker pull nextcloud:latest
+mkdir -p /usr/local/nextcloud
+docker run -d -p 80:80  --name mynextcloud  -v /usr/local/nextcloud/:/var/www/html/ --restart=always --privileged=true nextcloud
+admin/admin
+#################################################
+docker pull fauria/vsftpd
+docker run -d -p 20:20 -p 21:21 -p 21100-21110:21100-21110 \
+-v /root/aria2/downloads:/home/vsftpd \
+-e FTP_USER=admin \
+-e FTP_PASS=adminadmin \
+-e PASV_ADDRESS=192.168.0.101 \
+-e PASV_MIN_PORT=21100 \
+-e PASV_MAX_PORT=21110 \
+--name vsftpd \
+--restart=always \
+fauria/vsftpd
+docker exec -i -t vsftpd bash
+#################################################
+docker run -it --rm \
+-v /root/ssl/etc/letsencrypt:/etc/letsencrypt \
+-v /root/ssl/var/lib/letsencrypt:/var/lib/letsencrypt \
+-v /root/ssl/var/log/letsencrypt:/var/log/letsencrypt \
+-v /root/ssl/certbot:/data/letsencrypt \
+certbot/certbot \
+renew --webroot \
+--webroot-path=/data/letsencrypt
+#################################################
