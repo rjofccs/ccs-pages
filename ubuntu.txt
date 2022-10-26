@@ -37,6 +37,10 @@ pip3 install you-get
 cd /usr/local/www/html
 you-get 'https://www.youtube.com/watch?v=fhIrySD7SXo' -O test
 ffmpeg -i test.mp4 -f mp3 -vn test.mp3
+
+apt -y install nodejs && node -v && apt -y install npm
+apt-get -y install openjdk-8-jdk && java -version
+apt -y install maven && mvn -version
 #################################################
 curl -sSL https://get.daocloud.io/docker | sh
 systemctl daemon-reload && systemctl restart docker
@@ -59,7 +63,6 @@ http {
     server {
         listen       80;
         server_name  localhost;
-
         location / {
             root  /usr/share/nginx/html;
             autoindex  on;
@@ -87,7 +90,9 @@ docker run -p 3306:3306 --name mymysql \
 #################################################
 docker pull nextcloud:latest
 mkdir -p /usr/local/nextcloud
-docker run -d -p 80:80  --name mynextcloud  -v /usr/local/nextcloud/:/var/www/html/ --restart=always --privileged=true nextcloud
+docker run -d -p 80:80  --name mynextcloud  \
+-v /usr/local/nextcloud/:/var/www/html/ \
+--restart=always --privileged=true nextcloud
 admin/admin
 #################################################
 docker pull fauria/vsftpd
