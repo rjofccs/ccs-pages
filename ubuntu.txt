@@ -2,7 +2,7 @@
 node01:sed 's/192.168.32.10/192.168.32.11/' /etc/sysconfig/network-scripts/ifcfg-ens33 -i
 echo 'root:uw'|chpasswd
 https://www.17ce.com/
-139.144.171.90
+atlanta:139.144.171.90
 
 apt-get install -y openssh-server
 ssh-server配置文件位于/etc/ssh/sshd_config，
@@ -10,6 +10,11 @@ ssh-server配置文件位于/etc/ssh/sshd_config，
 （或把配置文件中的”PermitRootLogin without-password”加一个”#”号,把它注释掉，
 再增加一句”PermitRootLogin yes”）
 /etc/init.d/ssh start或service ssh start
+
+https://github.com/coder/code-server/releases
+wget https://github.com/coder/code-server/releases/download/v4.8.0/code-server-4.8.0-linux-amd64.tar.gz
+tar -zxvf code-server-4.8.0-linux-amd64.tar.gz
+cd code-server-4.8.0-linux-amd64
 
 vim /etc/resolv.conf
 nameserver 8.8.8.8
@@ -26,6 +31,7 @@ proxy_redirect off;
 
 apt-get install -y python3-pip
 apt-get install -y ffmpeg
+apt-get install -y tree
 ffmpeg -decoders && ffmpeg -version
 wget https://raw.githubusercontent.com/rjofccs/ccs-pages/master/action_py_rs/test.py
 pip3 install requests
@@ -39,8 +45,29 @@ you-get 'https://www.youtube.com/watch?v=fhIrySD7SXo' -O test
 ffmpeg -i test.mp4 -f mp3 -vn test.mp3
 
 apt -y install nodejs && node -v && apt -y install npm
+#################################################
 apt-get -y install openjdk-8-jdk && java -version
 apt -y install maven && mvn -version
+wget https://repo.spring.io/release/org/springframework/boot/spring-boot-cli/2.7.4/spring-boot-cli-2.7.4-bin.tar.gz
+tar -zxvf spring-boot-cli-2.7.4-bin.tar.gz
+SPRING_HOME="$(pwd)/spring-2.7.4/" && PATH=$PATH:$SPRING_HOME/bin
+echo $SPRING_HOME && echo $PATH
+java -version && spring --version
+spring init --dependencies=web,data-jpa --java-version=1.8 my-project
+#################################################
+docker pull lscr.io/linuxserver/code-server:latest
+mkdir -p /usr/local/mycode-server/config
+docker run --name mycodeserver \
+-e PUID=1000 \
+-e PGID=1000 \
+-e TZ=Europe/London \
+-p 8443:8443 \
+-p 8080:8080 \
+-v /usr/local/mycode-server/config:/config \
+--restart unless-stopped \
+-d lscr.io/linuxserver/code-server:latest
+
+ls /usr/local/mycode-server/config/workspace
 #################################################
 curl -sSL https://get.daocloud.io/docker | sh
 systemctl daemon-reload && systemctl restart docker
@@ -116,4 +143,9 @@ docker run -it --rm \
 certbot/certbot \
 renew --webroot \
 --webroot-path=/data/letsencrypt
+#################################################
+docker pull mongo:4.0
+docker run --name mymongo -d mongo:4.0 --smallfiles --replSet rs0 --oplogSize 128
+docker exec -ti mymongo mongo --eval "printjson(rs.initiate())"
+docker rm mymongo -f
 #################################################
