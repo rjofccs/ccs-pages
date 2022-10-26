@@ -43,8 +43,33 @@ pip3 install you-get
 cd /usr/local/www/html
 you-get 'https://www.youtube.com/watch?v=fhIrySD7SXo' -O test
 ffmpeg -i test.mp4 -f mp3 -vn test.mp3
+#################################################
+curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - 
+apt -y install nodejs && node -v
+npm install --global yarn && yarn --version
+yarn global add typescript && tsc -v
+yarn init
+question entry point (index.js): src/app.ts
+yarn add @types/node typescript
+yarn add -D ts-node
+yarn tsc --init --rootDir src --outDir ./bin --esModuleInterop --lib ES2019 --module commonjs --noImplicitAny true
+mkdir src
+echo "console.log('Hello World\!\!\!')" > src/app.ts
+yarn tsc
+"scripts": {
+  "build": "tsc",
+  "start": "node ./bin/app.js",
+  "dev": "ts-node ./src/app.ts"
+},
+```
+npx create-react-app my-app --template typescript
+yarn create react-app my-app --template typescript
+cd my-app&&npm start
+```
+yarn add @mui/material @emotion/react @emotion/styled
+yarn add @fontsource/roboto
 
-apt -y install nodejs && node -v && apt -y install npm
+"build": "react-scripts build && mv build/* ../html"
 #################################################
 apt-get -y install openjdk-8-jdk && java -version
 apt -y install maven && mvn -version
@@ -56,6 +81,9 @@ java -version && spring --version
 cd /usr/local/mycode-server/config/workspace
 spring init --dependencies=web,data-jpa --java-version=1.8 my-project
 chmod -R 777 /usr/local/mycode-server/config/workspace
+#################################################
+curl -sSL https://get.daocloud.io/docker | sh
+systemctl daemon-reload && systemctl restart docker
 #################################################
 docker pull lscr.io/linuxserver/code-server:latest
 mkdir -p /usr/local/mycode-server/config
@@ -70,9 +98,6 @@ docker run --name mycodeserver \
 -d lscr.io/linuxserver/code-server:latest
 
 ls /usr/local/mycode-server/config/workspace
-#################################################
-curl -sSL https://get.daocloud.io/docker | sh
-systemctl daemon-reload && systemctl restart docker
 #################################################
 docker pull nginx:latest
 mkdir -p /usr/local/www/config
@@ -117,12 +142,21 @@ docker run -p 3306:3306 --name mymysql \
 -e MYSQL_ROOT_PASSWORD=S1234567 \
 -d mysql
 #################################################
+#################################################
 docker pull nextcloud:latest
 mkdir -p /usr/local/nextcloud
 docker run -d -p 80:80  --name mynextcloud  \
 -v /usr/local/nextcloud/:/var/www/html/ \
 --restart=always --privileged=true nextcloud
 admin/admin
+#################################################
+docker pull bwsw/webshell
+docker run -d --name mywebshell \
+--privileged \
+--security-opt seccomp=unconfined \
+-p 8018:80 \
+-e ALLOWED_NETWORKS=0.0.0.0/0 \
+bwsw/webshell
 #################################################
 docker pull fauria/vsftpd
 docker run -d -p 20:20 -p 21:21 -p 21100-21110:21100-21110 \
