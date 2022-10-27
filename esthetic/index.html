@@ -17,14 +17,13 @@
         var objs = [];
         var status = false;
         var ind = 0;
-        function load(ind){
-            res = objs[ind];
+        var audio;
+        function load(index){
+            res = objs[index];
             // word = res[0];
             sony = res[1];
-            var audio = new Audio(sony);
+            audio = new Audio(sony);
             audio.volume = 0.5;
-            // audio.play();
-            return audio;
         }
         function play(){
             audio.play();
