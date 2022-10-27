@@ -36,7 +36,7 @@ apt-get install -y python3-pip
 apt-get install -y ffmpeg
 apt-get install -y tree
 ffmpeg -decoders && ffmpeg -version
-wget https://raw.githubusercontent.com/rjofccs/ccs-pages/master/action_py_rs/test.py
+pip3 install ffmpeg-python
 pip3 install requests
 pip3 install arrow
 pip3 install lxml
