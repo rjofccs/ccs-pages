@@ -33,7 +33,7 @@ def read_est():
                         # fetch first uk
                         aud = js[0]['prons'][0]
                         ind = aud.find('pron/')
-                        pron = aud[ind-3:].replace('/','_')
+                        pron = 'https://github.com/rjofccs/ccs-pages/raw/master/esthetic/mp3/' + aud[ind-3:].replace('/','_')
                 # para.append((chapter, word, noun, tran, pron))
                 para.append((word, pron))
     return para
