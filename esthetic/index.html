@@ -6,56 +6,17 @@
     <meta name="googlebot" content="noindex"/>
     <link rel="shortcut icon" href="favicon.ico"/>
     <meta name="viewport" content="user-scalable=no, width=device-width">
+    <link href="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/css/jquery.terminal.min.css" rel="stylesheet"/>
+
     <script src="https://cdn.jsdelivr.net/npm/jquery"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-polyfills/keyboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/jquery.terminal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/less.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/unix_formatting.js"></script>
     <script>
-     function query() {
-         var result = {};
-         var search = document.location.search;
-         if (search) {
-             search.substring(1).split('&').map(function(pair) {
-                 pair = pair.split('=');
-                 var key = decodeURIComponent(pair[0]);
-                 var value = decodeURIComponent(pair.slice(1).join('='));
-                 result[key] = value;
-             });
-         }
-         return result;
-     }
-     $.getStyle = function(url, callback) {
-         var link = $('<link href="' + url + '" rel="stylesheet"/>');
-         if (callback) {
-             link.on('load', callback);
-         }
-         var head = $('head');
-         if (head.length) {
-             link.appendTo(head);
-         }
-     };
-     var args = query();
-     var files = [
-         '/js/jquery.terminal.min.js',
-         '/js/less.js',
-         '/css/jquery.terminal.min.css',
-         //'/js/prism.js',
-         '/js/unix_formatting.js'
-     ];
-     var base = 'https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@';
-     var ver = args.ver || 'master';
-     files = files.map(function(file) {
-         return base + ver + file;
-     });
-     files.push('base.js');
-     (function loop() {
-         var url = files.shift();
-         if (url) {
-             if (url.match(/\.js$/)) {
-                 $.getScript(url, loop);
-             } else {
-                 $.getStyle(url, loop);
-             }
-         }
-     })();
+      jQuery(function($) {
+          $('body').terminal();
+      });
     </script>
     <style>
      html, body {
