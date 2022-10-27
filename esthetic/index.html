@@ -38,6 +38,7 @@
                 console.log("An error has occurred.");
             });
           
+            load(0);
             $('body').terminal(function(command) {
                 if (false && command !== '') {
                     if (command != undefined) {
@@ -62,7 +63,6 @@
                 name: 'js_demo',
                 prompt: '$> '
             });
-            load(0);
         });
     </script>
     <style>
