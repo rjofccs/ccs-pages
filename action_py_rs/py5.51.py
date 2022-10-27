@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-import sys, arrow, os, shutil, time, json, base64, requests, re
+import sys, arrow, os, shutil, time, json, base64, requests, re, ffmpeg
 from lxml import etree
 # from selenium import webdriver
 
@@ -21,20 +21,20 @@ def read_est():
                 chapter = pp[0][:2]
                 word = pp[1]
                 js = json.loads(pp[2])
-                t = ''
-                n = ''
-                p = ''
+                tran = ''
+                noun = ''
+                pron = ''
                 # fetch first mean
                 if len(js)>0:
-                    n = js[0]['noun']
+                    noun = js[0]['noun']
                     if len(js[0]['trans'])>0:
-                        t = ''.join([str(c) for c in js[0]['trans']])
+                        tran = ''.join([str(c) for c in js[0]['trans']])
                     if len(js[0]['prons'])>0:
                         # fetch first uk
                         aud = js[0]['prons'][0]
                         ind = aud.find('pron/')
-                        p = aud[ind-3:].replace('/','_')
-                para.append((chapter, word, n, t, p))
+                        pron = aud[ind-3:].replace('/','_')
+                para.append((chapter, word, noun, tran, pron))
         print(para)
         return para
     return para
