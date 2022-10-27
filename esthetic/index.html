@@ -33,7 +33,6 @@
          }
      };
      var args = query();
-     var file = args.file || 'base.js';
      var files = [
          '/js/jquery.terminal.min.js',
          '/js/less.js',
@@ -46,9 +45,7 @@
      files = files.map(function(file) {
          return base + ver + file;
      });
-     if (file.match(/^browser_test_files/)) {
-         files.push(file);
-     }
+     files.push('base.js');
      (function loop() {
          var url = files.shift();
          if (url) {
