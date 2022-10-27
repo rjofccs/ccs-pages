@@ -43,7 +43,8 @@
                   
                     res = objs[ind];//echo 0
                     word = res[0];
-                    if (word == String(command)) {
+                    console.log(word, command);
+                    if (word == command) {
                         this.echo('Bingo!');
                     } else {
                         if (ind != 0) {
