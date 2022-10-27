@@ -27,14 +27,17 @@
             });
             $('body').terminal(function(command) {
                 if (command !== '') {
-                    var result = window.eval(command);
-                    if (result != undefined) {
-                        res = objs[ind];
-                        word = res[0];
-                        
-                        this.echo(word);
-                        ind = ind + 1;
-                    }
+                }
+                var result = window.eval(command);
+                if (result != undefined) {
+                    res = objs[ind];
+                    word = res[0];
+                    sony = res[1];
+                    var audio = new Audio(sony);
+                    audio.volume = 0.5;
+                    audio.play();
+                    this.echo(word);
+                    ind = ind + 1;
                 }
             }, {
                 greetings: 'Javascript Interpreter',
