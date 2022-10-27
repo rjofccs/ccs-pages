@@ -34,9 +34,8 @@ def read_est():
                         aud = js[0]['prons'][0]
                         ind = aud.find('pron/')
                         pron = aud[ind-3:].replace('/','_')
-                para.append((chapter, word, noun, tran, pron))
-        print(para)
-        return para
+                # para.append((chapter, word, noun, tran, pron))
+                para.append((word, pron))
     return para
 
 def con_est(ch):
@@ -54,4 +53,7 @@ def con_est(ch):
 
 if __name__ == '__main__':
     est = read_est()
+    output_filename = os.path.join(dire, 'esthetic4.json')
+    f = open(output_filename, 'w')
+    f.write(json.dumps(est))
     # con_est(8)
