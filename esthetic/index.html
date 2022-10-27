@@ -18,27 +18,23 @@
         var status = false;
         var ind = 0;
         var audio;
-        function load(index){
-            res = objs[index];
-            // word = res[0];
-            sony = res[1];
-            audio = new Audio(sony);
-            audio.volume = 0.5;
-        }
-        function play(){
-            audio.play();
-        }
         jQuery(function($, undefined) {
             $.getJSON("../action_py_rs/esthetic4.json", function(data){
                 // $.each(data, function (index, value) {
                 //     console.log(value);
                 // });
                 objs = data;
+              
+                res = objs[0];
+                // word = res[0];
+                sony = res[1];
+                audio = new Audio(sony);
+                audio.volume = 0.5;
+                // audio.play();
             }).fail(function(){
                 console.log("An error has occurred.");
             });
           
-            load(0);
             $('body').terminal(function(command) {
                 if (false && command !== '') {
                     if (command != undefined) {
@@ -47,12 +43,25 @@
                 }
                 if (command == 'start') {
                     status = true;
-                    play();
-                    load(ind + 1);
+                    audio.play();
+                    
+                    res = objs[ind + 1];
+                    // word = res[0];
+                    sony = res[1];
+                    audio = new Audio(sony);
+                    audio.volume = 0.5;
+                    // audio.play();
                 }
                 if (status) {
-                    play();
-                    load(ind + 1);
+                    audio.play();
+                    
+                    res = objs[ind + 1];
+                    // word = res[0];
+                    sony = res[1];
+                    audio = new Audio(sony);
+                    audio.volume = 0.5;
+                    // audio.play();
+                  
                     res = objs[ind];
                     word = res[0];
                     this.echo(word);
