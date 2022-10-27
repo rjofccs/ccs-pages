@@ -45,9 +45,8 @@
                   
                     res = objs[ind];//echo 0
                     word = res[0];
-                    if (word==String(command)) {
+                    if (word == String(command)) {
                         this.echo('Bingo!');
-                        ind = ind + 1;
                     } else {
                         this.echo('Error!');
                     }
@@ -58,6 +57,8 @@
                     audio = new Audio(sony);
                     audio.volume = 0.5;
                     // audio.play();
+                  
+                    ind = ind + 1;
                 }
             }, {
                 greetings: 'Javascript Interpreter',
@@ -68,20 +69,17 @@
     </script>
     <style>
         html, body {
-           height: 100%;
-           margin: 0;
+            height: 100%;
+            margin: 0;
         }
         body.terminal {
-           min-height: 100%;
+            min-height: 100%;
         }
         body:not(.terminal) .terminal {
-           height: 100%;
+            height: 100%;
         }
-        .terminal div{
-           margin-bottom: 10px;    
-        }
-        .terminal-output, .cmd{
-           font-size: 24px;
+        .terminal, span {
+            --size: 1.4;
         }
     </style>
   </head>
