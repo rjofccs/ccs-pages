@@ -35,6 +35,8 @@ def read_est():
                         ind = aud.find('pron/')
                         p = aud[ind-3:].replace('/','_')
                 para.append((chapter, word, n, t, p))
+        print(para)
+        return para
     return para
 
 def con_est(ch):
@@ -51,5 +53,5 @@ def con_est(ch):
     os.remove(os.path.dirname(dire)+'/esthetic/ff' + ii + '.txt')
 
 if __name__ == '__main__':
-    read_file()
+    est = read_est()
     # con_est(8)
