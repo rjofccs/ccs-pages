@@ -29,15 +29,19 @@
             }
             localStorage.setItem("nono", JSON.stringify(existingEntries));
         }
+        function echo(p, msg){
+            p.echo("[[gb;teal;black]" + msg + "]");
+        }
         function traverse(p) {
             if(!localStorage.hasOwnProperty("nono")){
                 return false;
             }
-            var existingEntries = JSON.parse(localStorage.getItem("nono"));
-            for (i = 0; i < existingEntries.length; i++){
-                var nono = existingEntries[i];
-                p.echo(nono);
-            }
+            // var existingEntries = JSON.parse(localStorage.getItem("nono"));
+            // for (i = 0; i < existingEntries.length; i++){
+            //     var nono = existingEntries[i];
+            // }
+            var msg = localStorage.getItem("nono");
+            echo(p, msg);
         }
 
         var objs = [];
@@ -64,18 +68,17 @@
             });
           
             $('body').terminal(function(command, term) {
-                if (false && command !== '') {
-                    if (command != undefined) {
-                        var result = window.eval(command);
-                    }
-                }
+                // if (false && command !== '') {
+                //     if (command != undefined) {
+                //         var result = window.eval(command);
+                //     }
+                // }
                 
                 if (command == 'c') {
                     term.invoke_key('CTRL+L');
                 } else if (command == 'l') {
                     traverse(this);
-                } else if (command == 'l') {
-                    traverse(this);
+                } else if (command == 'm') {
                 } else {
                     audio.play();//play 0
 
@@ -83,9 +86,9 @@
                         res = objs[ind - 1];//echo 0
                         word = res[0];
                         if (word == command) {
-                            this.echo('Bingo!');
+                            echo(this, 'Bingo!');
                         } else {
-                            this.echo('Error!');
+                            echo(this, 'Error!');
                             // console.log(word, command);
                             addStorage(word);
                         }
@@ -101,11 +104,11 @@
                     audio.volume = 0.5;
                     // audio.play();
                     var msg = ind + '/' + objs.length;
-                    this.echo("[[gb;teal;black]" + msg + "]");
+                    echo(this, msg);
                 }
             }, {
                 greetings: 'IELTS words 3715',
-                name: 'js_demo',
+                name: 'ielts',
                 prompt: '$> '
             });
         });
