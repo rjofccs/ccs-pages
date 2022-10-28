@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>jQuery Terminal</title>
+    <title>IELTS words 3715 Terminal</title>
     <meta name="robots" content="noindex"/>
     <meta name="googlebot" content="noindex"/>
     <link rel="shortcut icon" href="favicon.ico"/>
@@ -30,7 +30,7 @@
             localStorage.setItem("nono", JSON.stringify(existingEntries));
         }
         function echo(p, msg){
-            p.echo("[[gb;teal;black]" + msg.replace('[', '\[').replace(']', '\]') + "]");
+            p.echo("[[gb;teal;white]" + msg.replace('[', '\[').replace(']', '\]') + "]");
         }
         function traverse(p) {
             if(!localStorage.hasOwnProperty("nono")){
@@ -109,9 +109,14 @@
                     echo(this, msg);
                 }
             }, {
-                greetings: 'IELTS words 3715',
+                greetings: false,
                 name: 'ielts',
-                prompt: '$> '
+                prompt: '$> ',
+                onInit: function() {
+                    this.echo(function() {
+                        return new Array(this.cols()).fill('-').join('');
+                    });
+                }
             });
         });
     </script>
