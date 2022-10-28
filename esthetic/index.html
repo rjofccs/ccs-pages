@@ -82,12 +82,12 @@
                     if (!first) {
                         res = objs[ind - 1];//echo 0
                         word = res[0];
-                        // console.log(word, command);
-                        addStorage(word);
                         if (word == command) {
                             this.echo('Bingo!');
                         } else {
                             this.echo('Error!');
+                            // console.log(word, command);
+                            addStorage(word);
                         }
                     }
 
@@ -100,11 +100,8 @@
                     audio = new Audio(sony);
                     audio.volume = 0.5;
                     // audio.play();
-                    this.echo(ind + '/' + objs.length, {
-                        finalize: function(div) {
-                            div.css("color", "blue");
-                        }
-                    });
+                    var msg = ind + '/' + objs.length;
+                    this.echo("[[gb;teal;black]" + msg + "]");
                 }
             }, {
                 greetings: 'IELTS words 3715',
