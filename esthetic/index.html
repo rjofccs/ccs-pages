@@ -54,8 +54,8 @@
                     }
                 }
                 
-                if (command !== 'clear') {
-                    term.exec('clear');
+                if (command !== 'c') {
+                    term.invoke_key('CTRL+L');
                 } else {
                     audio.play();//play 0
                     var ind = localStorage.getItem("ind");
