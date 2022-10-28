@@ -43,9 +43,10 @@
         var objs = [];
         var audio;
         var first = true;
-        var ind = localStorage.getItem("ind");
-        if (ind == null) {
-            ind = 0;
+        var ind = 0;
+        var lind = localStorage.getItem("ind");
+        if (lind != null) {
+            ind = parseInt(lind);
         }
         jQuery(function($, undefined) {
             $.getJSON("../action_py_rs/esthetic4.json", function(data){
@@ -91,7 +92,7 @@
                     }
 
                     ind = ind + 1;
-                    localStorage.setItem("ind", ind);
+                    localStorage.setItem("ind", ind + '');
                     first = false;
                     res = objs[ind];//load 1
                     // word = res[0];
