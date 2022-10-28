@@ -59,7 +59,7 @@
                 // });
                 objs = data;
               
-                res = objs[0];
+                res = objs[ind];
                 sony = res[1];
                 audio = new Audio(sony);
                 audio.volume = 0.5;
@@ -73,9 +73,10 @@
                 //         var result = window.eval(command);
                 //     }
                 // }
-                
                 if (command == 'c') {
                     term.invoke_key('CTRL+L');
+                } else if (command == 'p') {
+                    return $('<img src="https://placekitten.com/' + 1000 + '/' + 200 + '">');
                 } else if (command == 'l') {
                     traverse(this);
                 } else if (command == 'h') {
@@ -127,6 +128,10 @@
         }
         .terminal, span {
             --size: 1.4;
+        }
+        .terminal {
+            --color: rgba(0, 128, 0, 0.99);
+            --background: white;
         }
     </style>
   </head>
