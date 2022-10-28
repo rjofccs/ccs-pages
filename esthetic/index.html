@@ -14,8 +14,23 @@
     <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/less.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/unix_formatting.js"></script>
     <script>
+        function addStorage(entry) {
+            var existingEntries = [];
+            if(localStorage.hasOwnProperty("nono")){
+                existingEntries = JSON.parse(localStorage.getItem("nono"));
+            }
+            if(existingEntries.indexOf(entry) !== -1){// exist
+                var index = existingEntries.indexOf(entry);
+                if (false && index !== -1) {
+                    existingEntries.splice(index, 1);
+                }
+            }else{
+                existingEntries.push(entry);
+            }
+            localStorage.setItem("nono", JSON.stringify(existingEntries));
+        }
+
         var objs = [];
-        var ind = 0;
         var audio;
         jQuery(function($, undefined) {
             $.getJSON("../action_py_rs/esthetic4.json", function(data){
@@ -32,19 +47,28 @@
                 console.log("An error has occurred.");
             });
           
-            $('body').terminal(function(command) {
+            $('body').terminal(function(command, term) {
                 if (false && command !== '') {
                     if (command != undefined) {
                         var result = window.eval(command);
                     }
                 }
-                if (true) {
+                
+                if (command !== 'clear') {
+                    term.exec('clear');
+                } else {
                     audio.play();//play 0
+                    var ind = localStorage.getItem("ind");
+                    if (ind == null) {
+                        localStorage.setItem("ind", 0);
+                        ind = 0;
+                    }
 
                     if (ind != 0) {
                         res = objs[ind-1];//echo 0
                         word = res[0];
-                        console.log(word, command);
+                        // console.log(word, command);
+                        addStorage(word);
                         if (word == command) {
                             this.echo('Bingo!');
                         } else {
@@ -59,10 +83,14 @@
                     audio = new Audio(sony);
                     audio.volume = 0.5;
                     // audio.play();
-                    this.echo(ind+'/'+objs.length);
+                    this.echo(ind+'/'+objs.length, {
+                        finalize: function(div) {
+                            div.css("color", "blue");
+                        }
+                    });
                 }
             }, {
-                greetings: 'Javascript Interpreter',
+                greetings: 'IELTS words 3715',
                 name: 'js_demo',
                 prompt: '$> '
             });
