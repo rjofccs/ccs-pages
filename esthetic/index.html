@@ -29,6 +29,16 @@
             }
             localStorage.setItem("nono", JSON.stringify(existingEntries));
         }
+        function traverse(p) {
+            if(!localStorage.hasOwnProperty("nono")){
+                return false;
+            }
+            var existingEntries = JSON.parse(localStorage.getItem("nono"));
+            for (i = 0; i < existingEntries.length; i++){
+                var nono = existingEntries[i];
+                p.echo(nono);
+            }
+        }
 
         var objs = [];
         var audio;
@@ -54,8 +64,10 @@
                     }
                 }
                 
-                if (command !== 'c') {
+                if (command == 'c') {
                     term.invoke_key('CTRL+L');
+                } else if (command == 'l') {
+                    traverse(this);
                 } else {
                     audio.play();//play 0
                     var ind = localStorage.getItem("ind");
@@ -65,7 +77,7 @@
                     }
 
                     if (ind != 0) {
-                        res = objs[ind-1];//echo 0
+                        res = objs[ind - 1];//echo 0
                         word = res[0];
                         // console.log(word, command);
                         addStorage(word);
@@ -83,7 +95,7 @@
                     audio = new Audio(sony);
                     audio.volume = 0.5;
                     // audio.play();
-                    this.echo(ind+'/'+objs.length, {
+                    this.echo(ind + '/' + objs.length, {
                         finalize: function(div) {
                             div.css("color", "blue");
                         }
