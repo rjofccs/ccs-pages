@@ -40,18 +40,18 @@
                 }
                 if (true) {
                     audio.play();//play 0
-                  
-                    res = objs[ind - 1];//echo 0
-                    word = res[0];
-                    console.log(word, command);
-                    if (word == command) {
-                        this.echo('Bingo!');
-                    } else {
-                        if (ind != 0) {
+
+                    if (ind != 0) {
+                        res = objs[ind-1];//echo 0
+                        word = res[0];
+                        console.log(word, command);
+                        if (word == command) {
+                            this.echo('Bingo!');
+                        } else {
                             this.echo('Error!');
                         }
                     }
-                  
+
                     ind = ind + 1;
                     res = objs[ind];//load 1
                     // word = res[0];
