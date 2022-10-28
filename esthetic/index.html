@@ -42,6 +42,11 @@
 
         var objs = [];
         var audio;
+        var first = true;
+        var ind = localStorage.getItem("ind");
+        if (ind == null) {
+            ind = 0;
+        }
         jQuery(function($, undefined) {
             $.getJSON("../action_py_rs/esthetic4.json", function(data){
                 // $.each(data, function (index, value) {
@@ -72,13 +77,8 @@
                     traverse(this);
                 } else {
                     audio.play();//play 0
-                    var ind = localStorage.getItem("ind");
-                    if (ind == null) {
-                        localStorage.setItem("ind", 0);
-                        ind = 0;
-                    }
 
-                    if (ind != 0) {
+                    if (!first) {
                         res = objs[ind - 1];//echo 0
                         word = res[0];
                         // console.log(word, command);
@@ -91,6 +91,8 @@
                     }
 
                     ind = ind + 1;
+                    localStorage.setItem("ind", ind);
+                    first = false;
                     res = objs[ind];//load 1
                     // word = res[0];
                     sony = res[1];
