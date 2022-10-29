@@ -1,5 +1,37 @@
 # -*- coding: utf8 -*-
 # pip install aliyun-python-sdk-core==2.13.3
+'''
+{
+	"Words": [{
+		"Word": "facebook",
+		"EndTime": 1099,
+		"BeginTime": 0,
+		"ChannelId": 0
+	}, {
+		"Word": "parent",
+		"EndTime": 1832,
+		"BeginTime": 1099,
+		"ChannelId": 0
+	}],
+	"Sentences": [{
+		"EndTime": 13930,
+		"SilenceDuration": 0,
+		"BeginTime": 0,
+		"Text": "facebook parent company. meta has built a technology tool designed to directly translate spoken speech from one language to another. ",
+		"ChannelId": 0,
+		"SpeechRate": 86,
+		"EmotionValue": 7.3
+	}, {
+		"EndTime": 30740,
+		"SilenceDuration": 0,
+		"BeginTime": 14460,
+		"Text": "meta recently released a video that demonstrated how the artificial intelligence ai powered tool can translate between english and the hokkien language. ",
+		"ChannelId": 0,
+		"SpeechRate": 81,
+		"EmotionValue": 7.2
+	}]
+}
+'''
 import sys, arrow, os, time, datetime, json, base64, threading
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
@@ -55,24 +87,20 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
             print (e)
     if statusText == "SUCCESS" :
         print ("录音文件识别成功！")
-        f = open(dire+'/'+fileName,'w')
-        res = resp['Result']
-        f.write(json.dumps(res))
-        # words = resp['Result']['Words']
-        # lastEnd=0
-        # for word in words:
-        #     if word['ChannelId']==0:
-        #         t = int(word['BeginTime'])-lastEnd
-        #         if t>1000:
-        #             f.writelines('.\n')
-        #         else:
-        #             f.writelines(' ')
-        #         f.writelines(''+word['Word'])
-        #         lastEnd=int(word['EndTime'])
-        # f.writelines('.')
+        # res = resp['Result']
+        # f.write(json.dumps(res))
+        
+        f = open('/usr/local/www/html/'+fileName,'w')
+        sens = resp['Result']['Sentences']
+        for sen in sens:
+            if sen['ChannelId']==0:
+                begin = int(sen['BeginTime'])
+                end = int(sen['EndTime'])
+                f.writelines('{}--{}=={}\n'.format(begin,end,sen['Text']))
     else :
         print ("录音文件识别失败！")
 
 
+appKey = "O7PwMh9AZEdSsMVt"
 fileLink = "https://files.51voa.cn/202210/meta-demonstrates-ai-powered-speech-to-speech-translation-system.mp3"
-fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, 'test.json')
+fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, 'test.txt')
