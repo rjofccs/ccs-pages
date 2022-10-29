@@ -93,9 +93,9 @@
                     if (!first) {
                         // ["01", "atmosphere", "noun", "中文", "mp3"]
                         if (word == command) {
-                            echo(this, 'Bingo!' + word + '(right) ' + res[3]);
+                            echo(this, 'Bingo! ' + word + ' ' + res[3]);
                         } else {
-                            echo(this, 'Error!' + command + ';' + word + '(right) ' + res[3]);
+                            echo(this, 'Error! ' + command + '(x) ' + word + '(y) ' + res[3]);
                             addStorage(word);
                         }
                     }
