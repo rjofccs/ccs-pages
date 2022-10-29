@@ -14,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/less.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/jcubic/jquery.terminal@master/js/unix_formatting.js"></script>
     <script>
+        const prefix = 'https://raw.githubusercontent.com/rjofccs/ccs-pages/master/esthetic/mp3/';
         function addStorage(entry) {
             var existingEntries = [];
             if(localStorage.hasOwnProperty("nono")){
@@ -53,15 +54,15 @@
             ind = parseInt(lind);
         }
         jQuery(function($, undefined) {
-            $.getJSON("../action_py_rs/esthetic4.json", function(data){
+            $.getJSON("../action_py_rs/esthetic5.json", function(data){
                 // $.each(data, function (index, value) {
                 //     console.log(value);
                 // });
                 objs = data;
               
                 res = objs[ind];
-                sony = res[1];
-                audio = new Audio(sony);
+                # ["01", "atmosphere", "noun", "中文", "mp3"]
+                audio = new Audio(prefix + res[4]);
                 audio.volume = 0.5;
             }).fail(function(){
                 console.log("An error has occurred.");
@@ -83,18 +84,18 @@
                     term.echo('c:clear\nl:list\n', {newline: false});
                 } else {                  
                     res = objs[ind - 1];//echo 0
-                    word = res[0];
+                    word = res[1];
                     try {
                         audio.play();//play 0
                     } catch(error) {
                         echo(this, 'play error!' + word);
                     }
                     if (!first) {
+                        # ["01", "atmosphere", "noun", "中文", "mp3"]
                         if (word == command) {
-                            echo(this, 'Bingo!');
+                            echo(this, 'Bingo!' + word + '(right) ' + res[3]);
                         } else {
-                            echo(this, 'Error!');
-                            // console.log(word, command);
+                            echo(this, 'Error!' + command + ';' + word + '(right) ' + res[3]);
                             addStorage(word);
                         }
                     }
@@ -103,12 +104,10 @@
                     localStorage.setItem("ind", ind + '');
                     first = false;
                     res = objs[ind];//load 1
-                    // word = res[0];
-                    sony = res[1];
-                    audio = new Audio(sony);
+                    audio = new Audio(prefix + res[4]);
                     audio.volume = 0.5;
                     // audio.play();
-                    var msg = ind + '/' + objs.length;
+                    var msg = ind + '/' + objs.length + ' ' + res[0];
                     echo(this, msg);
                 }
             }, {
