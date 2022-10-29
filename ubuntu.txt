@@ -42,6 +42,9 @@ pip3 install you-get
 cd /usr/local/www/html
 you-get 'https://www.youtube.com/watch?v=fhIrySD7SXo' -O test
 ffmpeg -i test.mp4 -f mp3 -vn test.mp3
+str(i+1).rjust(3,'0')
+os.system('ffmpeg -i ./mp3.mp3 -ss x -to x -acodec copy ./mp4.mp3')
+os.system('ffmpeg -i ./mp3.mp3 -ss x -t x -acodec copy ./mp4.mp3')
 #################################################react
 curl -sL https://deb.nodesource.com/setup_18.x | sudo -E bash - 
 apt -y install nodejs && node -v
