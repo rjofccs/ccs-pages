@@ -28,5 +28,4 @@ for tline in open(input_filename, 'r').readlines():
                     p = 'https://raw.githubusercontent.com/rjofccs/ccs-pages/master/esthetic/mp3/' + aud[ind-3:].replace('/','_')
             para.append((chapter, word, n, t, p))
 
-
 open(output_filename, 'w').write(json.dumps(para))
