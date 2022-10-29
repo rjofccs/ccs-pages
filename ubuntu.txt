@@ -38,6 +38,7 @@ pip3 install arrow
 pip3 install lxml
 pip3 install PyMySQL
 pip3 install you-get
+pip3 install schedule
 
 cd /usr/local/www/html
 you-get 'https://www.youtube.com/watch?v=fhIrySD7SXo' -O test
@@ -84,6 +85,38 @@ java -version && spring --version
 cd /usr/local/mycode-server/config/workspace
 spring init --dependencies=web,data-jpa --java-version=1.8 my-project
 chmod -R 777 /usr/local/mycode-server/config/workspace
+#################################################schedule
+mkdir /usr/local/schedule/
+tee /usr/local/schedule/running.py<<-'EOF'
+import schedule, time, os
+
+def job():
+    print("I'm working...")
+    os.system('python x.py')
+
+schedule.every(2).minutes.do(job)
+# schedule.every().hour.do(job)
+# schedule.every().day.at("10:30").do(job)
+# schedule.every().monday.do(job)
+# schedule.every().wednesday.at("13:15").do(job)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+EOF
+tee /usr/local/schedule/pm2.json<<-'EOF'
+{
+    "name": "schedule",
+    "script": "/usr/bin/python3",
+    "args": [
+        "/usr/local/schedule/running.py"
+    ],
+    "exec_interpreter": "",
+    "exec_mode": "fork",
+    "error_file" : "/usr/local/schedule/fz-err.log",
+    "out_file"   : "/usr/local/schedule/fz-out.log"
+}
+EOF
 #################################################pm2
 npm install pm2 -g
 pm2 start|stop|restart|describe|del xxx
