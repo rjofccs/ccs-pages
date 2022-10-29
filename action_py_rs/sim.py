@@ -4,6 +4,7 @@ dire = os.path.dirname(os.path.abspath(__file__))
 
 para = []
 input_filename = os.path.join(dire, 'esthetic2.txt')
+output_filename = os.path.join(dire, 'esthetic5.json')
 for tline in open(input_filename, 'r').readlines():
     line = tline.strip()
     if line:
@@ -26,4 +27,6 @@ for tline in open(input_filename, 'r').readlines():
                     ind = aud.find('pron/')
                     p = 'https://raw.githubusercontent.com/rjofccs/ccs-pages/master/esthetic/mp3/' + aud[ind-3:].replace('/','_')
             para.append((chapter, word, n, t, p))
-print(para)
+
+
+open(output_filename, 'w').write(json.dumps(para))
