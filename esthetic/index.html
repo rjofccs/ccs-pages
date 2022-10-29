@@ -81,12 +81,15 @@
                     traverse(this);
                 } else if (command == 'h') {
                     term.echo('c:clear\nl:list\n', {newline: false});
-                } else {
-                    audio.play();//play 0
-
+                } else {                  
+                    res = objs[ind - 1];//echo 0
+                    word = res[0];
+                    try {
+                        audio.play();//play 0
+                    } catch(error) {
+                        echo(this, 'play error!' + word);
+                    }
                     if (!first) {
-                        res = objs[ind - 1];//echo 0
-                        word = res[0];
                         if (word == command) {
                             echo(this, 'Bingo!');
                         } else {
