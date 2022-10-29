@@ -7,7 +7,7 @@ from aliyunsdkcore.request import CommonRequest
 dire = os.path.dirname(os.path.abspath(__file__))
 now = arrow.utcnow().to('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')
 
-def fileTrans(akId, akSecret, appKey, fileLink, num):
+def fileTrans(akId, akSecret, appKey, fileLink, fileName):
     client = AcsClient(akId, akSecret, "cn-shanghai")
 
     postRequest = CommonRequest()
@@ -56,7 +56,7 @@ def fileTrans(akId, akSecret, appKey, fileLink, num):
     if statusText == "SUCCESS" :
         print ("录音文件识别成功！")
         words = getResponse['Result']['Words']
-        f = open(dire+'\\'+num+'.txt','w')
+        f = open(dire+'\\'+fileName,'w')
         lastEnd=0
         for word in words:
             if word['ChannelId']==0:
@@ -74,5 +74,5 @@ def fileTrans(akId, akSecret, appKey, fileLink, num):
         print ("录音文件识别失败！")
 
 
-fileLink = "https://down.guixue.com/mp3/ielts_lexicon/.mp3"
-fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, num)
+fileLink = "https://files.51voa.cn/202210/meta-demonstrates-ai-powered-speech-to-speech-translation-system.mp3"
+fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, 'test.txt')
