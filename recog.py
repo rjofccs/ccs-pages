@@ -101,6 +101,7 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
         print ("录音文件识别失败！")
 
 
+
 appKey = "O7PwMh9AZEdSsMVt"
 fileLink = "https://files.51voa.cn/202210/meta-demonstrates-ai-powered-speech-to-speech-translation-system.mp3"
 fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, 'test.txt')
