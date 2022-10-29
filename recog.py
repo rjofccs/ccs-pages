@@ -1,6 +1,6 @@
 # -*- coding: utf8 -*-
 # pip install aliyun-python-sdk-core==2.13.3
-import sys, arrow, os, time, tkinter, datetime, json, base64, threading
+import sys, arrow, os, time, datetime, json, base64, threading
 from aliyunsdkcore.client import AcsClient
 from aliyunsdkcore.request import CommonRequest
 
@@ -43,10 +43,10 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
     statusText = ""
     while True :
         try :
-            getResponse = client.do_action_with_exception(getRequest)
-            getResponse = json.loads(getResponse)
-            print (getResponse)
-            statusText = getResponse["StatusText"]
+            resp = client.do_action_with_exception(getRequest)
+            resp = json.loads(resp)
+            print (resp)
+            statusText = resp["StatusText"]
             if statusText == "RUNNING" or statusText == "QUEUEING" :
                 time.sleep(10)
             else :
@@ -55,24 +55,24 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
             print (e)
     if statusText == "SUCCESS" :
         print ("录音文件识别成功！")
-        words = getResponse['Result']['Words']
-        f = open(dire+'\\'+fileName,'w')
-        lastEnd=0
-        for word in words:
-            if word['ChannelId']==0:
-                t = int(word['BeginTime'])-lastEnd
-                if t>1000:
-                    f.writelines('.\n')
-                else:
-                    f.writelines(' ')
-                f.writelines(''+word['Word'])
-                
-                # print(t, word['Word'])
-                lastEnd=int(word['EndTime'])
-        f.writelines('.')
+        f = open(dire+'/'+fileName,'w')
+        res = resp['Result']
+        f.write(json.dumps(res))
+        # words = resp['Result']['Words']
+        # lastEnd=0
+        # for word in words:
+        #     if word['ChannelId']==0:
+        #         t = int(word['BeginTime'])-lastEnd
+        #         if t>1000:
+        #             f.writelines('.\n')
+        #         else:
+        #             f.writelines(' ')
+        #         f.writelines(''+word['Word'])
+        #         lastEnd=int(word['EndTime'])
+        # f.writelines('.')
     else :
         print ("录音文件识别失败！")
 
 
 fileLink = "https://files.51voa.cn/202210/meta-demonstrates-ai-powered-speech-to-speech-translation-system.mp3"
-fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, 'test.txt')
+fileTrans(accessKeyId, accessKeySecret, appKey, fileLink, 'test.json')
