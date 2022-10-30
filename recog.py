@@ -40,8 +40,9 @@ dire = os.path.dirname(os.path.abspath(__file__))
 now = arrow.utcnow().to('Asia/Shanghai').format('YYYY-MM-DD HH:mm:ss')
 
 def intToStr(t):
-	ss = datetime.datetime.fromtimestamp(int(t)/1000)
-	return '00'+ss.strftime("%Y-%m-%d %H:%M:%S.%f")[13:-3]
+    return str(int(t)/1000)
+    # ss = datetime.datetime.fromtimestamp()
+    # return '00'+ss.strftime("%Y-%m-%d %H:%M:%S.%f")[13:-3]
 	
 
 def fileTrans(akId, akSecret, appKey, fileLink, fileName):
@@ -99,11 +100,9 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
         sens = resp['Result']['Sentences']
         for sen in sens:
             if sen['ChannelId']==0:
-                # begin = intToStr(int(sen['BeginTime']))
-                # end = intToStr(int(sen['EndTime']))
+                begin = intToStr(int(sen['BeginTime']))
+                end = intToStr(int(sen['EndTime']))
                 # f.writelines('{}--{}=={}\n'.format(begin,end,sen['Text']))
-                begin = int(sen['BeginTime'])
-                end = int(sen['EndTime'])
                 f.writelines('{}#t={},{}?sen={}\n'.format(fileLink,begin,end,sen['Text']))
     else :
         print ("录音文件识别失败！")
