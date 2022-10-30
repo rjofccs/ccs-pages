@@ -81,7 +81,7 @@
                 } else if (command == 'l') {
                     traverse(this);
                 } else if (command == 'h') {
-                    term.echo('c:clear\nl:list\n', {newline: false});
+                    term.echo('c:clear\n l:list\n p:picture\n ', {newline: false});
                 } else {                  
                     res = objs[ind - 1];//echo 0
                     word = res[1];
@@ -92,10 +92,11 @@
                     }
                     if (!first) {
                         // ["01", "atmosphere", "noun", "中文", "mp3"]
+                        var msg = '(' + ind + '/' + objs.length + ')[' + res[0] + '] ';
                         if (word == command) {
-                            echo(this, 'Bingo! ' + word + ' ' + res[3]);
+                            echo(this, 'Bingo! ' + msg + word + ' ' + res[3]);
                         } else {
-                            echo(this, 'Error! ' + command + '(x) ' + word + '(y) ' + res[3]);
+                            echo(this, 'Error! ' + msg + command + '(x) ' + word + '(y) ' + res[3]);
                             addStorage(word);
                         }
                     }
@@ -107,8 +108,6 @@
                     audio = new Audio(prefix + res[4]);
                     audio.volume = 0.5;
                     // audio.play();
-                    var msg = ind + '/' + objs.length + ' ' + res[0];
-                    echo(this, msg);
                 }
             }, {
                 greetings: false,
