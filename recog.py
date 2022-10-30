@@ -102,8 +102,8 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
 				# begin = intToStr(int(sen['BeginTime']))
 				# end = intToStr(int(sen['EndTime']))
 				# f.writelines('{}--{}=={}\n'.format(begin,end,sen['Text']))
-				begin = sen['BeginTime'])
-				end = sen['EndTime'])
+				begin = sen['BeginTime']
+				end = sen['EndTime']
 				f.writelines('#t=' + start + ',' + end+'=={}\n'.format(begin,end,sen['Text']))
     else :
         print ("录音文件识别失败！")
