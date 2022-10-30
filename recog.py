@@ -104,9 +104,10 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
                 # f.writelines('{}--{}=={}\n'.format(begin,end,sen['Text']))
                 begin = int(sen['BeginTime'])
                 end = int(sen['EndTime'])
-                f.writelines('#t=' + start + ',' + end+'=={}\n'.format(begin,end,sen['Text']))
+                f.writelines('{}#t={},{}?sen={}\n'.format(fileLink,begin,end,sen['Text']))
     else :
         print ("录音文件识别失败！")
+
 
 
 
