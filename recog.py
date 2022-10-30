@@ -99,12 +99,12 @@ def fileTrans(akId, akSecret, appKey, fileLink, fileName):
         sens = resp['Result']['Sentences']
         for sen in sens:
             if sen['ChannelId']==0:
-				# begin = intToStr(int(sen['BeginTime']))
-				# end = intToStr(int(sen['EndTime']))
-				# f.writelines('{}--{}=={}\n'.format(begin,end,sen['Text']))
-				begin = int(sen['BeginTime'])
-				end = int(sen['EndTime'])
-				f.writelines('#t=' + start + ',' + end+'=={}\n'.format(begin,end,sen['Text']))
+                # begin = intToStr(int(sen['BeginTime']))
+                # end = intToStr(int(sen['EndTime']))
+                # f.writelines('{}--{}=={}\n'.format(begin,end,sen['Text']))
+                begin = int(sen['BeginTime'])
+                end = int(sen['EndTime'])
+                f.writelines('#t=' + start + ',' + end+'=={}\n'.format(begin,end,sen['Text']))
     else :
         print ("录音文件识别失败！")
 
