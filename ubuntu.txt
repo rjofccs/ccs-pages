@@ -160,6 +160,10 @@ https://github.com/coder/code-server/releases
 wget https://github.com/coder/code-server/releases/download/v4.8.0/code-server-4.8.0-linux-amd64.tar.gz
 tar -zxvf code-server-4.8.0-linux-amd64.tar.gz
 cd code-server-4.8.0-linux-amd64
+#################################################arm-none-eabi-gcc
+https://raw.githubusercontent.com/strongly-typed/docker-arm-none-eabi-gcc/master/Dockerfile
+docker pull stronglytyped/arm-none-eabi-gcc
+docker run --rm stronglytyped/arm-none-eabi-gcc arm-none-eabi-gcc -v
 #################################################nginx
 docker pull nginx:latest
 mkdir -p /usr/local/www/config
@@ -203,6 +207,36 @@ docker run -p 3306:3306 --name mymysql \
 -v /usr/local/mysql/conf:/etc/mysql/mysql.conf.d \
 -e MYSQL_ROOT_PASSWORD=S1234567 \
 -d mysql
+#################################################frps
+docker pull snowdreamtech/frps
+tee /usr/local/frps/frps.ini <<-'EOF'
+[common]
+bind_port = 7000
+dashboard_port = 7500
+dashboard_user = admin
+dashboard_pwd = admin@123
+vhost_http_port = 7080
+vhost_https_port = 7081
+token = 12345678
+EOF
+docker run --restart=always --network host -d -v /usr/local/frps/frps.ini:/etc/frp/frps.ini --name frps snowdreamtech/frps
+tee /usr/local/frps/frpc.ini <<-'EOF'
+[common]
+server_addr = x.x.x.x
+server_port = 7000
+token = 12345678
+[ssh]
+type = tcp
+local_ip = 192.168.31.100
+local_port = 22
+remote_port = 18022
+[rdp]
+type = tcp
+local_ip = 192.168.31.101
+local_port = 3389
+remote_port = 18023
+EOF
+docker run --restart=always --network host -d -v /usr/local/frps/frpc.ini:/etc/frp/frpc.ini --name frpc snowdreamtech/frpc
 #################################################
 #################################################
 docker pull nextcloud:latest
