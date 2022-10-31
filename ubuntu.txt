@@ -207,6 +207,23 @@ docker run -p 3306:3306 --name mymysql \
 -v /usr/local/mysql/conf:/etc/mysql/mysql.conf.d \
 -e MYSQL_ROOT_PASSWORD=S1234567 \
 -d mysql
+#################################################mosquitto
+docker pull eclipse-mosquitto
+mkdir -p /usr/local/mosquitto/{config,data,log}
+tee /usr/local/mosquitto/config/mosquitto.conf <<-'EOF'
+persistence true
+persistence_location /usr/local/mosquitto/data
+log_dest file /usr/local/mosquitto/log/mosquitto.log
+EOF
+
+chmod -R 755 /usr/local/mosquitto
+chmod -R 777 /usr/local/mosquitto/log
+docker run -d --name=mymosquitto --privileged \
+-p 1883:1883 -p 9001:9001 \
+-v /usr/local/mosquitto/config/mosquitto.conf:/mosquitto/config/mosquitto.conf \
+-v /usr/local/mosquitto/data:/mosquitto/data \
+-v /usr/local/mosquitto/log:/mosquitto/log \
+eclipse-mosquitto
 #################################################frps
 docker pull snowdreamtech/frps
 tee /usr/local/frps/frps.ini <<-'EOF'
