@@ -32,7 +32,7 @@
         }
       
         $(document).ready(function(){
-          arlrc.json(lrc,'lrcaudio','lrctime','lrclrc')
+          arlrc.json(lrc, 'lrcaudio', 'lrctime', 'lrclrc')
         })
 
 var lrc=[
@@ -75,23 +75,16 @@ var lrc=[
 {"time":"03:24.05","timeout":204 ,"lrc":" Music by HOYO-MiX"}
 ];
     </script>
-    <style>
-        #time {
-            color:blue
-        }
-    </style>
   </head>
   <body>
-    <div class="jumbotron">
-        <h1 class="display-4">Moon Halo</h1>
-        <span class="lead" style="font-size:200%">崩坏3《薪炎永燃》动画短片印象曲</span>
-        <span class="lead">-茶理理 / TetraCalyx / Hanser / HOYO-MiX</span>
-        <div class="lrc lead">
-            <span><i id="lrctime" style="font-size:80%;color:blue"></i></span>
-            <span id="lrclrc" style="color:green"></span>
-        </div>
-        <hr/>
-        <audio src="https://files.51voa.cn/202210/south-korea-investigates-crowd-surge-india-looks-into-bridge-collapse.mp3" controls id="lrcaudio" style="width:100%" preload/>
-    </div>
+      <div>
+          <p>
+              <audio src="https://files.51voa.cn/202210/south-korea-investigates-crowd-surge-india-looks-into-bridge-collapse.mp3" controls id="lrcaudio" style="width:100%" preload/>
+          </p>
+          <p class="lrc lead">
+              <span><i id="lrctime" style="font-size:12px;"></i></span>
+              <span id="lrclrc" style="color:green;"></span>
+          </p>
+      </div>
   </body>
 </html>
