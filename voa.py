@@ -15,13 +15,22 @@ if not os.path.exists(output_filename):
     os.makedirs(output_filename)
 
 
-# if __name__ == "__main__":
-url = 'https://www.google.com.hk/search?tbm=isch&q='+'plateau'
-# resp = requests.get(url, headers={'User-Agent': "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36"})
-# parse_html = etree.HTML(resp.text)
-# xs = parse_html.xpath("//div[@id='islmp']")
-# for x in xs:
-#     img = x.xpath('a/div[2]/@style')[0].replace("background-image: url('",'').replace("')",'')
+if __name__ == "__main__":
+url = 'https://www.51voa.com/'
+header = {'User-Agent': "Mozilla/5.0 (Windows NT 6.3; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/37.0.2049.0 Safari/537.36"}
+resp = requests.get(url, headers=header)
+html = etree.HTML(resp.text)
+xs = html.xpath("//div[@class='list']/ul/li")
+for x in xs:
+    a = x.xpath("a[last()]")[0]
+    href = a.xpath("@href")[0]
+    titl = a.xpath("text()")[0]
+    cont = requests.get(url + href, headers=header)
+    con = etree.HTML(cont.text)
+    mp3 = con.xpath("//a[@id='mp3']/@href")
+    lrc = con.xpath("//a[@id='lrc']/@href")
+    print([titl, mp3[0] if len(mp3)!=0 else '', lrc[0] if len(lrc)!=0 else ''])
+
 
 # options = webdriver.ChromeOptions()
 # options.add_argument('--no-sandbox') # 解决DevToolsActivePort文件不存在的报错
@@ -33,6 +42,5 @@ url = 'https://www.google.com.hk/search?tbm=isch&q='+'plateau'
 # options.add_argument('--disable-dev-shm-usage')
 # driver = webdriver.Chrome(ChromeDriverManager().install(), chrome_options = options)
 # driver.get(url)
-
 # driver.save_screenshot('./ch.png')
 # driver.quit()
