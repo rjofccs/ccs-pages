@@ -1,2 +1,0 @@
-accessKeyId = "LTAI5tC1TWBFouTLUpgQ3yyr"
-accessKeySecret = "u6HULwvHPKgAZpIy90SDN6VQUK8XHb"
