@@ -284,14 +284,82 @@ docker run -d -p 20:20 -p 21:21 -p 21100-21110:21100-21110 \
 fauria/vsftpd
 docker exec -i -t vsftpd bash
 #################################################
-docker run -it --rm \
--v /root/ssl/etc/letsencrypt:/etc/letsencrypt \
--v /root/ssl/var/lib/letsencrypt:/var/lib/letsencrypt \
--v /root/ssl/var/log/letsencrypt:/var/log/letsencrypt \
--v /root/ssl/certbot:/data/letsencrypt \
-certbot/certbot \
-renew --webroot \
---webroot-path=/data/letsencrypt
+tee /usr/local/www/config/nginx.conf <<-'EOF'
+user root;
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       80;
+        server_name  moringstars.com www.moringstars.com;
+        location ~ /.well-known/acme-challenge/ {
+            allow all;
+            root /etc/nginx/;
+        }
+        location / {
+            return 301 https://$server_name$request_uri;
+        }
+    }
+}
+EOF
+
+tee /usr/local/www/config/nginx.conf <<-'EOF'
+user root;
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    #default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       443 ssl;
+        server_name  moringstars.com www.moringstars.com;
+        ssl_certificate     /etc/nginx/fullchain1.pem;
+        ssl_certificate_key  /etc/nginx/privkey1.pem;
+        ssl_session_timeout  5m;
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        location / {
+            root   /usr/share/nginx/html;
+            index  index.html index.htm;
+        }
+    }
+    server {
+        listen       80;
+        server_name  moringstars.com www.moringstars.com;
+        location ~ /.well-known/acme-challenge/ {
+            allow all;
+            root /etc/nginx/;
+        }
+        location / {
+            return 301 https://$server_name$request_uri;
+        }
+    }
+}
+EOF
+对应文件/usr/local/www/config:/etc/nginx
+对应文件/usr/local/www/config:/tmp/letsencrypt
+生成文件/usr/local/certbot/letsencrypt:/etc/letsencrypt
+docker restart mynginx
+docker pull certbot/certbot
+mkdir /usr/local/certbot/{letsencrypt,log}
+docker run --rm --name temp_certbot \
+    -v /usr/local/certbot/letsencrypt:/etc/letsencrypt \
+    -v /usr/local/www/config:/tmp/letsencrypt \
+    -v /usr/local/certbot/log:/var/log \
+    certbot/certbot:v1.8.0 \
+    certonly --webroot --agree-tos --renew-by-default \
+    --preferred-challenges http-01 --server https://acme-v02.api.letsencrypt.org/directory \
+    --text --email rjofccs@gmail.com \
+    -w /tmp/letsencrypt -d moringstars.com -d www.moringstars.com
+cp /usr/local/certbot/letsencrypt/archive/moringstars.com/* /usr/local/www/config/
 #################################################
 docker pull mongo:4.0
 docker run --name mymongo -d mongo:4.0 --smallfiles --replSet rs0 --oplogSize 128
