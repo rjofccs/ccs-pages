@@ -69,8 +69,13 @@ yarn tsc
 },
 ```
 npx create-react-app my-app --template typescript
-yarn create react-app my-app --template typescript
 cd my-app&&npm start
+cd /usr/local/mycode-server/config/workspace
+chmod -R 777 /usr/local/mycode-server/config/workspace
+http://139.144.171.90:8443/?folder=/config/workspace
+yarn create react-app my-app --template typescript
+cd my-app&&yarn build
+cp -r ./build/* /usr/local/www/html/
 ```
 yarn add @mui/material @emotion/react @emotion/styled
 yarn add @fontsource/roboto
@@ -86,8 +91,8 @@ echo $SPRING_HOME && echo $PATH
 java -version && spring --version
 
 cd /usr/local/mycode-server/config/workspace
-spring init --dependencies=web,data-jpa --java-version=1.8 my-project
 chmod -R 777 /usr/local/mycode-server/config/workspace
+spring init --build=maven --dependencies=web,data-jpa --java-version=1.8 my-project
 #################################################schedule
 mkdir /usr/local/schedule/
 tee /usr/local/schedule/running.py<<-'EOF'
