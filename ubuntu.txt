@@ -26,6 +26,9 @@ autoindex  on;
 set $node_port 1080;
 proxy_pass http://120.78.191.195:$node_port$request_uri;
 proxy_redirect off;
+docker rm -f mynginx
+chmod -R 755 /usr/local/www/html
+docker cp mynginx:/etc/nginx/conf.d /usr/local/www/config/conf.d
 #################################################apt-get
 #################################################apt-get
 apt-get install -y python3-pip
@@ -166,20 +169,17 @@ docker pull stronglytyped/arm-none-eabi-gcc
 docker run --rm stronglytyped/arm-none-eabi-gcc arm-none-eabi-gcc -v
 #################################################nginx
 docker pull nginx:latest
-mkdir -p /usr/local/www/config
+mkdir -p /usr/local/www/{config,log,html,ssl}
 tee /usr/local/www/config/nginx.conf <<-'EOF'
 user root;
 worker_processes  1;
-
 events {
     worker_connections  1024;
 }
-
 http {
     #default_type  application/octet-stream;
     sendfile        on;
     keepalive_timeout  65;
-
     server {
         listen       80;
         server_name  localhost;
@@ -190,11 +190,16 @@ http {
     }
 }
 EOF
-docker rm -f mynginx
-docker run --name mynginx -p 80:80 \
+tee /usr/local/www/html/index.html <<-'EOF'
+index
+EOF
+docker run --name mynginx -p 80:80 -p 443:443 \
 --restart always \
 -v /usr/local/www/html:/usr/share/nginx/html \
--v /usr/local/www/config:/etc/nginx \
+-v /usr/local/www/config/nginx.conf:/etc/nginx/nginx.conf \
+-v /usr/local/www/config/conf.d:/etc/nginx/conf.d \
+-v /usr/local/www/log:/var/log/nginx \
+-v /usr/local/www/ssl:/etc/nginx/ssl \
 -d nginx
 docker ps
 docker exec -it mynginx sh
@@ -291,37 +296,14 @@ events {
     worker_connections  1024;
 }
 http {
-    sendfile        on;
-    keepalive_timeout  65;
-    server {
-        listen       80;
-        server_name  moringstars.com www.moringstars.com;
-        location ~ /.well-known/acme-challenge/ {
-            allow all;
-            root /etc/nginx/;
-        }
-        location / {
-            return 301 https://$server_name$request_uri;
-        }
-    }
-}
-EOF
-
-tee /usr/local/www/config/nginx.conf <<-'EOF'
-user root;
-worker_processes  1;
-events {
-    worker_connections  1024;
-}
-http {
     #default_type  application/octet-stream;
     sendfile        on;
     keepalive_timeout  65;
     server {
         listen       443 ssl;
         server_name  moringstars.com www.moringstars.com;
-        ssl_certificate     /etc/nginx/fullchain1.pem;
-        ssl_certificate_key  /etc/nginx/privkey1.pem;
+        ssl_certificate     /etc/nginx/ssl/fullchain.pem;
+        ssl_certificate_key  /etc/nginx/ssl/privkey.pem;
         ssl_session_timeout  5m;
         ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
         ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
@@ -344,9 +326,6 @@ http {
     }
 }
 EOF
-对应文件/usr/local/www/config:/etc/nginx
-对应文件/usr/local/www/config:/tmp/letsencrypt
-生成文件/usr/local/certbot/letsencrypt:/etc/letsencrypt
 docker restart mynginx
 docker pull certbot/certbot
 mkdir /usr/local/certbot/{letsencrypt,log}
@@ -359,7 +338,9 @@ docker run --rm --name temp_certbot \
     --preferred-challenges http-01 --server https://acme-v02.api.letsencrypt.org/directory \
     --text --email rjofccs@gmail.com \
     -w /tmp/letsencrypt -d moringstars.com -d www.moringstars.com
-cp /usr/local/certbot/letsencrypt/archive/moringstars.com/* /usr/local/www/config/
+
+cp /usr/local/certbot/letsencrypt/archive/moringstars.com/fullchain2.pem /usr/local/www/ssl/fullchain.pem
+cp /usr/local/certbot/letsencrypt/archive/moringstars.com/privkey2.pem /usr/local/www/ssl/privkey.pem
 #################################################
 docker pull mongo:4.0
 docker run --name mymongo -d mongo:4.0 --smallfiles --replSet rs0 --oplogSize 128
