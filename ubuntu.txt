@@ -93,6 +93,27 @@ java -version && spring --version
 cd /usr/local/mycode-server/config/workspace
 chmod -R 777 /usr/local/mycode-server/config/workspace
 spring init --build=maven --dependencies=web,data-jpa --java-version=1.8 my-project
+mvn clean&&mvn package -Dmaven.test.skip=true
+
+mkdir /usr/local/mycode-server/config/workspace/my-project/src/main/docker/
+tee /usr/local/mycode-server/config/workspace/my-project/src/main/docker/Dockerfile<<-'EOF'
+FROM openjdk:8
+VOLUME /tmp
+ADD dockerapp-0.0.1-SNAPSHOT.jar app.jar
+RUN bash -c 'touch /app.jar'
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
+EOF
+mvn docker:build
+docker images
+docker exec -it myapp sh
+docker logs myapp
+
+mkdir -p /usr/local/app/logs
+docker rm myapp -f&&docker run --name myapp -p 8888:8080 \
+-v /usr/local/app/logs:/logs \
+-v /usr/local/app/mp3:/mp3 \
+--restart always \
+-d ccs/dockerapp
 #################################################schedule
 mkdir /usr/local/schedule/
 tee /usr/local/schedule/running.py<<-'EOF'
