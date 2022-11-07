@@ -29,6 +29,8 @@ proxy_redirect off;
 docker rm -f mynginx
 chmod -R 755 /usr/local/www/html
 docker cp mynginx:/etc/nginx/conf.d /usr/local/www/config/conf.d
+
+https://docs.linuxserver.io/images/docker-mysql-workbench
 #################################################apt-get
 #################################################apt-get
 apt-get install -y python3-pip
@@ -154,6 +156,8 @@ http {
     }
 }
 EOF
+
+zip -r x.zip x/*
 #################################################schedule
 mkdir /usr/local/schedule/
 tee /usr/local/schedule/running.py<<-'EOF'
@@ -210,8 +214,6 @@ pm2 start pm2.json
 curl -sSL https://get.daocloud.io/docker | sh
 systemctl daemon-reload && systemctl restart docker
 #################################################code-server
-https://docs.linuxserver.io/images/docker-mysql-workbench
-
 docker pull lscr.io/linuxserver/code-server:latest
 mkdir -p /usr/local/mycode-server/config
 docker run --name mycodeserver \
