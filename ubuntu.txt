@@ -109,11 +109,51 @@ docker exec -it myapp sh
 docker logs myapp
 
 mkdir -p /usr/local/app/logs
-docker rm myapp -f&&docker run --name myapp -p 8888:8080 \
+docker rm myapp -f&&docker run --name myapp -p 8080:8080 \
 -v /usr/local/app/logs:/logs \
 -v /usr/local/app/mp3:/mp3 \
 --restart always \
 -d ccs/dockerapp
+
+tee /usr/local/www/config/nginx.conf <<-'EOF'
+user root;
+worker_processes  1;
+events {
+    worker_connections  1024;
+}
+http {
+    #default_type  application/octet-stream;
+    sendfile        on;
+    keepalive_timeout  65;
+    server {
+        listen       443 ssl;
+        server_name  moringstars.com www.moringstars.com;
+        ssl_certificate     /etc/nginx/ssl/fullchain.pem;
+        ssl_certificate_key  /etc/nginx/ssl/privkey.pem;
+        ssl_session_timeout  5m;
+        ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+        ssl_prefer_server_ciphers on;
+        location / {
+            proxy_pass  http://139.144.171.90:8080;
+            # proxy_set_header Host $proxy_host;
+            # proxy_set_header X-Real-IP $remote_addr;
+            # proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+    }
+    server {
+        listen       80;
+        server_name  moringstars.com www.moringstars.com;
+        location ~ /.well-known/acme-challenge/ {
+            allow all;
+            root /etc/nginx/;
+        }
+        location / {
+            return 301 https://$server_name$request_uri;
+        }
+    }
+}
+EOF
 #################################################schedule
 mkdir /usr/local/schedule/
 tee /usr/local/schedule/running.py<<-'EOF'
@@ -170,6 +210,8 @@ pm2 start pm2.json
 curl -sSL https://get.daocloud.io/docker | sh
 systemctl daemon-reload && systemctl restart docker
 #################################################code-server
+https://docs.linuxserver.io/images/docker-mysql-workbench
+
 docker pull lscr.io/linuxserver/code-server:latest
 mkdir -p /usr/local/mycode-server/config
 docker run --name mycodeserver \
@@ -177,7 +219,6 @@ docker run --name mycodeserver \
 -e PGID=1000 \
 -e TZ=Europe/London \
 -p 8443:8443 \
--p 8080:8080 \
 -v /usr/local/mycode-server/config:/config \
 --restart unless-stopped \
 -d lscr.io/linuxserver/code-server:latest
