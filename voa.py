@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 import sys, arrow, os, datetime, json, requests, threading, urllib3
 from lxml import etree
+from urllib.parse import urlparse
 
 now = arrow.utcnow().to('Asia/Shanghai').format('YYYY-MM-DD_HH:mm:ss')
 dire = os.path.dirname(os.path.abspath(__file__))
@@ -11,7 +12,7 @@ output_filename = os.path.join(dire, '/mp3/')
 #     os.makedirs(output_filename)
 
 def d(durl):
-    open(output_filename+'/'+os.path.basename(urlparse(durl)).path),'wb').write(requests.get(durl).content)
+    open('/mp3/'+os.path.basename(urlparse(durl)).path,'wb').write(requests.get(durl).content)
     
 if __name__ == "__main__":
     url = 'https://www.51voa.com/'
