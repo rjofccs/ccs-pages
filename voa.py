@@ -7,12 +7,12 @@ from urllib.parse import urlparse
 now = arrow.utcnow().to('Asia/Shanghai').format('YYYY-MM-DD_HH:mm:ss')
 dire = os.path.dirname(os.path.abspath(__file__))
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
-output_filename = os.path.join(dire, '/mp3/')
+# output_filename = os.path.join(dire, '/mp3/')
 # if not os.path.exists(output_filename):
 #     os.makedirs(output_filename)
 
 def d(durl):
-    open('/mp3/'+os.path.basename(urlparse(durl)).path,'wb').write(requests.get(durl).content)
+    open('/usr/local/app/mp3/'+os.path.basename(urlparse(durl).path),'wb').write(requests.get(durl).content)
     
 if __name__ == "__main__":
     url = 'https://www.51voa.com/'
@@ -32,11 +32,9 @@ if __name__ == "__main__":
             lrc = con.xpath("//a[@id='lrc']/@href")
             print(titl)
             if len(mp3) != 0:
-                durl = mp3[0]
-                d(durl)
+                d(mp3[0])
             if len(lrc) != 0:
-                durl = url+lrc[0]
-                d(durl)
+                d(url+lrc[0])
 
 
 # from selenium import webdriver
