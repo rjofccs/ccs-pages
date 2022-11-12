@@ -1,0 +1,129 @@
+hostnamectl --static set-hostname k8s-master &&\
+sed -i "2i139.144.31.66  k8s-node1" /etc/hosts &&\
+sed -i "2i139.144.31.76  k8s-node2" /etc/hosts &&\
+hostname $hostname
+hostnamectl --static set-hostname k8s-node1 &&\
+sed -i "2i170.187.204.15  k8s-master" /etc/hosts &&\
+sed -i "2i139.144.31.76  k8s-node2" /etc/hosts &&\
+hostname $hostname
+hostnamectl --static set-hostname k8s-node2 &&\
+sed -i "2i170.187.204.15  k8s-master" /etc/hosts &&\
+sed -i "2i139.144.31.66  k8s-node1" /etc/hosts &&\
+hostname $hostname
+
+swapoff -a&&ufw status&&ufw disable
+curl -sSL https://get.daocloud.io/docker | sh && systemctl daemon-reload && systemctl restart docker
+
+https://kubernetes.io/docs/setup/production-environment/tools/kubeadm/install-kubeadm/
+sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates curl
+sudo curl -fsSLo /usr/share/keyrings/kubernetes-archive-keyring.gpg https://packages.cloud.google.com/apt/doc/apt-key.gpg
+echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee /etc/apt/sources.list.d/kubernetes.list
+sudo apt install -y socat conntrack ebtables
+sudo apt-get update && sudo apt-get install -y kubelet kubeadm kubectl && sudo apt-mark hold kubelet kubeadm kubectl
+
+export KUBECONFIG=/etc/kubernetes/admin.conf
+kubeadm init \
+--apiserver-advertise-address=170.187.204.15 \
+--pod-network-cidr=172.16.0.0/16 \
+--ignore-preflight-errors=NumCPU
+
+kubeadm join 170.187.204.15:6443 \
+--token ioiwio. \
+--discovery-token-ca-cert-hash sha256:
+
+kubectl get nodes
+
+
+
+hold:
+sudo apt-mark unhold kubelet kubeadm kubectl
+scp /etc/apt/sources.list k8s-master:/etc/apt/sources.list
+container runtime:
+rm -rf /etc/containerd/config.toml && systemctl restart containerd
+refuse:
+systemctl restart docker.service
+systemctl restart kubelet.service
+40s:
+kubeadm reset -f
+
+repo
+kubelet kubeadm kubectl 1.18
+kubeadm init
+kubeadm join
+kubectl get nodes
+kubectl apply
+kubectl create deployment mynginx --image=nginx -o yaml --dry-run
+
+kubectl apply -f nginx.yaml
+kubectl get pods nginx -o wide
+kubectl describe pod nginx
+kubectl exec -it nginx sh
+netstat -tan
+wget -q -O - localhost
+kubectl get pods -o wide -l 'app=nginx'
+kubectl get svc nginx-service -o wide
+curl http://127.0.0.1:31871
+
+
+
+
+
+
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx
+  # 指定 label，便于检索
+  labels:
+    app: nginx
+spec:
+  containers:
+  - name: nginx
+    # 指定镜像
+    image: nginx:alpine
+    # 指定暴露端口
+    ports:
+    - containerPort: 80
+
+
+---
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mynginxdeployment
+spec:
+  selector:
+    matchLabels:
+      app: mynginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: mynginx
+    spec:
+      containers:
+      - name: mynginx
+        image: nginx:alpine
+        ports:
+        - containerPort: 80
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: mynginxservice
+spec:
+  selector:
+    app: mynginx
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: NodePort
+
+
