@@ -59,6 +59,7 @@ promise1.then(function(data) {
   console.log('catch' + err);
 });
 #################################################
+https://www.runoob.com/react/react-lists-and-keys.html
 compilerOptions.noImplicitAny: false
 
 index.tsx:
@@ -203,5 +204,220 @@ function NumberList(props) {
 const numbers = [1, 2, 3, 4, 5];
 root.render(<NumberList numbers={numbers} />);
 -------------------------------------------------
-https://www.runoob.com/react/react-lists-and-keys.html
+function ListItem(props) {
+  return <li>{props.value}</li>;
+}
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <ListItem key={number.toString()} value={number} />
+  );
+  return (
+    <ul>
+      {listItems}
+    </ul>
+  );
+}
+const numbers = [1, 2, 3, 4, 5];
+root.render(<NumberList numbers={numbers} />);
+-------------------------------------------------
+function Blog(props) {
+  const sidebar = (
+    <ul>
+      {props.posts.map((post) =>
+        <li key={post.id}>{post.title}</li>
+      )}
+    </ul>
+  );
+  const content = props.posts.map((post) =>
+    <div key={post.id}>
+      <h3>{post.title}</h3>
+      <p>{post.content}</p>
+    </div>
+  );
+  return (
+    <div>
+      {sidebar}
+      <hr />
+      {content}
+    </div>
+  );
+}
+const posts = [
+  {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
+  {id: 2, title: 'Installation', content: 'You can install React from npm.'}
+];
+root.render(<Blog posts={posts} />);
+-------------------------------------------------
+设置状态：setState
+替换状态：replaceState
+设置属性：setProps
+替换属性：replaceProps
+强制更新：forceUpdate
+获取DOM节点：findDOMNode
+判断组件挂载状态：isMounted
+class Counter extends React.Component<{}, {clickCount}>{
+  constructor(props) {
+      super(props);
+      this.state = {clickCount: 0};
+      this.handleClick = this.handleClick.bind(this);
+  }
+  
+  handleClick() {
+    this.setState(function(state) {
+      return {clickCount: state.clickCount + 1};
+    });
+  }
+  render () {
+    return (<h2 onClick={this.handleClick}>{this.state.clickCount}</h2>);
+  }
+}
+root.render(<Counter />);
+-------------------------------------------------
+class Clock extends React.Component {
+  timerID!: number;
+  state = {
+      date: new Date()
+  };
+  componentDidMount() {
+      this.timerID = window.setInterval(() => this.tick(), 1000);
+  }
+  componentWillUnmount() {
+      clearInterval(this.timerID);
+  }
+  tick() {
+      this.setState({date: new Date()});
+  }
+  render() {
+      return (
+          <div>
+              <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
+          </div>
+      );
+  }
+}
+root.render(<Clock />);
+-------------------------------------------------
+class HelloMessage extends React.Component {
+  state = {value: 'Hello Runoob!'};  
+  constructor(props) {
+      super(props);
+      this.handleChange = this.handleChange.bind(this);
+  }
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  render() {
+    var value = this.state.value;
+    return <div>
+            <input type="text" value={value} onChange={this.handleChange} /> 
+            <h4>{value}</h4>
+           </div>;
+  }
+}
+root.render(<HelloMessage />);
+-------------------------------------------------2child
+class Content extends React.Component<{myDataProp,updateStateProp},{}> {
+  render() {
+    return  <div>
+              <input type="text" value={this.props.myDataProp} onChange={this.props.updateStateProp} /> 
+              <h4>{this.props.myDataProp}</h4>
+            </div>;
+  }
+}
+class HelloMessage extends React.Component<{},{value}> {
+  constructor(props) {
+      super(props);
+      this.state = {value: 'Hello Runoob!'};
+      this.handleChange = this.handleChange.bind(this);
+  }
+ 
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  render() {
+    var value = this.state.value;
+    return <div>
+            <Content myDataProp = {value} updateStateProp = {this.handleChange}></Content>
+           </div>;
+  }
+}
+root.render(<HelloMessage />);
+-------------------------------------------------
+class Parent extends React.Component<{},{}> {
+  message = 'Hello world!';
+  render() {
+      return (
+          <Child myProp={this.message} />
+      );
+  }
+}
+class Child extends React.Component<{myProp},{}> {
+  message = this.props.myProp;
+  render() {
+      return (
+          <div>{this.message}</div>
+      );
+  }
+}
+root.render(<Parent />);
+-------------------------------------------------
+class Parent extends React.Component {
+  state = {message: '',};
+  handleMsg(msg) {
+      this.setState({message: msg,});
+  }
+  render() {
+      return (
+          <>
+              {this.state.message}
+              <Child onMsg={(msg) => this.handleMsg(msg)}/>
+          </>
+      );
+  }
+}
 
+class Child extends React.Component<{onMsg}> {
+  handleClick() {
+      this.props.onMsg('Hello');
+  }
+  render() {
+      return (
+          <button onClick={() => this.handleClick()}>Clike me</button>
+      );
+  }
+}
+root.render(<Parent />);
+-------------------------------------------------
+父组件提前声明数据处理逻辑，该方法接收传入的值，然后进行相应处理；
+父组件将该方法通过 props 传递给子组件；
+子组件触发一些行为，得到了将要传递给父组件的值；
+子组件通过 this.props 调用父组件传入的处理函数，并将要传递的值作为该函数的参数；
+处理函数开始执行，由于其是在父组件的作用域中声明的，所以也能访问父组件中的一些数据，比如 state，相当于在父组件中处理子组件传入的数据；
+处理函数更新 state 状态值，随后其他访问该 state 的地方也会随即更新；
+-------------------------------------------------
+class Parent extends React.Component {
+  state = {msg: 'hello',}  
+  handleChangeMsg(msg) {
+      this.setState({msg: msg,});
+  }  
+  render() {
+      return (<>
+          <ChildLabel msg={this.state.msg} />
+          <ChildButton onChangeMsg={(msg) => this.handleChangeMsg(msg)} />
+      </>);
+  }
+}
+
+class ChildLabel extends React.Component<{msg}> {
+  render() {
+      return <span>{this.props.msg}</span>
+  }
+}
+
+class ChildButton extends React.Component<{onChangeMsg}> {
+  render() {
+      return (<button onClick={() => this.props.onChangeMsg('world')}>Change</button>)
+  }
+}
+root.render(<Parent />);
