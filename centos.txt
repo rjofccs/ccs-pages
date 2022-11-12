@@ -1,0 +1,207 @@
+firewall-cmd --permanent --zone=public --add-port=80/tcp
+firewall-cmd --permanent --zone=public --add-port=443/tcp
+firewall-cmd --reload
+#################################################
+curl -sSL https://get.daocloud.io/docker | sh && systemctl daemon-reload && systemctl restart docker
+#################################################
+yum install -y nginx
+vi /etc/nginx/nginx.conf
+/usr/local/mycode-server/config/workspace/my-app/build
+#systemctl restart nginx
+#/var/log/nginx/error.log
+#################################################
+curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
+yum install -y nodejs && corepack enable yarn npm && yarn global add typescript
+node --version && npm --version && yarn -v && tsc -v
+#################################################
+docker pull lscr.io/linuxserver/code-server:latest
+mkdir -p /usr/local/mycode-server/config
+docker run --name mycodeserver \
+-e PUID=1000 \
+-e PGID=1000 \
+-e TZ=Europe/London \
+-p 8443:8443 \
+-v /usr/local/mycode-server/config:/config \
+--restart unless-stopped \
+-d lscr.io/linuxserver/code-server:latest
+#################################################
+cd /usr/local/mycode-server/config/workspace
+npx create-react-app my-app --template typescript
+chmod -R 777 /usr/local/mycode-server/config/workspace
+cd my-app&&npm start
+#################################################
+let是在代码块内有效，var是在全局范围内有效
+let只能声明一次，var可以声明多次
+let sy = Symbol("key1");
+Promise:嵌套
+//https://segmentfault.com/a/1190000011652907
+var promise1 = new Promise(function(resolve, reject) {
+  setTimeout(function() {
+    resolve('aa');
+  }, 2000);
+});
+promise1.then(function(data) {
+  console.log(data);
+  return 'bb';
+}, function(err) {}).then(function(data) {
+  console.log('1' + data);
+  return 'cc';
+}).then(function(data) {
+  console.log(data);
+  console.log('dd');
+
+  return new Promise(function(resolve, reject) {
+    reject('error');
+  });
+}, function(err) {}).then(function(data) {
+  console.log('fulfilled');
+}).catch(function(err) {
+  console.log('catch' + err);
+});
+#################################################
+compilerOptions.noImplicitAny: false
+
+index.tsx:
+import ReactDOM from 'react-dom/client';
+const root = ReactDOM.createRoot(
+  document.getElementById('root') as HTMLElement
+);
+root.render(
+  <h1>Hello, world!</h1>
+);
+-------------------------------------------------
+function Hello() {
+  return <h1>Hello World!</h1>;
+}
+root.render(<Hello />);
+-------------------------------------------------
+var myStyle = {
+  fontSize: 100,
+  color: '#FF0000'
+};
+function Hello() {
+  {/*注释...*/}
+  return <h1 style = {myStyle}>Hello World!</h1>;
+}
+-------------------------------------------------
+function HelloMessage(props) {
+    return <h1>Hello {props.name}!</h1>;
+}
+const element = <HelloMessage name="Runoob"/>;
+root.render(element);
+-------------------------------------------------
+class Clock extends React.Component<{}, {date: Date}> {
+  constructor(props) {
+    super(props);
+    this.state = {date: new Date()};
+    console.log(typeof setInterval);
+    setInterval(() => {this.setState({date: new Date()})}, 1000);
+  }
+  render() {
+    return (
+      <div>
+        <h1>Hello, world!</h1>
+        <h2>{this.state.date.toLocaleTimeString()}.</h2>
+      </div>
+    );
+  }
+}
+const element = <Clock />;
+root.render(element);
+-------------------------------------------------
+class WebSite extends React.Component<{}, {name: String}> {
+  constructor(props) {
+      super(props);
+      this.state = {name: "Runoob"}
+  }
+  render() {
+    return (
+      <div>
+        <Name name={this.state.name} />
+      </div>
+    );
+  }
+}
+class Name extends React.Component<{name: String}, {}> {
+  render() {
+    return (<h1>{this.props.name}</h1>);
+  }
+}
+root.render(<WebSite />);
+-------------------------------------------------
+function ActionLink() {
+  function handleClick(e) {
+    e.preventDefault();
+    console.log('clicked');
+  }
+ 
+  return (<a href="#" onClick={handleClick}>Click</a>);
+}
+root.render(<ActionLink />);
+-------------------------------------------------1
+class Toggle extends React.Component<{},{isToggleOn: boolean}> {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClick = this.handleClick.bind(this);
+  }
+ 
+  handleClick() {
+    this.setState(prevState => ({
+      isToggleOn: !prevState.isToggleOn
+    }));
+  }
+ 
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+root.render(<Toggle />);
+-------------------------------------------------2
+class Toggle extends React.Component<{},{isToggleOn: boolean}> {
+  constructor(props) {
+    super(props);
+    this.state = {isToggleOn: true};
+    this.handleClick = this.handleClick.bind(this);
+  }
+ 
+  handleClick = () => {//handleClick() {
+    this.setState({
+      isToggleOn: !this.state.isToggleOn
+    });
+  }
+ 
+  render() {
+    return (
+      <button onClick={this.handleClick}>
+        {this.state.isToggleOn ? 'ON' : 'OFF'}
+      </button>
+    );
+  }
+}
+root.render(<Toggle />);
+-------------------------------------------------
+const numbers = [1, 2, 3, 4, 5];
+const listItems = numbers.map((numbers) =>
+  <li>{numbers}</li>
+);
+root.render(<ul>{listItems}</ul>);
+-------------------------------------------------
+function NumberList(props) {
+  const numbers = props.numbers;
+  const listItems = numbers.map((number) =>
+    <li key={number.toString()}>{number}</li>
+  );
+  return (
+    <ul>{listItems}</ul>
+  );
+}
+const numbers = [1, 2, 3, 4, 5];
+root.render(<NumberList numbers={numbers} />);
+-------------------------------------------------
+https://www.runoob.com/react/react-lists-and-keys.html
+
