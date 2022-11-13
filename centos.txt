@@ -30,6 +30,36 @@ npx create-react-app my-app --template typescript
 chmod -R 777 /usr/local/mycode-server/config/workspace
 cd my-app&&npm start
 #################################################
+GRAALVM_VERSION=22.2.0
+JAVA_VERSION=java11
+JAVA_HOME=$PWD/graalvm-ce-$JAVA_VERSION-$GRAALVM_VERSION
+PATH=./:$JAVA_HOME/bin/:$PATH
+MAVEN_VERSION=3.8.4
+MAVEN_HOME=$PWD/apache-maven-$MAVEN_VERSION
+PATH=$PATH:$MAVEN_HOME/bin/
+QUARKUS_VERSION=2.7.4
+PATH=$PATH:$PWD/quarkus-cli-$QUARKUS_VERSION.Final/bin/
+
+yum install -y java-11 && yum -y install gcc glibc-devel zlib-devel gcc-c++ && java -version
+curl -L https://github.com/graalvm/graalvm-ce-builds/releases/download/vm-$GRAALVM_VERSION/graalvm-ce-$JAVA_VERSION-linux-amd64-$GRAALVM_VERSION.tar.gz | tar -xzf -
+gu install native-image && gu list
+curl -L https://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binaries/apache-maven-$MAVEN_VERSION-bin.tar.gz | tar -xzf -
+mvn -Dplugin=io.quarkus:quarkus-maven-plugin help:describe
+curl -L https://github.com/quarkusio/quarkus/releases/download/$QUARKUS_VERSION.Final/quarkus-cli-$QUARKUS_VERSION.Final.tar.gz | tar -xzf -
+mvn io.quarkus:quarkus-maven-plugin:$QUARKUS_VERSION.Final:create \
+    -DprojectGroupId=com.example \
+    -DprojectArtifactId=myapp \
+    -DclassName="com.example.quarkus.Greeting" \
+    -Dpath="/myapp"
+mvn package -Pnative -DskipTests
+mvn package -Pnative -Dquarkus.native.container-build=true -Dquarkus.native.container-runtime=docker
+docker build -f src/main/docker/Dockerfile.native -t quarkus/myapp .
+docker run -i --rm -p 8080:8080 quarkus/myapp
+-
+quarkus create com.example:myapp
+cd myapp && quarkus dev || cd myapp && mvnw quarkus:dev
+curl -w "\n" http://localhost:8080/myapp
+#################################################
 npm i docsify-cli -g && docsify -v
 docsify init ./build
 #################################################
