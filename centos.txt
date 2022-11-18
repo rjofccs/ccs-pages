@@ -66,6 +66,332 @@ vi /etc/nginx/nginx.conf
 /usr/local/mycode-server/config/workspace/my-app/build
 #systemctl restart nginx
 #/var/log/nginx/error.log
+#################################################neo4j
+docker pull neo4j
+mkdir -p /usr/local/neo4j/{data,logs,conf,import}
+tee /usr/local/neo4j/conf/neo4j.conf <<-'EOF'
+dbms.security.auth_enabled=false
+EOF
+
+docker run --restart=always --privileged=true --name myneo4j \
+-p 7474:7474 -p 7687:7687 -d \
+-v /usr/local/neo4j/data:/data \
+-v /usr/local/neo4j/logs:/logs \
+-v /usr/local/neo4j/conf:/conf \
+-v /usr/local/neo4j/import:/import \
+--env NEO4J_AUTH=neo4j/x neo4j
+#################################################reactjs
+service firewalld stop
+yarn create react-app my-app( --template typescript)
+cd my-app && yarn install && yarn build && export PORT=80 && yarn start
+-------------------------------------------------
+function App() {
+  return (<div>Hello</div>);
+}
+export default App;
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<App />);
+-------------------------------------------------P24
+export default function Todo (x) {
+  return (<div>{x.text}</div>);
+}
+
+import Todo from "./Todo"
+export default function App () {
+  return (<div>
+    <Todo text="hello"/>
+  </div>);
+}
+-------------------------------------------------
+yarn add react-admin
+// package.json
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "ra-data-json-server": "^4.5.0",
+    "react": "^18.2.0",
+    "react-admin": "^4.5.1",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
+// index.js
+import * as React from "react";
+import { render } from 'react-dom';
+import { Admin, Resource } from 'react-admin';
+import restProvider from 'ra-data-json-server';
+import { UserList, UserEdit, UserCreate, UserIcon } from './users';
+render(
+    <Admin dataProvider={restProvider('https://jsonplaceholder.typicode.com')}>
+        <Resource name="users" list={UserList} edit={UserEdit} create={UserCreate} icon={UserIcon} />
+    </Admin>,
+    document.getElementById('root')
+);
+
+// users.js
+import * as React from "react";
+import { List, Datagrid, Edit, Create, SimpleForm, EmailField, TextField, EditButton, TextInput, useRecordContext } from 'react-admin';
+import BookIcon from '@mui/icons-material/Book';
+export const UserIcon = BookIcon;
+export const UserList = () => (
+    <List>
+        <Datagrid>
+            <TextField source="id" />
+            <TextField source="name" />
+            <TextField source="username" />
+            <EmailField source="email" />
+            {/* <TextField source="address.street" />
+            <TextField source="address.suite" />
+            <TextField source="address.city" />
+            <TextField source="address.zipcode" />
+            <TextField source="address.geo.lat" />
+            <TextField source="address.geo.lng" /> */}
+            <TextField source="phone" />
+            <TextField source="website" />
+            <TextField source="company.name" />
+            <TextField source="company.catchPhrase" />
+            <TextField source="company.bs" />
+            <EditButton />
+        </Datagrid>
+    </List>
+);
+const UserTitle = () => {
+    const record = useRecordContext();
+    return <span>User {record ? `"${record.name}"` : ''}</span>;
+};
+export const UserEdit = () => (
+    <Edit title={<UserTitle />}>
+        <SimpleForm>
+            <TextInput disabled source="id" />
+            <TextInput source="name" />
+            <TextInput source="username" options={{ multiline: true }} />
+            <TextInput multiline source="phone" />
+            <TextInput source="email" />
+            <TextInput source="website" />
+            <TextInput disabled label="Nb views" source="username" />
+        </SimpleForm>
+    </Edit>
+);
+export const UserCreate = () => (
+    <Create title="Create a User">
+        <SimpleForm>
+            <TextInput source="name" />
+            <TextInput source="username" options={{ multiline: true }} />
+            <TextInput multiline source="phone" />
+            <TextInput source="email" />
+            <TextInput source="website" />
+        </SimpleForm>
+    </Create>
+);
+-------------------------------------------------
+tee ./Dockerfile<<-'EOF'
+FROM node:16-alpine as builder
+# Set the working directory to /app inside the container
+WORKDIR /app
+# Copy app files
+COPY . .
+# Install dependencies (npm ci makes sure the exact versions in the lockfile gets installed)
+RUN npm i 
+# Build the app
+RUN npm run build
+
+# Bundle static assets with nginx
+FROM nginx:1.21.0-alpine as production
+ENV NODE_ENV production
+# Copy built assets from `builder` image
+COPY --from=builder /app/build /usr/share/nginx/html
+# Add your nginx.conf
+# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# Expose port
+EXPOSE 80
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
+EOF
+docker build . -t dockerized-react && docker images
+docker rm -f myreact && docker run --name myreact -p 80:80 -d dockerized-react
+#################################################nextjs P104
+cd /usr/local/mycode-server/config/workspace && yarn create next-app my-app
+cd my-app && yarn install && yarn build && yarn next dev -p 80
+
+import fs from 'fs-promise2';
+import path from 'path';
+import Link from 'next/link';
+export async function getStaticProps(){
+  console.log("Re Generating")
+  const jsonData = await fs.File.readFile(path.join(process.cwd(),"data","products.json"));
+  const data = JSON.parse(jsonData);
+  return {props:data,revalidate:10}//next start//notFound,redirect
+}
+export default function Home(props) {
+  const products = props.products;
+  return (
+    <ul>
+      {
+        products.map((p)=>
+          <li key={p.pid}><Link href={`/${p.pid}`}>{p.title}</Link></li>
+        )
+      }
+    </ul>
+  )
+}
+
+export async function getStaticProps(context){
+  console.log(context);
+  const {params} = context;
+  return {props:params}
+}
+export async function getStaticPaths(){
+  return {
+    paths:[
+      {params:{pid:"p1"}},
+    ],
+    fallback:true
+  }
+}
+export default function Pid(props) {
+  if(!props.pid){
+    return (
+      <div>Loading</div>
+    )
+  }
+  return (
+    <div>
+      {props.pid}
+    </div>
+  )
+}
+-------------------------------------------------
+import { useEffect, useState } from "react";
+export async function getServerSideProps(context){
+  const { params, req, res } = context;
+  return { props: {} }
+}
+
+export default function Home(props) {
+  const [products, setProducts] = useState();
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {
+    setLoading(true);
+    fetch("https://ageless-answer-237913-default-rtdb.firebaseio.com/products.json")
+    .then((res)=>res.json())
+    .then((data)=>{
+      const ps=[];
+      for (const key in data) {
+        ps.push({
+          pid: data[key].pid,
+          title: data[key].title,
+          desc: data[key].desc,
+        });
+      }
+      setLoading(false);
+      setProducts(ps);
+    });
+  }, []);
+
+  if(loading) return <div>Loading</div>
+  if(!products) return <div>No data</div>
+  return (
+    <ul>{products.map((p)=>
+          <li key={p.pid} href={`/${p.pid}`}>{p.desc}</li>
+        )}
+    </ul>
+  )
+}
+-------------------------------------------------
+import { useEffect, useState } from "react";
+import useSWR from 'swr';
+
+export default function Home(props) {
+  const [products, setProducts] = useState();
+  const fetcher = (url) => fetch(url).then((res) => res.json());
+  const { data, error } = useSWR('https://ageless-answer-237913-default-rtdb.firebaseio.com/products.json', fetcher);
+
+  useEffect(() => {
+    console.log(data);
+    if(data){
+      const ps=[];
+      for (const key in data) {
+        ps.push({
+          pid: data[key].pid,
+          title: data[key].title,
+          desc: data[key].desc,
+        });
+      }
+      setProducts(ps);
+    }
+  }, [data]);
+
+  if (error) return <div>failed to load</div>
+  if (!data||!products) return <div>loading...</div>
+
+  return (
+    <ul>{products.map((p)=>
+          <li key={p.pid} href={`/${p.pid}`}>{p.desc}</li>
+        )}
+    </ul>
+  )
+}
+-------------------------------------------------
+tee ./Dockerfile<<-'EOF'
+FROM node:alpine AS deps
+RUN apk add --no-cache libc6-compat
+WORKDIR /app
+COPY package.json yarn.lock ./
+RUN yarn install --frozen-lockfile
+FROM node:alpine AS builder
+WORKDIR /app
+COPY . .
+COPY --from=deps /app/node_modules ./node_modules
+RUN yarn build && yarn install --production --ignore-scripts --prefer-offline
+FROM node:alpine AS runner
+WORKDIR /app
+ENV NODE_ENV production
+RUN addgroup -g 1001 -S nodejs
+RUN adduser -S nextjs -u 1001
+COPY --from=builder /app/public ./public
+COPY --from=builder --chown=nextjs:nodejs /app/.next ./.next
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./package.json
+USER nextjs
+EXPOSE 3000
+ENV PORT 3000
+CMD ["node_modules/.bin/next", "start"]
+EOF
+docker build -t reactdocker . && docker rm myreact -f && docker run --name myreact -d -p 8080:3000 reactdocker
+
+useless:
+docker rmi $(docker images -q)
+docker rm $(docker ps -aq) -f
 #################################################
 let是在代码块内有效，var是在全局范围内有效
 let只能声明一次，var可以声明多次
