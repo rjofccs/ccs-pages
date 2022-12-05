@@ -48,7 +48,7 @@
         var objs = [];
         var audio;
         var first = true;
-        var ind = 0;
+        var ind = 1;
         var lind = localStorage.getItem("ind");
         if (lind != null) {
             ind = parseInt(lind);
@@ -60,7 +60,7 @@
                 // });
                 objs = data;
               
-                res = objs[ind];
+                var res = objs[ind];
                 // ["01", "atmosphere", "noun", "中文", "mp3"]
                 audio = new Audio(prefix + res[4]);
                 audio.volume = 0.5;
@@ -83,7 +83,7 @@
                 } else if (command == 'h') {
                     term.echo('c:clear\n l:list\n p:picture\n ', {newline: false});
                 } else {                  
-                    res = objs[ind - 1];//echo 0
+                    var res = objs[ind - 1];//echo 0
                     word = res[1];
                     try {
                         audio.play();//play 0
